@@ -53,6 +53,6 @@ DESKTOP / WEB | Include the module into your next Single Page App (SPA) / Multi-
 
 This project does not want to utilize ads. To that end, any support for this project is appreciated. We are just getting started so follow the links below to track / support this project.
 
-- <a href="https://www.buymeacoffee.com/codemelted"><img src="https://codemelted.com/assets/images/icon-buy-me-a-coffee.png" height="35px" /> Buy Me A Coffee</a>: Direct support for the CodeMeltedDEV content and services offered via the **codemelted.js Project**.
-- <a href="https://github.com/sponsors/CodeMelted"><img src="https://codemelted.com/assets/images/icon-github.png" height="35px" /> GitHub Sponsorship</a>: Direct support for the **codemelted.js Project** either through a one time donation or a monthly subscription.
+- <a href="https://www.buymeacoffee.com/codemelteddev"><img src="https://codemelted.com/assets/images/icon-buy-me-a-coffee.png" height="35px" /> Buy Me A Coffee</a>: Direct support for the CodeMeltedDEV content and services offered via the **codemelted.js Project**.
+- <a href="https://github.com/sponsors/CodeMeltedDEV"><img src="https://codemelted.com/assets/images/icon-github.png" height="35px" /> GitHub Sponsorship</a>: Direct support for the **codemelted.js Project** either through a one time donation or a monthly subscription.
 - <a href="https://dev.codemelted.com"><img src="https://codemelted.com/assets/favicon/apple-touch-icon.png" height="35px" /> CodeMeltedDEV Website</a>: Main website where I will blog about this project along with other interest and utilize this project to build out the with features and you can find me for other socials.
