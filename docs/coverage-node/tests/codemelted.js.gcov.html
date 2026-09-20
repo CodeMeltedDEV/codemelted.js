@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-09-20 00:08:57</td>
+            <td class="headerValue">2026-09-20 18:15:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryLo">43.0&nbsp;%</td>
@@ -5178,9 +5178,9 @@
 <span id="L5116"><span class="lineNum">    5116</span> <span class="tlaUNC">           0 :     // Determine how we are opening the item.</span></span>
 <span id="L5117"><span class="lineNum">    5117</span> <span class="tlaUNC">           0 :     if (popup_window) {</span></span>
 <span id="L5118"><span class="lineNum">    5118</span> <span class="tlaUNC">           0 :       // @ts-ignore Will return a number.</span></span>
-<span id="L5119"><span class="lineNum">    5119</span> <span class="tlaUNC">           0 :       const top = (runtime_query(QUERY_REQUEST.Height) - height) / 2;</span></span>
+<span id="L5119"><span class="lineNum">    5119</span> <span class="tlaUNC">           0 :       const top = (ui_screen(SCREEN_REQUEST.Height) - height) / 2;</span></span>
 <span id="L5120"><span class="lineNum">    5120</span> <span class="tlaUNC">           0 :       // @ts-ignore Will return a number.</span></span>
-<span id="L5121"><span class="lineNum">    5121</span> <span class="tlaUNC">           0 :       const left = (runtime_query(QUERY_REQUEST.Width) - width) / 2;</span></span>
+<span id="L5121"><span class="lineNum">    5121</span> <span class="tlaUNC">           0 :       const left = (ui_screen(SCREEN_REQUEST.Width) - width) / 2;</span></span>
 <span id="L5122"><span class="lineNum">    5122</span> <span class="tlaUNC">           0 :       const settings = `toolbar=no, location=no, ` +</span></span>
 <span id="L5123"><span class="lineNum">    5123</span> <span class="tlaUNC">           0 :         `directories=no, status=no, menubar=no, ` +</span></span>
 <span id="L5124"><span class="lineNum">    5124</span> <span class="tlaUNC">           0 :         `scrollbars=no, resizable=yes, copyhistory=no, ` +</span></span>
@@ -5192,7 +5192,7 @@
 <span id="L5130"><span class="lineNum">    5130</span> <span class="tlaUNC">           0 :     return globalThis.open(url_to_launch, target);</span></span>
 <span id="L5131"><span class="lineNum">    5131</span> <span class="tlaUNC">           0 :   } catch (err) {</span></span>
 <span id="L5132"><span class="lineNum">    5132</span> <span class="tlaUNC">           0 :     CModuleError.handle_error(err);</span></span>
-<span id="L5133"><span class="lineNum">    5133</span> <span class="tlaUNC">           0 :     throw new CModuleError(&quot;runtime_online() error.&quot;, err);</span></span>
+<span id="L5133"><span class="lineNum">    5133</span> <span class="tlaUNC">           0 :     throw new CModuleError(&quot;ui_open() error.&quot;, err);</span></span>
 <span id="L5134"><span class="lineNum">    5134</span> <span class="tlaUNC">           0 :   }</span></span>
 <span id="L5135"><span class="lineNum">    5135</span> <span class="tlaUNC">           0 : }</span></span>
 <span id="L5136"><span class="lineNum">    5136</span> <span class="tlaGNC">           1 : </span></span>

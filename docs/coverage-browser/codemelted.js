@@ -5116,9 +5116,9 @@ export function ui_open({
     // Determine how we are opening the item.
     if (popup_window) {
       // @ts-ignore Will return a number.
-      const top = (runtime_query(QUERY_REQUEST.Height) - height) / 2;
+      const top = (ui_screen(SCREEN_REQUEST.Height) - height) / 2;
       // @ts-ignore Will return a number.
-      const left = (runtime_query(QUERY_REQUEST.Width) - width) / 2;
+      const left = (ui_screen(SCREEN_REQUEST.Width) - width) / 2;
       const settings = `toolbar=no, location=no, ` +
         `directories=no, status=no, menubar=no, ` +
         `scrollbars=no, resizable=yes, copyhistory=no, ` +
@@ -5130,7 +5130,7 @@ export function ui_open({
     return globalThis.open(url_to_launch, target);
   } catch (err) {
     CModuleError.handle_error(err);
-    throw new CModuleError("runtime_online() error.", err);
+    throw new CModuleError("ui_open() error.", err);
   }
 }
 
