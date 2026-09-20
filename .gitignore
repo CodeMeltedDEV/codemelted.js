@@ -22,3 +22,7 @@ tests/codemelted.js
 
 # Stupid mac os files to not check into source control
 .DS_Store
+
+# Ignore files I do to build widgets
+codemelted_playground.html
+blogger_widgets.js

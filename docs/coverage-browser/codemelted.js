@@ -5055,53 +5055,57 @@ export function ui_open({
     json_check_type({type: "string", data: body, should_throw: true});
 
     // Now go build the URL to open.
-    let urlToLaunch = schema;
-    if (schema === "file:" ||
-        schema === "http://" ||
-        schema === "https://" ||
-        schema === "sms:" ||
-        schema === "tel:") {
+    let url_to_launch = schema;
+    if (schema === SCHEMA_TYPE.File ||
+        schema === SCHEMA_TYPE.Http ||
+        schema === SCHEMA_TYPE.Https ||
+        schema === SCHEMA_TYPE.Sms ||
+        schema === SCHEMA_TYPE.Tel) {
       json_check_type({type: "string", data: url, should_throw: true});
-      urlToLaunch += url;
+      url_to_launch += url?.replace(SCHEMA_TYPE.File, "")
+        .replace(SCHEMA_TYPE.Http, "")
+        .replace(SCHEMA_TYPE.Https, "")
+        .replace(SCHEMA_TYPE.Sms, "")
+        .replace(SCHEMA_TYPE.Tel, "");
     } else if (schema === "mailto:") {
       if (url) {
         json_check_type({type: "string", data: url, should_throw: true});
-        urlToLaunch += url;
+        url_to_launch += url.replace(SCHEMA_TYPE.Mailto, "");
       } else {
         // Form the mailto parameters to better control the URL formatting.
         if (mailto.length > 0) {
           mailto.forEach((addr) => {
-            urlToLaunch += `${addr};`;
+            url_to_launch += `${addr};`;
           });
-          urlToLaunch.substring(0, urlToLaunch.length - 1);
+          url_to_launch.substring(0, url_to_launch.length - 1);
         }
 
         let delimiter = "?";
         if (cc.length > 0) {
-          urlToLaunch += `${delimiter}cc=`;
+          url_to_launch += `${delimiter}cc=`;
           delimiter = "&";
           cc.forEach((addr) => {
-            urlToLaunch += `${addr};`;
+            url_to_launch += `${addr};`;
           });
-          urlToLaunch.substring(0, urlToLaunch.length - 1);
+          url_to_launch.substring(0, url_to_launch.length - 1);
         }
 
         if (bcc.length > 0) {
-          urlToLaunch += `${delimiter}bcc=`;
+          url_to_launch += `${delimiter}bcc=`;
           delimiter = "&";
           bcc.forEach((addr) => {
-            urlToLaunch += `${addr};`;
+            url_to_launch += `${addr};`;
           });
-          urlToLaunch.substring(0, urlToLaunch.length - 1);
+          url_to_launch.substring(0, url_to_launch.length - 1);
         }
 
         if (subject.trim().length > 0) {
-          urlToLaunch += `${delimiter}subject=${subject.trim()}`;
+          url_to_launch += `${delimiter}subject=${subject.trim()}`;
           delimiter = "&";
         }
 
         if (body.trim().length > 0) {
-          urlToLaunch += `${delimiter}body=${body.trim()}`;
+          url_to_launch += `${delimiter}body=${body.trim()}`;
           delimiter = "&";
         }
       }
@@ -5120,10 +5124,10 @@ export function ui_open({
         `scrollbars=no, resizable=yes, copyhistory=no, ` +
         `width=${width}, height=${height}, top=${top}, left=${left}`;
       // @ts-ignore Property exists in a browser runtime.
-      return globalThis.open(urlToLaunch, "_blank", settings);
+      return globalThis.open(url_to_launch, "_blank", settings);
     }
     // @ts-ignore Property exists in a browser runtime.
-    return globalThis.open(urlToLaunch, target);
+    return globalThis.open(url_to_launch, target);
   } catch (err) {
     CModuleError.handle_error(err);
     throw new CModuleError("runtime_online() error.", err);
@@ -5167,16 +5171,49 @@ export class CHtmlComponent extends HTMLElement {
   #connected_move_cb;
   /** @type {CHtmlComponentCB | undefined} */
   #disconnected_cb;
-  /** @type {ShadowRoot} */
+  /** @type {ShadowRoot | undefined} */
   #shadow_root;
 
   /**
    * Provides access to the shadow DOM for constructing the custom component.
    * @protected
    * @readonly
-   * @type {ShadowRoot}
+   * @type {ShadowRoot | undefined}
    */
   get shadow_root() { return this.#shadow_root; }
+
+  /**
+   * The set_attribute() method of the Element interface sets the value of
+   * an attribute on the specified element. If the attribute already exists,
+   * the value is updated; otherwise a new attribute is added with the
+   * specified name and value.
+   * @param {string} name A string containing the qualified name of the
+   * attribute whose value is to be set. The attribute name is automatically
+   * converted to all lower-case when set_attribute() is called on an HTML
+   * element in an HTML document.
+   * @param {string} value A trusted type or string containing the value
+   * to assign to the attribute.
+   */
+  set_attribute(name, value) {
+    // @ts-ignore Will exist in browser context.
+    this.setAttribute(name, value);
+  }
+
+  /**
+   * The get_attribute() method of the Element interface returns the
+   * string value of the specified attribute of the specified element. It
+   * returns null if the element doesn't have an attribute with the given
+   * name.
+   * @param {string} name A string specifying the name of the attribute. When
+   * called on an HTML element in a DOM flagged as an HTML document, the name
+   * is normalized to lowercase.
+   * @returns {string | null} A string containing the attribute's value,
+   * or null if the element doesn't have an attribute with the given name.
+   */
+  get_attribute(name) {
+    // @ts-ignore Will exist in browser context.
+    return this.getAttribute(name);
+  }
 
   /**
    * Provides the ability to query the DOM for a given css_value by
@@ -5289,11 +5326,17 @@ export class CHtmlComponent extends HTMLElement {
    * @param {any} element_def The constructor definition.
    */
   static register_component(name, element_def) {
-    // @ts-ignore This will exist in a browser context.
-    const is_defined =  !!customElements.get(name);
-    if (!is_defined) {
+    const available = runtime_available({
+      request: AVAILABILITY_REQUEST.AskRuntime,
+      name: "customElements"
+    });
+    if (available) {
       // @ts-ignore This will exist in a browser context.
-      customElements.define(name, element_def);
+      const is_defined =  !!globalThis.customElements.get(name);
+      if (!is_defined) {
+        // @ts-ignore This will exist in a browser context.
+        customElements.define(name, element_def);
+      }
     }
   }
 
@@ -5307,17 +5350,21 @@ export class CHtmlComponent extends HTMLElement {
    * that handles the {@link attributeChangedCallback} method.
    * @param {CHtmlComponentCB} [params.connected_cb] The callback that handles
    * the {@link connectedCallback} method.
-   * @param {CHtmlComponentCB} [params.connected_move_cb] The callback that handles
-   * the {@link connectedMoveCallback} method.
-   * @param {CHtmlComponentCB} [params.disconnected_cb] The callback that handles
-   * the {@link disconnectedCallback} method.
+   * @param {CHtmlComponentCB} [params.connected_move_cb] The callback that
+   * handles the {@link connectedMoveCallback} method.
+   * @param {CHtmlComponentCB} [params.disconnected_cb] The callback that
+   * handles the {@link disconnectedCallback} method.
+   * @param {"none" | "open" | "closed"} [params.shadow_mode="none"] Whether
+   * to attach a shadow root or not and what mode it will be. Utilize the
+   * shadow_root property if not set to "none".
    */
   constructor({
     adopted_cb,
     attribute_changed_cb,
     connected_cb,
     connected_move_cb,
-    disconnected_cb
+    disconnected_cb,
+    shadow_mode="none",
   }) {
     super();
     try {
@@ -5366,8 +5413,10 @@ export class CHtmlComponent extends HTMLElement {
       this.#connected_cb = connected_cb;
       this.#connected_move_cb = connected_move_cb;
       this.#disconnected_cb = disconnected_cb;
-      // @ts-ignore Will exist in the browser context
-      this.#shadow_root = this.attachShadow({mode: "closed"});
+      if (shadow_mode !== "none") {
+        // @ts-ignore Will exist in the browser context
+        this.#shadow_root = this.attachShadow({mode: "closed"});
+      }
     } catch (err) {
       CModuleError.handle_error(err);
       throw new CModuleError(CModuleError.MISUSE);

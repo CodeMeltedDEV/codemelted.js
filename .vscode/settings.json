@@ -3,6 +3,7 @@
     "choco",
     "codemelted",
     "codemelteddev",
+    "copyhistory",
     "genhtml",
     "LASTEXITCODE",
     "MSVC",
@@ -12,6 +13,7 @@
     "rustc",
     "staticlib",
     "typedoc",
+    "ummies",
     "usecase",
     "WORA"
   ],

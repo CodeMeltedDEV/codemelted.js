@@ -1,5 +1,5 @@
 <center>
-  <img style="width: px; "src="https://codemelted.com/assets/favicon/codemelted-js/android-chrome-192x192.png" />
+  <img style="width: px;" src="https://codemelted.com/assets/favicon/codemelted-js/android-chrome-192x192.png" />
   <h1>About the codemelted.js Project</h1>
   <a aria-label="Follow @CodeMeltedDEV on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-show-count="true" data-size="small" href="https://github.com/CodeMeltedDEV" title="Follow @CodeMeltedDEV on GitHub">CodeMeltedDEV</a>
   <a aria-label="Watch codemelteddev/codemelted.js on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-eye" data-show-count="true" data-size="small" href="https://github.com/codemelteddev/codemelted.js/subscription" title="Watch codemelteddev/codemelted.js on GitHub">Watch</a>

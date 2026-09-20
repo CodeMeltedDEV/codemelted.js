@@ -38,8 +38,10 @@ Rust desktop / mobile TAURI app.</p>
 <a href="#connectedcallback" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>connected<wbr/>Callback</span></a>
 <a href="#connectedmovecallback" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>connected<wbr/>Move<wbr/>Callback</span></a>
 <a href="#disconnectedcallback" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>disconnected<wbr/>Callback</span></a>
+<a href="#get_attribute" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get_<wbr/>attribute</span></a>
 <a href="#get_css_value" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get_<wbr/>css_<wbr/>value</span></a>
 <a href="#refresh" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>refresh</span></a>
+<a href="#set_attribute" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set_<wbr/>attribute</span></a>
 <a href="#register_component" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>register_<wbr/>component</span></a>
 </div></section></div></details></section></section>
 <details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Constructors"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
@@ -49,7 +51,7 @@ Rust desktop / mobile TAURI app.</p>
 <h3 class="tsd-anchor-link" id="constructor"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="constructorchtmlcomponent"><span class="tsd-signature-keyword">new</span> <span class="tsd-kind-constructor-signature">CHtmlComponent</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">params</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{</span><br/>        <span class="tsd-kind-property">adopted_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">attribute_changed_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CAttributeChangeCB.html" class="tsd-signature-type tsd-kind-type-alias">CAttributeChangeCB</a><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">connected_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">connected_move_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">disconnected_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type tsd-kind-class">CHtmlComponent</a><a href="#constructorchtmlcomponent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="constructorchtmlcomponent"><span class="tsd-signature-keyword">new</span> <span class="tsd-kind-constructor-signature">CHtmlComponent</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">params</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{</span><br/>        <span class="tsd-kind-property">adopted_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">attribute_changed_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CAttributeChangeCB.html" class="tsd-signature-type tsd-kind-type-alias">CAttributeChangeCB</a><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">connected_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">connected_move_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">disconnected_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>        <span class="tsd-kind-property">shadow_mode</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">&quot;open&quot;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">&quot;none&quot;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">&quot;closed&quot;</span><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type tsd-kind-class">CHtmlComponent</a><a href="#constructorchtmlcomponent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Creates the HTMLElement and attaches a closed shadow DOM to only allow
 styling via this component.</p>
@@ -57,7 +59,7 @@ styling via this component.</p>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
-<li><span><span class="tsd-kind-parameter">params</span>: <span class="tsd-signature-symbol">{</span><br/>    <span class="tsd-kind-property">adopted_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">attribute_changed_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CAttributeChangeCB.html" class="tsd-signature-type tsd-kind-type-alias">CAttributeChangeCB</a><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">connected_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">connected_move_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">disconnected_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/><span class="tsd-signature-symbol">}</span></span>
+<li><span><span class="tsd-kind-parameter">params</span>: <span class="tsd-signature-symbol">{</span><br/>    <span class="tsd-kind-property">adopted_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">attribute_changed_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CAttributeChangeCB.html" class="tsd-signature-type tsd-kind-type-alias">CAttributeChangeCB</a><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">connected_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">connected_move_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">disconnected_cb</span><span class="tsd-signature-symbol">?:</span> <a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a><span class="tsd-signature-symbol">;</span><br/>    <span class="tsd-kind-property">shadow_mode</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">&quot;open&quot;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">&quot;none&quot;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">&quot;closed&quot;</span><span class="tsd-signature-symbol">;</span><br/><span class="tsd-signature-symbol">}</span></span>
 <div class="tsd-comment tsd-typography"><p>The named parameters</p>
 </div>
 <ul class="tsd-parameters">
@@ -78,13 +80,19 @@ the <a href="#connectedcallback" class="tsd-kind-method">connectedCallback</a> m
 </div></li>
 <li class="tsd-parameter">
 <h5><code class="tsd-tag">Optional</code><span class="tsd-kind-property">connected_move_cb</span><span class="tsd-signature-symbol">?: </span><a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a></h5>
-<div class="tsd-comment tsd-typography"><p>The callback that handles
-the <a href="#connectedmovecallback" class="tsd-kind-method">connectedMoveCallback</a> method.</p>
+<div class="tsd-comment tsd-typography"><p>The callback that
+handles the <a href="#connectedmovecallback" class="tsd-kind-method">connectedMoveCallback</a> method.</p>
 </div></li>
 <li class="tsd-parameter">
 <h5><code class="tsd-tag">Optional</code><span class="tsd-kind-property">disconnected_cb</span><span class="tsd-signature-symbol">?: </span><a href="../types/codemelted.CHtmlComponentCB.html" class="tsd-signature-type tsd-kind-type-alias">CHtmlComponentCB</a></h5>
-<div class="tsd-comment tsd-typography"><p>The callback that handles
-the <a href="#disconnectedcallback" class="tsd-kind-method">disconnectedCallback</a> method.</p>
+<div class="tsd-comment tsd-typography"><p>The callback that
+handles the <a href="#disconnectedcallback" class="tsd-kind-method">disconnectedCallback</a> method.</p>
+</div></li>
+<li class="tsd-parameter">
+<h5><code class="tsd-tag">Optional</code><span class="tsd-kind-property">shadow_mode</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">&quot;open&quot;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">&quot;none&quot;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">&quot;closed&quot;</span></h5>
+<div class="tsd-comment tsd-typography"><p>Whether
+to attach a shadow root or not and what mode it will be. Utilize the
+shadow_root property if not set to &quot;none&quot;.</p>
 </div></li></ul></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="" class="tsd-signature-type tsd-kind-class">CHtmlComponent</a></h4><aside class="tsd-sources">
 <p>Overrides HTMLElement.constructor</p></aside></div></li></ul></section></section></details>
@@ -158,6 +166,28 @@ state-preserving moves for more details.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></div></li></ul></section>
 <section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="get_attribute"><span>get_<wbr/>attribute</span><a href="#get_attribute" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="get_attribute-1"><span class="tsd-kind-call-signature">get_attribute</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">null</span><a href="#get_attribute-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>The get_attribute() method of the Element interface returns the
+string value of the specified attribute of the specified element. It
+returns null if the element doesn't have an attribute with the given
+name.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></span>
+<div class="tsd-comment tsd-typography"><p>A string specifying the name of the attribute. When
+called on an HTML element in a DOM flagged as an HTML document, the name
+is normalized to lowercase.</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">null</span></h4><p>A string containing the attribute's value,
+or null if the element doesn't have an attribute with the given name.</p>
+</div></li></ul></section>
+<section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="get_css_value"><span>get_<wbr/>css_<wbr/>value</span><a href="#get_css_value" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="">
@@ -185,6 +215,31 @@ as it is assumed to be the actual style.</p>
 <div class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Forces a refresh of the component.</p>
 </div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="set_attribute"><span>set_<wbr/>attribute</span><a href="#set_attribute" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="set_attribute-1"><span class="tsd-kind-call-signature">set_attribute</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span> <span class="tsd-kind-parameter">value</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#set_attribute-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>The set_attribute() method of the Element interface sets the value of
+an attribute on the specified element. If the attribute already exists,
+the value is updated; otherwise a new attribute is added with the
+specified name and value.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></span>
+<div class="tsd-comment tsd-typography"><p>A string containing the qualified name of the
+attribute whose value is to be set. The attribute name is automatically
+converted to all lower-case when set_attribute() is called on an HTML
+element in an HTML document.</p>
+</div></li>
+<li><span><span class="tsd-kind-parameter">value</span>: <span class="tsd-signature-type">string</span></span>
+<div class="tsd-comment tsd-typography"><p>A trusted type or string containing the value
+to assign to the attribute.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></div></li></ul></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="register_component"><code class="tsd-tag">Static</code><span>register_<wbr/>component</span><a href="#register_component" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
@@ -221,7 +276,7 @@ been defined.</p>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Constructors"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Constructors</summary>
 <div><a href="#constructor"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Constructor"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a></div></details>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Methods</summary>
-<div><a href="#adoptedcallback"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>adopted<wbr/>Callback</span></a><a href="#attributechangedcallback"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>attribute<wbr/>Changed<wbr/>Callback</span></a><a href="#connectedcallback"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>connected<wbr/>Callback</span></a><a href="#connectedmovecallback"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>connected<wbr/>Move<wbr/>Callback</span></a><a href="#disconnectedcallback"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>disconnected<wbr/>Callback</span></a><a href="#get_css_value"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get_<wbr/>css_<wbr/>value</span></a><a href="#refresh"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>refresh</span></a><a href="#register_component"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>register_<wbr/>component</span></a></div></details></div></details></div>
+<div><a href="#adoptedcallback"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>adopted<wbr/>Callback</span></a><a href="#attributechangedcallback"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>attribute<wbr/>Changed<wbr/>Callback</span></a><a href="#connectedcallback"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>connected<wbr/>Callback</span></a><a href="#connectedmovecallback"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>connected<wbr/>Move<wbr/>Callback</span></a><a href="#disconnectedcallback"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>disconnected<wbr/>Callback</span></a><a href="#get_attribute"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get_<wbr/>attribute</span></a><a href="#get_css_value"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get_<wbr/>css_<wbr/>value</span></a><a href="#refresh"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>refresh</span></a><a href="#set_attribute"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>set_<wbr/>attribute</span></a><a href="#register_component"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>register_<wbr/>component</span></a></div></details></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../modules.html">codemelted.js Project</a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container">
