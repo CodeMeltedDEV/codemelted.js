@@ -10,6 +10,7 @@
   <a aria-label="Fork codemelteddev/codemelted.js on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-repo-forked" data-size="small" href="https://github.com/codemelteddev/codemelted.js/fork" title="Fork codemelteddev/codemelted.js on GitHub">Fork</a>
   <a aria-label="Issue codemelteddev/codemelted.js on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-issue-opened" data-size="small" href="https://github.com/codemelteddev/codemelted.js/issues" title="Issue codemelteddev/codemelted.js on GitHub">Issue</a>
   <br><br>
+  <button style="cursor:pointer;" onclick="window.print();">Print</button>
   <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
 </center>
 
