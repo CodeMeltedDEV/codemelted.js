@@ -31,17 +31,17 @@
             <td class="headerValue">lcov.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryLo">73.6&nbsp;%</td>
-            <td class="headerCovTableEntry">5486</td>
-            <td class="headerCovTableEntry">4037</td>
+            <td class="headerCovTableEntryLo">73.5&nbsp;%</td>
+            <td class="headerCovTableEntry">5571</td>
+            <td class="headerCovTableEntry">4097</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-09-20 18:15:08</td>
+            <td class="headerValue">2026-09-30 21:31:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryLo">44.2&nbsp;%</td>
-            <td class="headerCovTableEntry">129</td>
+            <td class="headerCovTableEntryLo">43.5&nbsp;%</td>
+            <td class="headerCovTableEntry">131</td>
             <td class="headerCovTableEntry">57</td>
           </tr>
                   <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
@@ -2267,28 +2267,28 @@
 <span id="L2205"><span class="lineNum">    2205</span> <span class="tlaGNC">           1 :  * });</span></span>
 <span id="L2206"><span class="lineNum">    2206</span> <span class="tlaGNC">           1 :  */</span></span>
 <span id="L2207"><span class="lineNum">    2207</span> <span class="tlaGNC">           1 : export function json_check_type({</span></span>
-<span id="L2208"><span class="lineNum">    2208</span> <span class="tlaGNC">         515 :   type,</span></span>
-<span id="L2209"><span class="lineNum">    2209</span> <span class="tlaGNC">         515 :   data,</span></span>
-<span id="L2210"><span class="lineNum">    2210</span> <span class="tlaGNC">         515 :   count = undefined,</span></span>
-<span id="L2211"><span class="lineNum">    2211</span> <span class="tlaGNC">         515 :   should_throw = false</span></span>
-<span id="L2212"><span class="lineNum">    2212</span> <span class="tlaGNC">         515 : }) {</span></span>
-<span id="L2213"><span class="lineNum">    2213</span> <span class="tlaGNC">         515 :   try {</span></span>
-<span id="L2214"><span class="lineNum">    2214</span> <span class="tlaGNC">         515 :     const is_expected_type = typeof type !== &quot;string&quot;</span></span>
-<span id="L2215"><span class="lineNum">    2215</span> <span class="tlaGNC">         515 :       ? (data instanceof type)</span></span>
-<span id="L2216"><span class="lineNum">    2216</span> <span class="tlaGNC">         515 :       // deno-lint-ignore valid-typeof</span></span>
-<span id="L2217"><span class="lineNum">    2217</span> <span class="tlaGNC">         515 :       : typeof data === type;</span></span>
-<span id="L2218"><span class="lineNum">    2218</span> <span class="tlaGNC">         515 :     const valid = typeof count === &quot;number&quot;</span></span>
-<span id="L2219"><span class="lineNum">    2219</span> <span class="tlaGNC">         515 :       ? is_expected_type &amp;&amp; data.length === count</span></span>
-<span id="L2220"><span class="lineNum">    2220</span> <span class="tlaGNC">         515 :       : is_expected_type;</span></span>
-<span id="L2221"><span class="lineNum">    2221</span> <span class="tlaGNC">         515 :     if (should_throw &amp;&amp; !valid) {</span></span>
+<span id="L2208"><span class="lineNum">    2208</span> <span class="tlaGNC">         518 :   type,</span></span>
+<span id="L2209"><span class="lineNum">    2209</span> <span class="tlaGNC">         518 :   data,</span></span>
+<span id="L2210"><span class="lineNum">    2210</span> <span class="tlaGNC">         518 :   count = undefined,</span></span>
+<span id="L2211"><span class="lineNum">    2211</span> <span class="tlaGNC">         518 :   should_throw = false</span></span>
+<span id="L2212"><span class="lineNum">    2212</span> <span class="tlaGNC">         518 : }) {</span></span>
+<span id="L2213"><span class="lineNum">    2213</span> <span class="tlaGNC">         518 :   try {</span></span>
+<span id="L2214"><span class="lineNum">    2214</span> <span class="tlaGNC">         518 :     const is_expected_type = typeof type !== &quot;string&quot;</span></span>
+<span id="L2215"><span class="lineNum">    2215</span> <span class="tlaGNC">         518 :       ? (data instanceof type)</span></span>
+<span id="L2216"><span class="lineNum">    2216</span> <span class="tlaGNC">         518 :       // deno-lint-ignore valid-typeof</span></span>
+<span id="L2217"><span class="lineNum">    2217</span> <span class="tlaGNC">         518 :       : typeof data === type;</span></span>
+<span id="L2218"><span class="lineNum">    2218</span> <span class="tlaGNC">         518 :     const valid = typeof count === &quot;number&quot;</span></span>
+<span id="L2219"><span class="lineNum">    2219</span> <span class="tlaGNC">         518 :       ? is_expected_type &amp;&amp; data.length === count</span></span>
+<span id="L2220"><span class="lineNum">    2220</span> <span class="tlaGNC">         518 :       : is_expected_type;</span></span>
+<span id="L2221"><span class="lineNum">    2221</span> <span class="tlaGNC">         518 :     if (should_throw &amp;&amp; !valid) {</span></span>
 <span id="L2222"><span class="lineNum">    2222</span> <span class="tlaGNC">          30 :       throw new CModuleError(CModuleError.TYPE_VIOLATION);</span></span>
 <span id="L2223"><span class="lineNum">    2223</span> <span class="tlaGNC">          30 :     }</span></span>
-<span id="L2224"><span class="lineNum">    2224</span> <span class="tlaGNC">         484 :     return valid;</span></span>
-<span id="L2225"><span class="lineNum">    2225</span> <span class="tlaGNC">         515 :   } catch (err) {</span></span>
+<span id="L2224"><span class="lineNum">    2224</span> <span class="tlaGNC">         487 :     return valid;</span></span>
+<span id="L2225"><span class="lineNum">    2225</span> <span class="tlaGNC">         518 :   } catch (err) {</span></span>
 <span id="L2226"><span class="lineNum">    2226</span> <span class="tlaGNC">          30 :     CModuleError.handle_error(err);</span></span>
 <span id="L2227"><span class="lineNum">    2227</span> <span class="tlaGNC">          30 :     throw new CModuleError(&quot;json_check_type() error.&quot;, err);</span></span>
 <span id="L2228"><span class="lineNum">    2228</span> <span class="tlaGNC">          30 :   }</span></span>
-<span id="L2229"><span class="lineNum">    2229</span> <span class="tlaGNC">         515 : }</span></span>
+<span id="L2229"><span class="lineNum">    2229</span> <span class="tlaGNC">         518 : }</span></span>
 <span id="L2230"><span class="lineNum">    2230</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L2231"><span class="lineNum">    2231</span> <span class="tlaGNC">           1 : /**</span></span>
 <span id="L2232"><span class="lineNum">    2232</span> <span class="tlaGNC">           1 :  * Creates a JavaScript compliant JSON array with ability to copy data</span></span>
@@ -3897,7 +3897,7 @@
 <span id="L3835"><span class="lineNum">    3835</span> <span class="tlaGNC">           1 :  * }</span></span>
 <span id="L3836"><span class="lineNum">    3836</span> <span class="tlaGNC">           1 :  */</span></span>
 <span id="L3837"><span class="lineNum">    3837</span> <span class="tlaGNC">           1 : export function runtime_available({request, name=&quot;&quot;, obj = globalThis}) {</span></span>
-<span id="L3838"><span class="lineNum">    3838</span> <span class="tlaGNC">          44 :   /**</span></span>
+<span id="L3838"><span class="lineNum">    3838</span> <span class="tlaGNC">          45 :   /**</span></span>
 <span id="L3839"><span class="lineNum">    3839</span> <span class="tlaGNC">           1 :    * Internal lookup function.</span></span>
 <span id="L3840"><span class="lineNum">    3840</span> <span class="tlaGNC">           1 :    * @private</span></span>
 <span id="L3841"><span class="lineNum">    3841</span> <span class="tlaGNC">           1 :    * @param {object} params The named parameters.</span></span>
@@ -3905,49 +3905,49 @@
 <span id="L3843"><span class="lineNum">    3843</span> <span class="tlaGNC">           1 :    * @param {object} [params.obj=globalThis] The object to check.</span></span>
 <span id="L3844"><span class="lineNum">    3844</span> <span class="tlaGNC">           1 :    * @returns  true if defined, false otherwise.</span></span>
 <span id="L3845"><span class="lineNum">    3845</span> <span class="tlaGNC">           1 :    */</span></span>
-<span id="L3846"><span class="lineNum">    3846</span> <span class="tlaGNC">          44 :   const is_available = ({property, obj = globalThis}) =&gt; {</span></span>
-<span id="L3847"><span class="lineNum">    3847</span> <span class="tlaGNC">          46 :     json_check_type({type: &quot;object&quot;, data: obj, should_throw: true});</span></span>
-<span id="L3848"><span class="lineNum">    3848</span> <span class="tlaGNC">          46 :     json_check_type({type: &quot;string&quot;, data: property, should_throw: true});</span></span>
-<span id="L3849"><span class="lineNum">    3849</span> <span class="tlaGNC">          46 :     let available = false;</span></span>
-<span id="L3850"><span class="lineNum">    3850</span> <span class="tlaGNC">          46 :     if (json_check_type({type: &quot;object&quot;, data: obj})) {</span></span>
-<span id="L3851"><span class="lineNum">    3851</span> <span class="tlaGNC">          43 :       available = property in obj;</span></span>
-<span id="L3852"><span class="lineNum">    3852</span> <span class="tlaGNC">          43 :     }</span></span>
-<span id="L3853"><span class="lineNum">    3853</span> <span class="tlaGNC">          43 :     return available;</span></span>
-<span id="L3854"><span class="lineNum">    3854</span> <span class="tlaGNC">          44 :   };</span></span>
+<span id="L3846"><span class="lineNum">    3846</span> <span class="tlaGNC">          45 :   const is_available = ({property, obj = globalThis}) =&gt; {</span></span>
+<span id="L3847"><span class="lineNum">    3847</span> <span class="tlaGNC">          47 :     json_check_type({type: &quot;object&quot;, data: obj, should_throw: true});</span></span>
+<span id="L3848"><span class="lineNum">    3848</span> <span class="tlaGNC">          47 :     json_check_type({type: &quot;string&quot;, data: property, should_throw: true});</span></span>
+<span id="L3849"><span class="lineNum">    3849</span> <span class="tlaGNC">          47 :     let available = false;</span></span>
+<span id="L3850"><span class="lineNum">    3850</span> <span class="tlaGNC">          47 :     if (json_check_type({type: &quot;object&quot;, data: obj})) {</span></span>
+<span id="L3851"><span class="lineNum">    3851</span> <span class="tlaGNC">          44 :       available = property in obj;</span></span>
+<span id="L3852"><span class="lineNum">    3852</span> <span class="tlaGNC">          44 :     }</span></span>
+<span id="L3853"><span class="lineNum">    3853</span> <span class="tlaGNC">          44 :     return available;</span></span>
+<span id="L3854"><span class="lineNum">    3854</span> <span class="tlaGNC">          45 :   };</span></span>
 <span id="L3855"><span class="lineNum">    3855</span> <span class="tlaGNC">           1 : </span></span>
-<span id="L3856"><span class="lineNum">    3856</span> <span class="tlaGNC">          44 :   try {</span></span>
-<span id="L3857"><span class="lineNum">    3857</span> <span class="tlaGNC">          44 :     switch (request) {</span></span>
-<span id="L3858"><span class="lineNum">    3858</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.AskRuntime:</span></span>
+<span id="L3856"><span class="lineNum">    3856</span> <span class="tlaGNC">          45 :   try {</span></span>
+<span id="L3857"><span class="lineNum">    3857</span> <span class="tlaGNC">          45 :     switch (request) {</span></span>
+<span id="L3858"><span class="lineNum">    3858</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.AskRuntime:</span></span>
 <span id="L3859"><span class="lineNum">    3859</span> <span class="tlaGNC">          10 :         return is_available({property: name, obj: obj});</span></span>
-<span id="L3860"><span class="lineNum">    3860</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Audio:</span></span>
+<span id="L3860"><span class="lineNum">    3860</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Audio:</span></span>
 <span id="L3861"><span class="lineNum">    3861</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;HTMLAudioElement&quot;});</span></span>
-<span id="L3862"><span class="lineNum">    3862</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Beacon:</span></span>
+<span id="L3862"><span class="lineNum">    3862</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Beacon:</span></span>
 <span id="L3863"><span class="lineNum">    3863</span> <span class="tlaGNC">           1 :         return is_available({</span></span>
 <span id="L3864"><span class="lineNum">    3864</span> <span class="tlaGNC">           1 :           property: &quot;sendBeacon&quot;,</span></span>
 <span id="L3865"><span class="lineNum">    3865</span> <span class="tlaGNC">           1 :           obj: globalThis[&quot;navigator&quot;]</span></span>
 <span id="L3866"><span class="lineNum">    3866</span> <span class="tlaGNC">           1 :         });</span></span>
-<span id="L3867"><span class="lineNum">    3867</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Bluetooth:</span></span>
+<span id="L3867"><span class="lineNum">    3867</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Bluetooth:</span></span>
 <span id="L3868"><span class="lineNum">    3868</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;bluetooth&quot;,</span></span>
 <span id="L3869"><span class="lineNum">    3869</span> <span class="tlaGNC">           1 :                            obj: globalThis[&quot;navigator&quot;]});</span></span>
-<span id="L3870"><span class="lineNum">    3870</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.BroadcastChannel:</span></span>
+<span id="L3870"><span class="lineNum">    3870</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.BroadcastChannel:</span></span>
 <span id="L3871"><span class="lineNum">    3871</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;BroadcastChannel&quot;});</span></span>
-<span id="L3872"><span class="lineNum">    3872</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Browser:</span></span>
+<span id="L3872"><span class="lineNum">    3872</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Browser:</span></span>
 <span id="L3873"><span class="lineNum">    3873</span> <span class="tlaGNC">           2 :         return is_available({property: &quot;HTMLElement&quot;}) &amp;&amp;</span></span>
 <span id="L3874"><span class="lineNum">    3874</span> <span class="tlaGNC">           2 :           !is_available({property: &quot;Bun&quot;}) &amp;&amp;</span></span>
 <span id="L3875"><span class="lineNum">    3875</span> <span class="tlaGNC">           2 :           !is_available({property: &quot;Deno&quot;}) &amp;&amp;</span></span>
 <span id="L3876"><span class="lineNum">    3876</span> <span class="tlaGNC">           2 :           !is_available({property: &quot;process&quot;}) &amp;&amp;</span></span>
 <span id="L3877"><span class="lineNum">    3877</span> <span class="tlaGNC">           2 :           !is_available({property: &quot;WorkerGlobalScope&quot;});</span></span>
-<span id="L3878"><span class="lineNum">    3878</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Bun:</span></span>
+<span id="L3878"><span class="lineNum">    3878</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Bun:</span></span>
 <span id="L3879"><span class="lineNum">    3879</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;Bun&quot;});</span></span>
-<span id="L3880"><span class="lineNum">    3880</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Deno:</span></span>
-<span id="L3881"><span class="lineNum">    3881</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;Deno&quot;});</span></span>
-<span id="L3882"><span class="lineNum">    3882</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.CookieStore:</span></span>
+<span id="L3880"><span class="lineNum">    3880</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Deno:</span></span>
+<span id="L3881"><span class="lineNum">    3881</span> <span class="tlaGNC">           2 :         return is_available({property: &quot;Deno&quot;});</span></span>
+<span id="L3882"><span class="lineNum">    3882</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.CookieStore:</span></span>
 <span id="L3883"><span class="lineNum">    3883</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;cookieStore&quot;});</span></span>
-<span id="L3884"><span class="lineNum">    3884</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.EventSource:</span></span>
+<span id="L3884"><span class="lineNum">    3884</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.EventSource:</span></span>
 <span id="L3885"><span class="lineNum">    3885</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;EventSource&quot;});</span></span>
-<span id="L3886"><span class="lineNum">    3886</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.LocalStorage:</span></span>
+<span id="L3886"><span class="lineNum">    3886</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.LocalStorage:</span></span>
 <span id="L3887"><span class="lineNum">    3887</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;localStorage&quot;});</span></span>
-<span id="L3888"><span class="lineNum">    3888</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.IFrame:</span></span>
+<span id="L3888"><span class="lineNum">    3888</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.IFrame:</span></span>
 <span id="L3889"><span class="lineNum">    3889</span> <span class="tlaGNC">           1 :         try {</span></span>
 <span id="L3890"><span class="lineNum">    3890</span> <span class="tlaGNC">           1 :           if (is_available({property: &quot;Bun&quot;}) ||</span></span>
 <span id="L3891"><span class="lineNum">    3891</span> <span class="tlaGNC">           1 :               is_available({property: &quot;Deno&quot;}) ||</span></span>
@@ -3961,80 +3961,80 @@
 <span id="L3899"><span class="lineNum">    3899</span> <span class="tlaUNC">           0 :         } catch {</span></span>
 <span id="L3900"><span class="lineNum">    3900</span> <span class="tlaUNC">           0 :           return false;</span></span>
 <span id="L3901"><span class="lineNum">    3901</span> <span class="tlaUNC">           0 :         }</span></span>
-<span id="L3902"><span class="lineNum">    3902</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Midi:</span></span>
+<span id="L3902"><span class="lineNum">    3902</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Midi:</span></span>
 <span id="L3903"><span class="lineNum">    3903</span> <span class="tlaGNC">           1 :         return is_available({</span></span>
 <span id="L3904"><span class="lineNum">    3904</span> <span class="tlaGNC">           1 :           property: &quot;requestMIDIAccess&quot;,</span></span>
 <span id="L3905"><span class="lineNum">    3905</span> <span class="tlaGNC">           1 :           obj: globalThis[&quot;navigator&quot;]</span></span>
 <span id="L3906"><span class="lineNum">    3906</span> <span class="tlaGNC">           1 :         });</span></span>
-<span id="L3907"><span class="lineNum">    3907</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Node:</span></span>
+<span id="L3907"><span class="lineNum">    3907</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Node:</span></span>
 <span id="L3908"><span class="lineNum">    3908</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;process&quot;}) &amp;&amp;</span></span>
 <span id="L3909"><span class="lineNum">    3909</span> <span class="tlaGNC">           1 :           !is_available({property: &quot;Deno&quot;}) &amp;&amp;</span></span>
 <span id="L3910"><span class="lineNum">    3910</span> <span class="tlaGNC">           1 :           !is_available({property: &quot;Bun&quot;});</span></span>
-<span id="L3911"><span class="lineNum">    3911</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Open:</span></span>
+<span id="L3911"><span class="lineNum">    3911</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Open:</span></span>
 <span id="L3912"><span class="lineNum">    3912</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;open&quot;});</span></span>
-<span id="L3913"><span class="lineNum">    3913</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Orientation:</span></span>
+<span id="L3913"><span class="lineNum">    3913</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Orientation:</span></span>
 <span id="L3914"><span class="lineNum">    3914</span> <span class="tlaGNC">           1 :         return is_available({</span></span>
 <span id="L3915"><span class="lineNum">    3915</span> <span class="tlaGNC">           1 :           property: &quot;geolocation&quot;,</span></span>
 <span id="L3916"><span class="lineNum">    3916</span> <span class="tlaGNC">           1 :           obj: globalThis[&quot;navigator&quot;]</span></span>
 <span id="L3917"><span class="lineNum">    3917</span> <span class="tlaGNC">           1 :         });</span></span>
-<span id="L3918"><span class="lineNum">    3918</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Pwa:</span></span>
+<span id="L3918"><span class="lineNum">    3918</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Pwa:</span></span>
 <span id="L3919"><span class="lineNum">    3919</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;matchMedia&quot;}) &amp;&amp;</span></span>
 <span id="L3920"><span class="lineNum">    3920</span> <span class="tlaUNC">           0 :           // @ts-ignore This is in a browser context</span></span>
 <span id="L3921"><span class="lineNum">    3921</span> <span class="tlaUNC">           0 :           globalThis.matchMedia(&quot;(display-mode: standalone)&quot;</span></span>
 <span id="L3922"><span class="lineNum">    3922</span> <span class="tlaGNC">           1 :         ).matches;</span></span>
-<span id="L3923"><span class="lineNum">    3923</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.SecureContext:</span></span>
+<span id="L3923"><span class="lineNum">    3923</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.SecureContext:</span></span>
 <span id="L3924"><span class="lineNum">    3924</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;isSecureContext&quot;}) &amp;&amp;</span></span>
 <span id="L3925"><span class="lineNum">    3925</span> <span class="tlaUNC">           0 :           // @ts-ignore This is in a browser context</span></span>
 <span id="L3926"><span class="lineNum">    3926</span> <span class="tlaGNC">           1 :           globalThis.isSecureContext;</span></span>
-<span id="L3927"><span class="lineNum">    3927</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.SerialPort:</span></span>
+<span id="L3927"><span class="lineNum">    3927</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.SerialPort:</span></span>
 <span id="L3928"><span class="lineNum">    3928</span> <span class="tlaGNC">           1 :         return is_available({</span></span>
 <span id="L3929"><span class="lineNum">    3929</span> <span class="tlaGNC">           1 :           property: &quot;serial&quot;,</span></span>
 <span id="L3930"><span class="lineNum">    3930</span> <span class="tlaGNC">           1 :           obj: globalThis[&quot;navigator&quot;]</span></span>
 <span id="L3931"><span class="lineNum">    3931</span> <span class="tlaGNC">           1 :         });</span></span>
-<span id="L3932"><span class="lineNum">    3932</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.SessionStorage:</span></span>
+<span id="L3932"><span class="lineNum">    3932</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.SessionStorage:</span></span>
 <span id="L3933"><span class="lineNum">    3933</span> <span class="tlaUNC">           0 :         return is_available({property: &quot;sessionStorage&quot;});</span></span>
-<span id="L3934"><span class="lineNum">    3934</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Share:</span></span>
+<span id="L3934"><span class="lineNum">    3934</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Share:</span></span>
 <span id="L3935"><span class="lineNum">    3935</span> <span class="tlaGNC">           1 :         return is_available({</span></span>
 <span id="L3936"><span class="lineNum">    3936</span> <span class="tlaGNC">           1 :           property: &quot;share&quot;,</span></span>
 <span id="L3937"><span class="lineNum">    3937</span> <span class="tlaGNC">           1 :           obj: globalThis[&quot;navigator&quot;]</span></span>
 <span id="L3938"><span class="lineNum">    3938</span> <span class="tlaGNC">           1 :         });</span></span>
-<span id="L3939"><span class="lineNum">    3939</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.TextToSpeech:</span></span>
+<span id="L3939"><span class="lineNum">    3939</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.TextToSpeech:</span></span>
 <span id="L3940"><span class="lineNum">    3940</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;SpeechSynthesisUtterance&quot;});</span></span>
-<span id="L3941"><span class="lineNum">    3941</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.TouchEnabled:</span></span>
+<span id="L3941"><span class="lineNum">    3941</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.TouchEnabled:</span></span>
 <span id="L3942"><span class="lineNum">    3942</span> <span class="tlaGNC">           1 :         return is_available({</span></span>
 <span id="L3943"><span class="lineNum">    3943</span> <span class="tlaGNC">           1 :           property: &quot;maxTouchPoints&quot;,</span></span>
 <span id="L3944"><span class="lineNum">    3944</span> <span class="tlaGNC">           1 :           obj: globalThis[&quot;navigator&quot;]</span></span>
 <span id="L3945"><span class="lineNum">    3945</span> <span class="tlaGNC">           1 :         }) &amp;&amp;</span></span>
 <span id="L3946"><span class="lineNum">    3946</span> <span class="tlaUNC">           0 :           // @ts-ignore This is in a browser context</span></span>
 <span id="L3947"><span class="lineNum">    3947</span> <span class="tlaGNC">           1 :           globalThis.navigator.maxTouchPoints &gt; 0;</span></span>
-<span id="L3948"><span class="lineNum">    3948</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Usb:</span></span>
+<span id="L3948"><span class="lineNum">    3948</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Usb:</span></span>
 <span id="L3949"><span class="lineNum">    3949</span> <span class="tlaGNC">           1 :         return is_available({</span></span>
 <span id="L3950"><span class="lineNum">    3950</span> <span class="tlaGNC">           1 :           property: &quot;usb&quot;,</span></span>
 <span id="L3951"><span class="lineNum">    3951</span> <span class="tlaGNC">           1 :           obj: globalThis[&quot;navigator&quot;]</span></span>
 <span id="L3952"><span class="lineNum">    3952</span> <span class="tlaGNC">           1 :         });</span></span>
-<span id="L3953"><span class="lineNum">    3953</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.Vibrate:</span></span>
+<span id="L3953"><span class="lineNum">    3953</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.Vibrate:</span></span>
 <span id="L3954"><span class="lineNum">    3954</span> <span class="tlaGNC">           1 :         return is_available({</span></span>
 <span id="L3955"><span class="lineNum">    3955</span> <span class="tlaGNC">           1 :           property: &quot;vibrate&quot;,</span></span>
 <span id="L3956"><span class="lineNum">    3956</span> <span class="tlaGNC">           1 :           obj: globalThis[&quot;navigator&quot;]</span></span>
 <span id="L3957"><span class="lineNum">    3957</span> <span class="tlaGNC">           1 :         });</span></span>
-<span id="L3958"><span class="lineNum">    3958</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.WebRTC:</span></span>
+<span id="L3958"><span class="lineNum">    3958</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.WebRTC:</span></span>
 <span id="L3959"><span class="lineNum">    3959</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;RTCPeerConnection&quot;});</span></span>
-<span id="L3960"><span class="lineNum">    3960</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.WebSocket:</span></span>
+<span id="L3960"><span class="lineNum">    3960</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.WebSocket:</span></span>
 <span id="L3961"><span class="lineNum">    3961</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;WebSocket&quot;});</span></span>
-<span id="L3962"><span class="lineNum">    3962</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.WebTransport:</span></span>
+<span id="L3962"><span class="lineNum">    3962</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.WebTransport:</span></span>
 <span id="L3963"><span class="lineNum">    3963</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;WebTransport&quot;});</span></span>
-<span id="L3964"><span class="lineNum">    3964</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.WorkerAvailable:</span></span>
+<span id="L3964"><span class="lineNum">    3964</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.WorkerAvailable:</span></span>
 <span id="L3965"><span class="lineNum">    3965</span> <span class="tlaGNC">           4 :         return is_available({property: &quot;Worker&quot;});</span></span>
-<span id="L3966"><span class="lineNum">    3966</span> <span class="tlaGNC">          44 :       case AVAILABILITY_REQUEST.WorkerRuntime:</span></span>
+<span id="L3966"><span class="lineNum">    3966</span> <span class="tlaGNC">          45 :       case AVAILABILITY_REQUEST.WorkerRuntime:</span></span>
 <span id="L3967"><span class="lineNum">    3967</span> <span class="tlaGNC">           1 :         return is_available({property: &quot;WorkerGlobalScope&quot;});</span></span>
-<span id="L3968"><span class="lineNum">    3968</span> <span class="tlaGNC">          44 :       default:</span></span>
+<span id="L3968"><span class="lineNum">    3968</span> <span class="tlaGNC">          45 :       default:</span></span>
 <span id="L3969"><span class="lineNum">    3969</span> <span class="tlaGNC">           1 :         throw new CModuleError(CModuleError.MISUSE);</span></span>
-<span id="L3970"><span class="lineNum">    3970</span> <span class="tlaGNC">          44 :     }</span></span>
-<span id="L3971"><span class="lineNum">    3971</span> <span class="tlaGNC">          44 :   } catch (err) {</span></span>
+<span id="L3970"><span class="lineNum">    3970</span> <span class="tlaGNC">          45 :     }</span></span>
+<span id="L3971"><span class="lineNum">    3971</span> <span class="tlaGNC">          45 :   } catch (err) {</span></span>
 <span id="L3972"><span class="lineNum">    3972</span> <span class="tlaGNC">           4 :     CModuleError.handle_error(err);</span></span>
 <span id="L3973"><span class="lineNum">    3973</span> <span class="tlaGNC">           4 :     throw new CModuleError(&quot;runtime_available() error.&quot;, err);</span></span>
 <span id="L3974"><span class="lineNum">    3974</span> <span class="tlaGNC">           4 :   }</span></span>
-<span id="L3975"><span class="lineNum">    3975</span> <span class="tlaGNC">          44 : }</span></span>
+<span id="L3975"><span class="lineNum">    3975</span> <span class="tlaGNC">          45 : }</span></span>
 <span id="L3976"><span class="lineNum">    3976</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L3977"><span class="lineNum">    3977</span> <span class="tlaGNC">           1 : /**</span></span>
 <span id="L3978"><span class="lineNum">    3978</span> <span class="tlaGNC">           1 :  * Adds or removes an event handler to the JavaScript runtime or</span></span>
@@ -5545,7 +5545,92 @@
 <span id="L5483"><span class="lineNum">    5483</span> <span class="tlaGNC">           1 : //   }</span></span>
 <span id="L5484"><span class="lineNum">    5484</span> <span class="tlaGNC">           1 : // }</span></span>
 <span id="L5485"><span class="lineNum">    5485</span> <span class="tlaGNC">           1 : // CHtmlComponent.register_component(&quot;cm-icon-button&quot;, CIconButton);</span></span>
-<span id="L5486"><span class="lineNum">    5486</span> <span class="tlaGNC">           1 : /* /Users/codemelted/Documents/GitHub/codemelted.js/tests/codemelted.js not long enough */</span></span>
+<span id="L5486"><span class="lineNum">    5486</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5487"><span class="lineNum">    5487</span> <span class="tlaGNC">           1 : // ============================================================================</span></span>
+<span id="L5488"><span class="lineNum">    5488</span> <span class="tlaGNC">           1 : // [CODEMELTED CLI IMPLEMENTATION] ============================================</span></span>
+<span id="L5489"><span class="lineNum">    5489</span> <span class="tlaGNC">           1 : // ============================================================================</span></span>
+<span id="L5490"><span class="lineNum">    5490</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5491"><span class="lineNum">    5491</span> <span class="tlaGNC">           1 : // ----------------------------------------------------------------------------</span></span>
+<span id="L5492"><span class="lineNum">    5492</span> <span class="tlaGNC">           1 : // [DATA DEFINITION] ----------------------------------------------------------</span></span>
+<span id="L5493"><span class="lineNum">    5493</span> <span class="tlaGNC">           1 : // ----------------------------------------------------------------------------</span></span>
+<span id="L5494"><span class="lineNum">    5494</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5495"><span class="lineNum">    5495</span> <span class="tlaGNC">           1 : /**</span></span>
+<span id="L5496"><span class="lineNum">    5496</span> <span class="tlaGNC">           1 :  * Holds the output for the CLI usage.</span></span>
+<span id="L5497"><span class="lineNum">    5497</span> <span class="tlaGNC">           1 :  * @readonly</span></span>
+<span id="L5498"><span class="lineNum">    5498</span> <span class="tlaGNC">           1 :  * @type {string}</span></span>
+<span id="L5499"><span class="lineNum">    5499</span> <span class="tlaGNC">           1 :  */</span></span>
+<span id="L5500"><span class="lineNum">    5500</span> <span class="tlaGNC">           1 : const HELP_OUTPUT = `</span></span>
+<span id="L5501"><span class="lineNum">    5501</span> <span class="tlaGNC">           1 : -------------------------------------------------------------------------------</span></span>
+<span id="L5502"><span class="lineNum">    5502</span> <span class="tlaGNC">           1 : *        codemelted native CLI - ${ABOUT_MODULE.version}           *</span></span>
+<span id="L5503"><span class="lineNum">    5503</span> <span class="tlaGNC">           1 : -------------------------------------------------------------------------------</span></span>
+<span id="L5504"><span class="lineNum">    5504</span> <span class="tlaGNC">           1 : ABOUT:</span></span>
+<span id="L5505"><span class="lineNum">    5505</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5506"><span class="lineNum">    5506</span> <span class="tlaGNC">           1 : AUTHOR: ${ABOUT_MODULE.author}</span></span>
+<span id="L5507"><span class="lineNum">    5507</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5508"><span class="lineNum">    5508</span> <span class="tlaGNC">           1 : SYNTAX: codemelted [action] [options]</span></span>
+<span id="L5509"><span class="lineNum">    5509</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5510"><span class="lineNum">    5510</span> <span class="tlaGNC">           1 :   --npu-compute formula arg1 [arg2 ...] : Executes the specified formula and</span></span>
+<span id="L5511"><span class="lineNum">    5511</span> <span class="tlaGNC">           1 :                                           displays the result.</span></span>
+<span id="L5512"><span class="lineNum">    5512</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5513"><span class="lineNum">    5513</span> <span class="tlaGNC">           1 :   --help : Displays command help to STDOUT</span></span>
+<span id="L5514"><span class="lineNum">    5514</span> <span class="tlaGNC">           1 : `;</span></span>
+<span id="L5515"><span class="lineNum">    5515</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5516"><span class="lineNum">    5516</span> <span class="tlaGNC">           1 : const ARGS_MAP = Object.freeze({</span></span>
+<span id="L5517"><span class="lineNum">    5517</span> <span class="tlaGNC">           1 :   &quot;--help&quot;:  cli_help</span></span>
+<span id="L5518"><span class="lineNum">    5518</span> <span class="tlaGNC">           1 : });</span></span>
+<span id="L5519"><span class="lineNum">    5519</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5520"><span class="lineNum">    5520</span> <span class="tlaGNC">           1 : // ----------------------------------------------------------------------------</span></span>
+<span id="L5521"><span class="lineNum">    5521</span> <span class="tlaGNC">           1 : // [HELPER FUNCTIONS] ---------------------------------------------------------</span></span>
+<span id="L5522"><span class="lineNum">    5522</span> <span class="tlaGNC">           1 : // ----------------------------------------------------------------------------</span></span>
+<span id="L5523"><span class="lineNum">    5523</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5524"><span class="lineNum">    5524</span> <span class="tlaGNC">           1 : /**</span></span>
+<span id="L5525"><span class="lineNum">    5525</span> <span class="tlaGNC">           1 :  * Displays the help system.</span></span>
+<span id="L5526"><span class="lineNum">    5526</span> <span class="tlaGNC">           1 :  * @param {string[]} _args Not used</span></span>
+<span id="L5527"><span class="lineNum">    5527</span> <span class="tlaGNC">           1 :  * @returns {void}</span></span>
+<span id="L5528"><span class="lineNum">    5528</span> <span class="tlaGNC">           1 :  */</span></span>
+<span id="L5529"><span class="lineNum">    5529</span> <span class="tlaUNC">           0 : function cli_help(_args) {</span></span>
+<span id="L5530"><span class="lineNum">    5530</span> <span class="tlaUNC">           0 :   console.log(HELP_OUTPUT);</span></span>
+<span id="L5531"><span class="lineNum">    5531</span> <span class="tlaUNC">           0 : }</span></span>
+<span id="L5532"><span class="lineNum">    5532</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5533"><span class="lineNum">    5533</span> <span class="tlaGNC">           1 : // ----------------------------------------------------------------------------</span></span>
+<span id="L5534"><span class="lineNum">    5534</span> <span class="tlaGNC">           1 : // [MAIN ENTRY POINT] ---------------------------------------------------------</span></span>
+<span id="L5535"><span class="lineNum">    5535</span> <span class="tlaGNC">           1 : // ----------------------------------------------------------------------------</span></span>
+<span id="L5536"><span class="lineNum">    5536</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5537"><span class="lineNum">    5537</span> <span class="tlaGNC">           1 : /**</span></span>
+<span id="L5538"><span class="lineNum">    5538</span> <span class="tlaGNC">           1 :  * Main entry point for the script.</span></span>
+<span id="L5539"><span class="lineNum">    5539</span> <span class="tlaGNC">           1 :  * @returns {void}</span></span>
+<span id="L5540"><span class="lineNum">    5540</span> <span class="tlaGNC">           1 :  */</span></span>
+<span id="L5541"><span class="lineNum">    5541</span> <span class="tlaUNC">           0 : function cli_main() {</span></span>
+<span id="L5542"><span class="lineNum">    5542</span> <span class="tlaUNC">           0 :   try {</span></span>
+<span id="L5543"><span class="lineNum">    5543</span> <span class="tlaUNC">           0 :     // Parse the arguments and then</span></span>
+<span id="L5544"><span class="lineNum">    5544</span> <span class="tlaUNC">           0 :     const args = globalThis.Deno.args;</span></span>
+<span id="L5545"><span class="lineNum">    5545</span> <span class="tlaUNC">           0 :     if (args.length === 0) {</span></span>
+<span id="L5546"><span class="lineNum">    5546</span> <span class="tlaUNC">           0 :       throw &quot;codemelted CLI expects parameters. Execute &quot; +</span></span>
+<span id="L5547"><span class="lineNum">    5547</span> <span class="tlaUNC">           0 :         &quot;'codemelted --help' for syntax of command.&quot;;</span></span>
+<span id="L5548"><span class="lineNum">    5548</span> <span class="tlaUNC">           0 :     }</span></span>
+<span id="L5549"><span class="lineNum">    5549</span> <span class="tlaUNC">           0 :     const action = args[0];</span></span>
+<span id="L5550"><span class="lineNum">    5550</span> <span class="tlaUNC">           0 :     if (!json_has_key({obj: ARGS_MAP, key: action})) {</span></span>
+<span id="L5551"><span class="lineNum">    5551</span> <span class="tlaUNC">           0 :       throw `codemelted received invalid action '${action}'`;</span></span>
+<span id="L5552"><span class="lineNum">    5552</span> <span class="tlaUNC">           0 :     }</span></span>
+<span id="L5553"><span class="lineNum">    5553</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5554"><span class="lineNum">    5554</span> <span class="tlaUNC">           0 :     // @ts-ignore Dictionary will have functions mapped to the action key.</span></span>
+<span id="L5555"><span class="lineNum">    5555</span> <span class="tlaUNC">           0 :     ARGS_MAP[action](args);</span></span>
+<span id="L5556"><span class="lineNum">    5556</span> <span class="tlaUNC">           0 :     globalThis.Deno.exit(0);</span></span>
+<span id="L5557"><span class="lineNum">    5557</span> <span class="tlaUNC">           0 :   } catch (err) {</span></span>
+<span id="L5558"><span class="lineNum">    5558</span> <span class="tlaUNC">           0 :     console.log(err);</span></span>
+<span id="L5559"><span class="lineNum">    5559</span> <span class="tlaUNC">           0 :     globalThis.Deno.exit(1);</span></span>
+<span id="L5560"><span class="lineNum">    5560</span> <span class="tlaUNC">           0 :   }</span></span>
+<span id="L5561"><span class="lineNum">    5561</span> <span class="tlaUNC">           0 : }</span></span>
+<span id="L5562"><span class="lineNum">    5562</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L5563"><span class="lineNum">    5563</span> <span class="tlaGNC">           1 : // Determine if we are kicking this off because this is our own self compiled</span></span>
+<span id="L5564"><span class="lineNum">    5564</span> <span class="tlaGNC">           1 : // CLI.</span></span>
+<span id="L5565"><span class="lineNum">    5565</span> <span class="tlaGNC">           1 : if (runtime_available({request: AVAILABILITY_REQUEST.Deno})) {</span></span>
+<span id="L5566"><span class="lineNum">    5566</span> <span class="tlaGNC">           1 :   const exe_name = globalThis.Deno.execPath().split(/[/\\]/).pop();</span></span>
+<span id="L5567"><span class="lineNum">    5567</span> <span class="tlaGNC">           1 :   if (exe_name?.replace(&quot;.exe&quot;, &quot;&quot;) === &quot;codemelted&quot;) {</span></span>
+<span id="L5568"><span class="lineNum">    5568</span> <span class="tlaUNC">           0 :     cli_main();</span></span>
+<span id="L5569"><span class="lineNum">    5569</span> <span class="tlaUNC">           0 :   }</span></span>
+<span id="L5570"><span class="lineNum">    5570</span> <span class="tlaGNC">           1 : }</span></span>
+<span id="L5571"><span class="lineNum">    5571</span> <span class="tlaGNC">           1 : /* /Users/codemelted/Documents/GitHub/codemelted.js/tests/codemelted.js not long enough */</span></span>
         </pre>
               </td>
             </tr>

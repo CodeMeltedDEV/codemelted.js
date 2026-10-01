@@ -1,0 +1,33 @@
+{
+  "scriptId": "50",
+  "url": "file:///Users/codemelted/Documents/GitHub/codemelted.js/tests/worker.test.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 2867,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "self.onmessage",
+      "ranges": [
+        {
+          "startOffset": 2689,
+          "endOffset": 2866,
+          "count": 2
+        },
+        {
+          "startOffset": 2740,
+          "endOffset": 2864,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

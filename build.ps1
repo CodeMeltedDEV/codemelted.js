@@ -24,9 +24,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 IN THE SOFTWARE.
 "@
-version = "v26.0.0 [Last Updated 2026-SEP-19]"
 history = @"
-- v26.0.0 [2026-SEP-19]: Initial release of the build script to support the
+- [2026-SEP-30]: Added make_cli and make_rust options to the script.
+- [2026-SEP-19]: Initial release of the build script to support the
   new codemelted.js project.
 "@
 todos = @"
@@ -58,6 +58,31 @@ function main {
   # ---------------------------------------------------------------------------
   # [MAKE FUNCTIONS] ----------------------------------------------------------
   # ---------------------------------------------------------------------------
+
+  function make_cli {
+    # Build the executable CLI
+    Remove-Item -Path $PSScriptRoot/dist -Force -Recurse `
+      -ErrorAction SilentlyContinue
+
+    deno compile --target aarch64-apple-darwin `
+      --include lib --output dist/mac/codemelted codemelted.js
+    if ($LASTEXITCODE -ne 0) {
+      throw "make_js - 'deno compile mac' failed."
+    }
+
+    deno compile --target x86_64-unknown-linux-gnu `
+      --include lib --output dist/linux/codemelted codemelted.js
+    if ($LASTEXITCODE -ne 0) {
+      throw "make_js - 'deno compile linux' failed."
+    }
+
+    deno compile --target x86_64-pc-windows-msvc `
+      --include lib --output dist/windows/codemelted.exe codemelted.js
+    if ($LASTEXITCODE -ne 0) {
+      throw "make_js - 'deno compile windows' failed."
+    }
+  }
+
   function make_js {
     message "Now building codemelted.js module."
 
@@ -67,28 +92,6 @@ function main {
     typedoc --skipErrorChecking
     if ($LASTEXITCODE -ne 0) {
       throw "make_js - 'typedoc --skipErrorChecking' failed."
-    }
-
-    # Build the executable CLI
-    Remove-Item -Path $PSScriptRoot/dist -Force -Recurse `
-      -ErrorAction SilentlyContinue
-
-    deno compile --target aarch64-apple-darwin `
-      --output dist/mac/codemelted codemelted_cli.ts
-    if ($LASTEXITCODE -ne 0) {
-      throw "make_js - 'deno compile mac' failed."
-    }
-
-    deno compile --target x86_64-unknown-linux-gnu `
-      --output dist/linux/codemelted codemelted_cli.ts
-    if ($LASTEXITCODE -ne 0) {
-      throw "make_js - 'deno compile linux' failed."
-    }
-
-    deno compile --target x86_64-pc-windows-msvc `
-      --output dist/windows/codemelted.exe codemelted_cli.ts
-    if ($LASTEXITCODE -ne 0) {
-      throw "make_js - 'deno compile windows' failed."
     }
 
     # Finish up the the prepping of the documentation
@@ -104,40 +107,26 @@ function main {
   function make_rust {
     message "Now building the codemelted_lib static library."
     Set-Location $PSScriptRoot/codemelted_lib
+    # TODO: Will need to add additional targets when the time comes
     cargo build --release
     if ($LASTEXITCODE -ne 0) {
       throw "make_rust - 'cargo build --release' failed"
     }
+    # TODO: Will need to copy all those additional target compiles
+    #       to the lib folder.
     Set-Location $PSScriptRoot
     message "codemelted_lib static library build completed."
   }
 
-  function make_zip {
-    # Compress all the compiles.
-    Compress-Archive -Path $PSScriptRoot/dist/linux `
-      -DestinationPath $PSScriptRoot/dist/linux.zip
-    Compress-Archive -Path $PSScriptRoot/dist/mac `
-      -DestinationPath $PSScriptRoot/dist/mac.zip
-    Compress-Archive -Path $PSScriptRoot/dist/windows `
-      -DestinationPath $PSScriptRoot/dist/windows.zip
-
-    # Now remove the originating directory
-    Remove-Item $PSScriptRoot/dist/linux -Recurse -Force -ErrorAction Stop
-    Remove-Item $PSScriptRoot/dist/mac -Recurse -Force -ErrorAction Stop
-    Remove-Item $PSScriptRoot/dist/windows -Recurse -Force -ErrorAction Stop
-  }
-
   function make([string]$option) {
     switch ($option) {
-      "js" {
-        make_js
-        make_zip
-      }
+      "cli" { make_cli }
+      "js" { make_js }
       "rust" { make_rust }
       "" {
         make_js
         make_rust
-        make_zip
+        make_cli
       }
       default { throw "make - invalid parameter specified" }
     }
