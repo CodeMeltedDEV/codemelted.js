@@ -2,7 +2,7 @@
 title: Starter Templates
 ---
 <center>
-  <img style="width: px; "src="https://codemelted.com/assets/favicon/codemelted-js/android-chrome-192x192.png" />
+  <img style="width: px; "src="../favicon/android-chrome-192x192.png" />
   <h1>CodeMeltedDEV Templates</h1>
   <button style="cursor:pointer;" onclick="window.print();">Print</button>
 </center>

@@ -31,6 +31,7 @@
   "projectDocuments": [
     "documents/about-project.md",
     "documents/module-tests.md",
-    "documents/starter-templates.md"
+    "documents/starter-templates.md",
+    "documents/domain-use-cases/index.md"
   ]
 }

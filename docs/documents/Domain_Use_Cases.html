@@ -1,0 +1,269 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Domain Use Cases | codemelted.js Project</title><meta name="description" content="Documentation for codemelted.js Project"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">codemelted.js Project</a>
+<div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/>
+<ul role="listbox" id="tsd-search-results"></ul>
+<div id="tsd-search-status" aria-live="polite" aria-atomic="true">
+<div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header>
+<div class="container container-main">
+<div class="col-content">
+<div class="tsd-page-title">
+<ul class="tsd-breadcrumb" aria-label="Breadcrumb">
+<li><a href="" aria-current="page">Domain Use Cases</a></li></ul></div>
+<div class="tsd-panel tsd-typography"><center>
+  <img style="width: px; "src="../favicon/android-chrome-192x192.png" />
+  <h1>Object Oriented Analysis and Design (OOAD)</h1>
+</center>
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#introduction">INTRODUCTION</a>
+<ul>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#scope">Scope</a></li>
+<li><a href="#terms">Terms</a></li>
+<li><a href="#references">References</a>
+<ul>
+<li><a href="#c-reference">C++ Reference</a></li>
+<li><a href="#mozilla-developer-network-mdn">Mozilla Developer Network (MDN)</a></li>
+<li><a href="#rust-std">Rust STD</a></li>
+<li><a href="#webdev">web.dev</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#functional-analysis">FUNCTIONAL ANALYSIS</a>
+<ul>
+<li><a href="#uc-1-function-feature">UC-1: Function Feature</a></li>
+</ul>
+</li>
+<li><a href="#non-functional-analysis">NON-FUNCTIONAL ANALYSIS</a>
+<ul>
+<li><a href="#useability">Useability</a></li>
+<li><a href="#reliability">Reliability</a></li>
+<li><a href="#performance">Performance</a></li>
+<li><a href="#supportability">Supportability</a></li>
+<li><a href="#design-constraints">Design Constraints</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#purchased-components">Purchased Components</a></li>
+<li><a href="#licensing-and-security">Licensing and Security</a></li>
+<li><a href="#legal-copyright-and-other-notices">Legal, Copyright and Other Notices</a></li>
+<li><a href="#applicable-standards">Applicable Standards</a></li>
+<li><a href="#internationalization-and-localization">Internationalization and Localization</a></li>
+<li><a href="#physical-deliverables">Physical Deliverables</a></li>
+<li><a href="#installation-and-deployment">Installation and Deployment</a></li>
+</ul>
+</li>
+<li><a href="#design-analysis">DESIGN ANALYSIS</a>
+<ul>
+<li><a href="#communication-interfaces">Communication Interfaces</a></li>
+<li><a href="#hardware-interfaces">Hardware Interfaces</a></li>
+<li><a href="#software-interfaces">Software Interfaces</a>
+<ul>
+<li><a href="#module-core">Module Core</a></li>
+<li><a href="#domain-use-case-implementation">Domain Use Case Implementation</a></li>
+</ul>
+</li>
+<li><a href="#user-interfaces">User Interfaces</a></li>
+</ul>
+</li>
+<li><a href="#traceability">TRACEABILITY</a></li>
+</ul>
+<h1 id="introduction" class="tsd-anchor-link">INTRODUCTION<a href="#introduction" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<h2 id="purpose" class="tsd-anchor-link">Purpose<a href="#purpose" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>The purpose outlines the reason for creating the process. It answers the question “why is this being done?” and provides direction, motivation, and clarity for all stakeholders involved. A well-defined purpose sets the overarching goals and desired outcomes, ensuring that everyone understands the intent behind the document.</mark></p>
+<h2 id="scope" class="tsd-anchor-link">Scope<a href="#scope" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>The scope specifies the boundaries, extent, and limitations of the process. It answers “what is included and what is excluded?” and defines the deliverables, tasks, responsibilities, and areas covered. Scope ensures that the project remains focused and manageable, preventing unnecessary expansion or deviation from the original goals.</mark></p>
+<h2 id="terms" class="tsd-anchor-link">Terms<a href="#terms" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>Breakdown of acronyms and definitions</mark></p>
+<h2 id="references" class="tsd-anchor-link">References<a href="#references" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>The following are the references to the external Browser / Deno APIs that were wrapped to create the <code>codemelted.js</code> module.</p>
+<h3 id="c-reference" class="tsd-anchor-link">C++ Reference<a href="#c-reference" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul>
+<li><a href="https://en.cppreference.com/cpp/thread/future">C++ Future</a></li>
+</ul>
+<h3 id="mozilla-developer-network-mdn" class="tsd-anchor-link">Mozilla Developer Network (MDN)<a href="#mozilla-developer-network-mdn" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API">Beacon</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth">Bluetooth</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CookieStore">CookieStore</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/console">Console</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource">EventSource</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget">EventTarget</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API">Geolocation</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file">Input File</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location">Location</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/download">HTMLAnchorElement Download</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator">Navigator</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen">Screen</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">sessionStorage</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/USB">USB</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">Using Custom Elements</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API">Web Serial</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket">WebSocket</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport">WebTransport</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Worker</a></li>
+</ul>
+<h3 id="rust-std" class="tsd-anchor-link">Rust STD<a href="#rust-std" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul>
+<li><a href="https://doc.rust-lang.org/std/result/">Result</a></li>
+</ul>
+<h3 id="webdev" class="tsd-anchor-link">web.dev<a href="#webdev" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul>
+<li><a href="https://web.dev/articles/files/save-a-file">web.dev: Save a File</a></li>
+</ul>
+<h1 id="functional-analysis" class="tsd-anchor-link">FUNCTIONAL ANALYSIS<a href="#functional-analysis" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<img src="../media/use-case-model.drawio.png" />
+<p><mark>An introductory use case model or other architecture diagram that may aid in visualizing the different requirements categories below.</mark></p>
+<p><mark>Add a new model for each complex Function Feature that may need further pictorial and feature breakdown until it is at its lowest testable functional description.</mark></p>
+<h2 id="uc-1-function-feature" class="tsd-anchor-link">UC-1: Function Feature<a href="#uc-1-function-feature" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>IF Describing via Behavioral Driven Development (BDD) User Story Format</mark></p>
+<ul>
+<li><strong>Description:</strong> As a [who], I want [what], so that [why].</li>
+<li><strong>Scenario 1:</strong> Describe the scenario
+<ul>
+<li><em>Given:</em> Sets up the initial context, state, or preconditions of the system before any action happens.</li>
+<li><em>When:</em> Describes the specific action, event, or trigger performed by the user or system.</li>
+<li><em>Then:</em> Specifies the expected observable outcome or response after the action.</li>
+<li><em>And:</em> Extends any of the previous statements to add positive or multiple conditions, actions, or results.</li>
+<li><em>But:</em> Adds a negative condition, exception, or contrasting limitation to the preceding steps</li>
+</ul>
+</li>
+<li><strong>Scenario 2:</strong> Describe the scenario
+<ul>
+<li><em>Given:</em> Sets up the initial context, state, or preconditions of the system before any action happens.</li>
+<li><em>When:</em> Describes the specific action, event, or trigger performed by the user or system.</li>
+<li><em>Then:</em> Specifies the expected observable outcome or response after the action.</li>
+<li><em>And:</em> Extends any of the previous statements to add positive or multiple conditions, actions, or results.</li>
+<li><em>But:</em> Adds a negative condition, exception, or contrasting limitation to the preceding steps</li>
+</ul>
+</li>
+</ul>
+<p><mark>IF Describing via Use Case Scenario Format:</mark></p>
+<ul>
+<li><strong>Description:</strong> A description of what this use case is all about.</li>
+<li><strong>Actors:</strong> Who / what is triggering this use case.</li>
+<li><strong>Trigger:</strong> The ideal setup necessary for the use case scenario to run.</li>
+<li><strong>Main Success Scenario:</strong> The primary, ideal sequence of steps where everything goes right and the user achieves their goal without errors</li>
+<li><strong>Alternate Flows:</strong> Different paths or optional behaviors that still lead to success (e.g., a customer pays with PayPal instead of a credit card)</li>
+<li><strong>Exception Flows:</strong> Paths handling errors, invalid inputs, or system failures (e.g., a declined credit card or an out-of-stock item)</li>
+<li><strong>Post-Condition:</strong> The expectation when the main success scenario completes.</li>
+</ul>
+<p><mark>IF Describing via EARS Function Requirements Format:</mark></p>
+<ul>
+<li>Ubiquitous (Always Active): The <system name> shall <system response> (e.g., The mobile phone shall have a mass of less than 150 grams</li>
+<li>State-Driven (Active During a State): While <state>, the <system name> shall <system response> (e.g., While the vehicle is in reverse, the system shall display the rear camera feed)</li>
+<li>Event-Driven (Triggered by an Event): When <trigger>, the <system name> shall <system response> (e.g., When the user presses the power button, the device shall turn on)</li>
+<li>Optional Features: Where <feature is present>, the <system name> shall <system response> (e.g., Where the navigation package is installed, the system shall display the map)</li>
+<li>Unwanted Behavior: If <unwanted trigger>, then the <system name> shall <system response> (e.g., If the password is entered incorrectly three times, then the system shall lock the account)</li>
+</ul>
+<h1 id="non-functional-analysis" class="tsd-anchor-link">NON-FUNCTIONAL ANALYSIS<a href="#non-functional-analysis" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<h2 id="useability" class="tsd-anchor-link">Useability<a href="#useability" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>State the requirements that affect usability.</mark></p>
+<h2 id="reliability" class="tsd-anchor-link">Reliability<a href="#reliability" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>State the requirements for reliability</mark></p>
+<h2 id="performance" class="tsd-anchor-link">Performance<a href="#performance" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>State the performance characteristics of the system, expressed quantitatively where possible and related to use cases where applicable.</mark></p>
+<h2 id="supportability" class="tsd-anchor-link">Supportability<a href="#supportability" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>State the requirements that enhance system supportability or maintainability</mark></p>
+<h2 id="design-constraints" class="tsd-anchor-link">Design Constraints<a href="#design-constraints" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>State the design or development constraints imposed on the system or development process.</mark></p>
+<h2 id="documentation" class="tsd-anchor-link">Documentation<a href="#documentation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>State the requirements or user and/or administrator documentation.</mark></p>
+<h2 id="purchased-components" class="tsd-anchor-link">Purchased Components<a href="#purchased-components" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>List the purchased components used with the system, licensing or usage restrictions, and compatibility/interoperability requirements</mark></p>
+<h2 id="licensing-and-security" class="tsd-anchor-link">Licensing and Security<a href="#licensing-and-security" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessability</mark></p>
+<h2 id="legal-copyright-and-other-notices" class="tsd-anchor-link">Legal, Copyright and Other Notices<a href="#legal-copyright-and-other-notices" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessibility.</p>
+<h2 id="applicable-standards" class="tsd-anchor-link">Applicable Standards<a href="#applicable-standards" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>Reference any applicable standards and the specific sections of any such standards that apply.</mark></p>
+<h2 id="internationalization-and-localization" class="tsd-anchor-link">Internationalization and Localization<a href="#internationalization-and-localization" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>State any requirements for support and application of different user languages and dialects</mark></p>
+<h2 id="physical-deliverables" class="tsd-anchor-link">Physical Deliverables<a href="#physical-deliverables" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>Define any specific deliverable artifacts required by the user or customer</mark></p>
+<h2 id="installation-and-deployment" class="tsd-anchor-link">Installation and Deployment<a href="#installation-and-deployment" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>Describe any specific deliverable artifacts required by the user or customer</mark></p>
+<h1 id="design-analysis" class="tsd-anchor-link">DESIGN ANALYSIS<a href="#design-analysis" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<p><mark>Define the interfaces that must be supported by the application. Utilize necessary UML and modeling definitions to reflect it.</mark></p>
+<h2 id="communication-interfaces" class="tsd-anchor-link">Communication Interfaces<a href="#communication-interfaces" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<h2 id="hardware-interfaces" class="tsd-anchor-link">Hardware Interfaces<a href="#hardware-interfaces" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<h2 id="software-interfaces" class="tsd-anchor-link">Software Interfaces<a href="#software-interfaces" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<h3 id="module-core" class="tsd-anchor-link">Module Core<a href="#module-core" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<img src="../media/module_core.png" />
+<h3 id="domain-use-case-implementation" class="tsd-anchor-link">Domain Use Case Implementation<a href="#domain-use-case-implementation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul>
+<li><a href="Domain_Use_Cases.Async.html">Async</a></li>
+</ul>
+<h2 id="user-interfaces" class="tsd-anchor-link">User Interfaces<a href="#user-interfaces" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<h1 id="traceability" class="tsd-anchor-link">TRACEABILITY<a href="#traceability" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<p><mark>Fill out table of the different elements showing how they relate.</mark></p>
+<table>
+<thead>
+<tr>
+<th>REQ #</th>
+<th>DESIGN #</th>
+</tr>
+</thead>
+</table>
+</div></div>
+<div class="col-sidebar">
+<div class="page-menu">
+<div class="tsd-navigation settings">
+<details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li></ul></div>
+<div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>On This Page</h3></summary>
+<div class="tsd-accordion-details"><a href="#introduction"><span>INTRODUCTION</span></a>
+<ul>
+<li><a href="#purpose"><span>Purpose</span></a></li>
+<li><a href="#scope"><span>Scope</span></a></li>
+<li><a href="#terms"><span>Terms</span></a></li>
+<li><a href="#references"><span>References</span></a></li>
+<li>
+<ul>
+<li><a href="#c-reference"><span>C++ <wbr/>Reference</span></a></li>
+<li><a href="#mozilla-developer-network-mdn"><span>Mozilla <wbr/>Developer <wbr/>Network (<wbr/>MDN)</span></a></li>
+<li><a href="#rust-std"><span>Rust <wbr/>STD</span></a></li>
+<li><a href="#webdev"><span>web.dev</span></a></li></ul></li></ul><a href="#functional-analysis"><span>FUNCTIONAL <wbr/>ANALYSIS</span></a>
+<ul>
+<li><a href="#uc-1-function-feature"><span>UC-<wbr/>1: <wbr/>Function <wbr/>Feature</span></a></li></ul><a href="#non-functional-analysis"><span>NON-<wbr/>FUNCTIONAL <wbr/>ANALYSIS</span></a>
+<ul>
+<li><a href="#useability"><span>Useability</span></a></li>
+<li><a href="#reliability"><span>Reliability</span></a></li>
+<li><a href="#performance"><span>Performance</span></a></li>
+<li><a href="#supportability"><span>Supportability</span></a></li>
+<li><a href="#design-constraints"><span>Design <wbr/>Constraints</span></a></li>
+<li><a href="#documentation"><span>Documentation</span></a></li>
+<li><a href="#purchased-components"><span>Purchased <wbr/>Components</span></a></li>
+<li><a href="#licensing-and-security"><span>Licensing and <wbr/>Security</span></a></li>
+<li><a href="#legal-copyright-and-other-notices"><span>Legal, <wbr/>Copyright and <wbr/>Other <wbr/>Notices</span></a></li>
+<li><a href="#applicable-standards"><span>Applicable <wbr/>Standards</span></a></li>
+<li><a href="#internationalization-and-localization"><span>Internationalization and <wbr/>Localization</span></a></li>
+<li><a href="#physical-deliverables"><span>Physical <wbr/>Deliverables</span></a></li>
+<li><a href="#installation-and-deployment"><span>Installation and <wbr/>Deployment</span></a></li></ul><a href="#design-analysis"><span>DESIGN <wbr/>ANALYSIS</span></a>
+<ul>
+<li><a href="#communication-interfaces"><span>Communication <wbr/>Interfaces</span></a></li>
+<li><a href="#hardware-interfaces"><span>Hardware <wbr/>Interfaces</span></a></li>
+<li><a href="#software-interfaces"><span>Software <wbr/>Interfaces</span></a></li>
+<li>
+<ul>
+<li><a href="#module-core"><span>Module <wbr/>Core</span></a></li>
+<li><a href="#domain-use-case-implementation"><span>Domain <wbr/>Use <wbr/>Case <wbr/>Implementation</span></a></li></ul></li>
+<li><a href="#user-interfaces"><span>User <wbr/>Interfaces</span></a></li></ul><a href="#traceability"><span>TRACEABILITY</span></a></div></details></div>
+<div class="site-menu">
+<nav class="tsd-navigation"><a href="../modules.html">codemelted.js Project</a>
+<ul class="tsd-small-nested-navigation" id="tsd-nav-container">
+<li>Loading...</li></ul></nav></div></div></div><footer></footer>
+<div class="overlay"></div></body></html>

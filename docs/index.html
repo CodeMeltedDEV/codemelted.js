@@ -9,7 +9,7 @@
 <div class="tsd-page-title">
 <h1>codemelted.js Project</h1></div>
 <div class="tsd-panel tsd-typography"><center>
-  <img style="width: px; "src="https://codemelted.com/assets/favicon/codemelted-js/android-chrome-192x192.png" />
+  <img style="width: px; "src="/favicon/android-chrome-192x192.png" />
   <h1>codemelted.js Project</h1>
   <button style="cursor:pointer;" onclick="window.print();">Print</button>
 </center>
@@ -17,33 +17,6 @@
 <li><a href="#features">FEATURES</a>
 <ul>
 <li><a href="#module-core">Module Core</a></li>
-<li><a href="#async-use-case">Async Use Case</a></li>
-<li><a href="#console-use-case">Console Use Case</a></li>
-<li><a href="#db-use-case">DB Use Case</a></li>
-<li><a href="#disk-use-case">Disk Use Case</a></li>
-<li><a href="#hw-use-case">HW Use Case</a></li>
-<li><a href="#json-use-case">JSON Use Case</a></li>
-<li><a href="#logger-use-case">Logger Use Case</a></li>
-<li><a href="#monitor-use-case">Monitor Use Case</a></li>
-<li><a href="#network-use-case">Network Use Case</a></li>
-<li><a href="#npu-use-case">NPU Use Case</a></li>
-<li><a href="#process-use-case">Process Use Case</a></li>
-<li><a href="#runtime-use-case">Runtime Use Case</a></li>
-<li><a href="#storage-use-case">Storage Use Case</a></li>
-<li><a href="#ui-use-case">UI Use Case</a>
-<ul>
-<li><a href="#public-api">Public API</a></li>
-<li><a href="#ui-components">UI Components</a></li>
-</ul>
-</li>
-<li><a href="#references">References</a>
-<ul>
-<li><a href="#c-reference">C++ Reference</a></li>
-<li><a href="#mozilla-developer-network-mdn">Mozilla Developer Network (MDN)</a></li>
-<li><a href="#rust-std">Rust STD</a></li>
-<li><a href="#webdev">web.dev</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li><a href="#getting-started">GETTING STARTED</a>
@@ -60,84 +33,6 @@
 <p>The <code>codemelted.js</code> module implements 14 domain specific use cases. These are implementation wrappers around Browser / Deno APIs to deliver a reusable tested way to build fullstack solutions. Domain use cases not available as wrappers are compiled via the <code>codemelted_lib</code> Rust static library and accessed via the <code>codemelted.js</code> module via the Deno Foreign Function Interface (FFI).</p>
 <p>The <em>codemelted.js Project</em> SDK documentation provides ways of detecting feature availability so your code can operate properly within a fullstack project. Any violation of the <code>codemelted.js</code> module API will throw a <code>CModuleError</code> with full stack trace of the violation.</p>
 <p>The sections below break down the architecture of the module and how the domain use cases are implemented.</p>
-<h2 id="module-core" class="tsd-anchor-link">Module Core<a href="#module-core" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<img src="media/module_core.png" />
-<h2 id="async-use-case" class="tsd-anchor-link">Async Use Case<a href="#async-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<img src="media/async_usecase.png" />
-<h2 id="console-use-case" class="tsd-anchor-link">Console Use Case<a href="#console-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p><mark>TO BE DEVELOPED</mark></p>
-<h2 id="db-use-case" class="tsd-anchor-link">DB Use Case<a href="#db-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p><mark>TO BE DEVELOPED</mark></p>
-<h2 id="disk-use-case" class="tsd-anchor-link">Disk Use Case<a href="#disk-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<img src="media/disk_usecase.png" />
-<p><mark>DENO DEVELOPMENT FORTHCOMING</mark></p>
-<h2 id="hw-use-case" class="tsd-anchor-link">HW Use Case<a href="#hw-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p><mark>TO BE DEVELOPED</mark></p>
-<h2 id="json-use-case" class="tsd-anchor-link">JSON Use Case<a href="#json-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<img src="media/json_usecase.png" />
-<h2 id="logger-use-case" class="tsd-anchor-link">Logger Use Case<a href="#logger-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<img src="media/logger_usecase.png" />
-<h2 id="monitor-use-case" class="tsd-anchor-link">Monitor Use Case<a href="#monitor-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p><mark>TO BE DEVELOPED</mark></p>
-<h2 id="network-use-case" class="tsd-anchor-link">Network Use Case<a href="#network-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p><mark>TO BE DEVELOPED</mark></p>
-<h2 id="npu-use-case" class="tsd-anchor-link">NPU Use Case<a href="#npu-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p><mark>TO BE DEVELOPED</mark></p>
-<h2 id="process-use-case" class="tsd-anchor-link">Process Use Case<a href="#process-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p><mark>TO BE DEVELOPED</mark></p>
-<h2 id="runtime-use-case" class="tsd-anchor-link">Runtime Use Case<a href="#runtime-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<img src="media/runtime_usecase.png" />
-<h2 id="storage-use-case" class="tsd-anchor-link">Storage Use Case<a href="#storage-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<img src="media/storage_usecase.png" />
-<h2 id="ui-use-case" class="tsd-anchor-link">UI Use Case<a href="#ui-use-case" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<h3 id="public-api" class="tsd-anchor-link">Public API<a href="#public-api" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<img src="media/ui_usecase.png" />
-<h3 id="ui-components" class="tsd-anchor-link">UI Components<a href="#ui-components" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<img src="media/ui_components.png" />
-<h2 id="references" class="tsd-anchor-link">References<a href="#references" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p>The following are the references to the external Browser / Deno APIs that were wrapped to create the <code>codemelted.js</code> module.</p>
-<h3 id="c-reference" class="tsd-anchor-link">C++ Reference<a href="#c-reference" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<ul>
-<li><a href="https://en.cppreference.com/cpp/thread/future">C++ Future</a></li>
-</ul>
-<h3 id="mozilla-developer-network-mdn" class="tsd-anchor-link">Mozilla Developer Network (MDN)<a href="#mozilla-developer-network-mdn" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API">Beacon</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth">Bluetooth</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CookieStore">CookieStore</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/console">Console</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource">EventSource</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget">EventTarget</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API">Geolocation</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file">Input File</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location">Location</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/download">HTMLAnchorElement Download</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator">Navigator</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen">Screen</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">sessionStorage</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/USB">USB</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements">Using Custom Elements</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API">Web Serial</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API">Web MIDI</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket">WebSocket</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebTransport">WebTransport</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Worker</a></li>
-</ul>
-<h3 id="rust-std" class="tsd-anchor-link">Rust STD<a href="#rust-std" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<ul>
-<li><a href="https://doc.rust-lang.org/std/result/">Result</a></li>
-</ul>
-<h3 id="webdev" class="tsd-anchor-link">web.dev<a href="#webdev" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<ul>
-<li><a href="https://web.dev/articles/files/save-a-file">web.dev: Save a File</a></li>
-</ul>
 <h1 id="getting-started" class="tsd-anchor-link">GETTING STARTED<a href="#getting-started" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
 <p>The following section breaks down how to clone / fork the project and build it, utilizing a CDN to consume the <code>codemelted.js</code> module directly, or utilizing the <code>codemelted</code> native CLI command to download the module directly into your project.</p>
 <h2 id="clone-fork" class="tsd-anchor-link">Clone / Fork<a href="#clone-fork" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
@@ -209,34 +104,7 @@
 <div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
 <details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg>
 <h3>On This Page</h3></summary>
-<div class="tsd-accordion-details"><a href="#features"><span>FEATURES</span></a>
-<ul>
-<li><a href="#module-core"><span>Module <wbr/>Core</span></a></li>
-<li><a href="#async-use-case"><span>Async <wbr/>Use <wbr/>Case</span></a></li>
-<li><a href="#console-use-case"><span>Console <wbr/>Use <wbr/>Case</span></a></li>
-<li><a href="#db-use-case"><span>DB <wbr/>Use <wbr/>Case</span></a></li>
-<li><a href="#disk-use-case"><span>Disk <wbr/>Use <wbr/>Case</span></a></li>
-<li><a href="#hw-use-case"><span>HW <wbr/>Use <wbr/>Case</span></a></li>
-<li><a href="#json-use-case"><span>JSON <wbr/>Use <wbr/>Case</span></a></li>
-<li><a href="#logger-use-case"><span>Logger <wbr/>Use <wbr/>Case</span></a></li>
-<li><a href="#monitor-use-case"><span>Monitor <wbr/>Use <wbr/>Case</span></a></li>
-<li><a href="#network-use-case"><span>Network <wbr/>Use <wbr/>Case</span></a></li>
-<li><a href="#npu-use-case"><span>NPU <wbr/>Use <wbr/>Case</span></a></li>
-<li><a href="#process-use-case"><span>Process <wbr/>Use <wbr/>Case</span></a></li>
-<li><a href="#runtime-use-case"><span>Runtime <wbr/>Use <wbr/>Case</span></a></li>
-<li><a href="#storage-use-case"><span>Storage <wbr/>Use <wbr/>Case</span></a></li>
-<li><a href="#ui-use-case"><span>UI <wbr/>Use <wbr/>Case</span></a></li>
-<li>
-<ul>
-<li><a href="#public-api"><span>Public <wbr/>API</span></a></li>
-<li><a href="#ui-components"><span>UI <wbr/>Components</span></a></li></ul></li>
-<li><a href="#references"><span>References</span></a></li>
-<li>
-<ul>
-<li><a href="#c-reference"><span>C++ <wbr/>Reference</span></a></li>
-<li><a href="#mozilla-developer-network-mdn"><span>Mozilla <wbr/>Developer <wbr/>Network (<wbr/>MDN)</span></a></li>
-<li><a href="#rust-std"><span>Rust <wbr/>STD</span></a></li>
-<li><a href="#webdev"><span>web.dev</span></a></li></ul></li></ul><a href="#getting-started"><span>GETTING <wbr/>STARTED</span></a>
+<div class="tsd-accordion-details"><a href="#features"><span>FEATURES</span></a><a href="#getting-started"><span>GETTING <wbr/>STARTED</span></a>
 <ul>
 <li><a href="#clone-fork"><span>Clone / <wbr/>Fork</span></a></li>
 <li><a href="#content-delivery-network-cdn"><span>Content <wbr/>Delivery <wbr/>Network (<wbr/>CDN)</span></a></li>

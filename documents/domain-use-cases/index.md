@@ -1,4 +1,12 @@
-<center><img style="width: px; "src="https://codemelted.com/assets/favicon/codemelted-js/android-chrome-192x192.png" /><h1>codemelted Command Line Interface (CLI)</h1></center>
+---
+title: "Domain Use Cases"
+children:
+  - async.md
+---
+<center>
+  <img style="width: px; "src="../favicon/android-chrome-192x192.png" />
+  <h1>Object Oriented Analysis and Design (OOAD)</h1>
+</center>
 
 **Table of Contents**
 
@@ -7,6 +15,10 @@
   - [Scope](#scope)
   - [Terms](#terms)
   - [References](#references)
+    - [C++ Reference](#c-reference)
+    - [Mozilla Developer Network (MDN)](#mozilla-developer-network-mdn)
+    - [Rust STD](#rust-std)
+    - [web.dev](#webdev)
 - [FUNCTIONAL ANALYSIS](#functional-analysis)
   - [UC-1: Function Feature](#uc-1-function-feature)
 - [NON-FUNCTIONAL ANALYSIS](#non-functional-analysis)
@@ -27,6 +39,8 @@
   - [Communication Interfaces](#communication-interfaces)
   - [Hardware Interfaces](#hardware-interfaces)
   - [Software Interfaces](#software-interfaces)
+    - [Module Core](#module-core)
+    - [Domain Use Case Implementation](#domain-use-case-implementation)
   - [User Interfaces](#user-interfaces)
 - [TRACEABILITY](#traceability)
 
@@ -46,9 +60,53 @@
 
 ## References
 
-<mark>Any outside references that inform this breakdown.</mark>
+The following are the references to the external Browser / Deno APIs that were wrapped to create the `codemelted.js` module.
+
+### C++ Reference
+
+- [C++ Future](https://en.cppreference.com/cpp/thread/future)
+
+### Mozilla Developer Network (MDN)
+
+- [Beacon](https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API)
+- [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth)
+- [Broadcast Channel](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API)
+- [CookieStore](https://developer.mozilla.org/en-US/docs/Web/API/CookieStore)
+- [Console](https://developer.mozilla.org/en-US/docs/Web/API/console)
+- [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
+- [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)
+- [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+- [File System](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API)
+- [Geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
+- [Input File](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file)
+- [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+- [Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)
+- [HTMLAnchorElement Download](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/download)
+- [Navigator](https://developer.mozilla.org/en-US/docs/Web/API/Navigator)
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Screen](https://developer.mozilla.org/en-US/docs/Web/API/Screen)
+- [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
+- [USB](https://developer.mozilla.org/en-US/docs/Web/API/USB)
+- [Using Custom Elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- [Web Serial](https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API)
+- [Web MIDI](https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API)
+- [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
+- [WebRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)
+- [WebTransport](https://developer.mozilla.org/en-US/docs/Web/API/WebTransport)
+- [Window](https://developer.mozilla.org/en-US/docs/Web/API/Window)
+- [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker)
+
+### Rust STD
+
+- [Result](https://doc.rust-lang.org/std/result/)
+
+### web.dev
+
+- [web.dev: Save a File](https://web.dev/articles/files/save-a-file)
 
 # FUNCTIONAL ANALYSIS
+
+<img src="models/use-case-model.drawio.png" />
 
 <mark>An introductory use case model or other architecture diagram that may aid in visualizing the different requirements categories below.</mark>
 
@@ -153,6 +211,14 @@
 ## Hardware Interfaces
 
 ## Software Interfaces
+
+### Module Core
+
+<img src="models/module_core.png" />
+
+### Domain Use Case Implementation
+
+- [Async](./async.md)
 
 ## User Interfaces
 
