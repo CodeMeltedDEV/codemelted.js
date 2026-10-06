@@ -30,8 +30,9 @@
   "ignoredHighlightLanguages": ["mermaid"],
   "projectDocuments": [
     "documents/about-project.md",
+    "documents/changelog.md",
     "documents/module-tests.md",
-    "documents/starter-templates.md",
-    "documents/domain-use-cases/index.md"
+    "documents/domain-use-cases/index.md",
+    "documents/software-engineering/index.md",
   ]
 }

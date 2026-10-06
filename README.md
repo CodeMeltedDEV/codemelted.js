@@ -2,7 +2,7 @@
 title: codemelted.js Project
 ---
 <center>
-  <img style="width: px; "src="/favicon/android-chrome-192x192.png" />
+  <img style="width: px; "src="favicon/android-chrome-192x192.png" />
   <h1>codemelted.js Project</h1>
   <button style="cursor:pointer;" onclick="window.print();">Print</button>
 </center>

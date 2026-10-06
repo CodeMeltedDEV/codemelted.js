@@ -7,13 +7,8 @@
       "ranges": [
         {
           "startOffset": 0,
-          "endOffset": 186750,
+          "endOffset": 184007,
           "count": 1
-        },
-        {
-          "startOffset": 186726,
-          "endOffset": 186747,
-          "count": 0
         }
       ],
       "isBlockCoverage": true
@@ -1124,7 +1119,7 @@
         {
           "startOffset": 73459,
           "endOffset": 74070,
-          "count": 518
+          "count": 515
         },
         {
           "startOffset": 73619,
@@ -1134,7 +1129,7 @@
         {
           "startOffset": 73689,
           "endOffset": 73711,
-          "count": 502
+          "count": 499
         },
         {
           "startOffset": 73763,
@@ -1149,12 +1144,12 @@
         {
           "startOffset": 73813,
           "endOffset": 73831,
-          "count": 493
+          "count": 490
         },
         {
           "startOffset": 73854,
           "endOffset": 73863,
-          "count": 454
+          "count": 452
         },
         {
           "startOffset": 73865,
@@ -1164,7 +1159,7 @@
         {
           "startOffset": 73931,
           "endOffset": 73954,
-          "count": 487
+          "count": 484
         },
         {
           "startOffset": 73954,
@@ -2081,7 +2076,7 @@
         {
           "startOffset": 122986,
           "endOffset": 128428,
-          "count": 45
+          "count": 44
         },
         {
           "startOffset": 123730,
@@ -2141,7 +2136,7 @@
         {
           "startOffset": 124736,
           "endOffset": 124816,
-          "count": 2
+          "count": 1
         },
         {
           "startOffset": 124823,
@@ -2307,12 +2302,12 @@
         {
           "startOffset": 123360,
           "endOffset": 123690,
-          "count": 47
+          "count": 46
         },
         {
           "startOffset": 123622,
           "endOffset": 123689,
-          "count": 44
+          "count": 43
         }
       ],
       "isBlockCoverage": true
@@ -2617,28 +2612,6 @@
         {
           "startOffset": 180761,
           "endOffset": 182372,
-          "count": 0
-        }
-      ],
-      "isBlockCoverage": false
-    },
-    {
-      "functionName": "cli_help",
-      "ranges": [
-        {
-          "startOffset": 185479,
-          "endOffset": 185535,
-          "count": 0
-        }
-      ],
-      "isBlockCoverage": false
-    },
-    {
-      "functionName": "cli_main",
-      "ranges": [
-        {
-          "startOffset": 185841,
-          "endOffset": 186453,
           "count": 0
         }
       ],
