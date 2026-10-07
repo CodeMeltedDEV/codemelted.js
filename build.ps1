@@ -65,19 +65,19 @@ function main {
       -ErrorAction SilentlyContinue
 
     deno compile --target aarch64-apple-darwin `
-      --include lib --output dist/mac/codemelted codemelted.js
+      --include lib --output dist/mac/codemelted codemelted-cli.ts
     if ($LASTEXITCODE -ne 0) {
       throw "make_js - 'deno compile mac' failed."
     }
 
     deno compile --target x86_64-unknown-linux-gnu `
-      --include lib --output dist/linux/codemelted codemelted.js
+      --include lib --output dist/linux/codemelted codemelted-cli.ts
     if ($LASTEXITCODE -ne 0) {
       throw "make_js - 'deno compile linux' failed."
     }
 
     deno compile --target x86_64-pc-windows-msvc `
-      --include lib --output dist/windows/codemelted.exe codemelted.js
+      --include lib --output dist/windows/codemelted.exe codemelted-cli.ts
     if ($LASTEXITCODE -ne 0) {
       throw "make_js - 'deno compile windows' failed."
     }

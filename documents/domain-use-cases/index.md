@@ -1,11 +1,15 @@
 ---
 title: "Domain Use Cases"
+date: 2026-Oct-06
+author: "Mark Shaffer"
+description: "TBD"
+tags: []
 children:
   - async.md
 ---
 <center>
-  <img style="width: px; "src="../favicon/android-chrome-192x192.png" />
-  <h1>Object Oriented Analysis and Design (OOAD)</h1>
+  <img style="width: px; "src="../../favicon/android-chrome-192x192.png" />
+  <h1>Object-Oriented Analysis and Design (OOAD)</h1>
 </center>
 
 **Table of Contents**

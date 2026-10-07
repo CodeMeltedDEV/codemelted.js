@@ -20,7 +20,6 @@ categories:
   - [UC-1: Function Feature](#uc-1-function-feature)
 - [NOTES](#notes)
 
-
 # FUNCTIONAL ANALYSIS
 
 <mark>An introductory use case model or other architecture diagram that may aid in visualizing the different requirements categories below.</mark>

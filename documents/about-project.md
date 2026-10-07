@@ -1,5 +1,9 @@
 ---
-title: About Project
+title: "About Project"
+date: 2026-Oct-06
+author: "Mark Shaffer"
+description: "The codemelted.js Project aims to deliver on this full stack engineering premise allowing software engineers to easily build fullstack software solutions."
+tags: [codemelted.js, ES6 Module, JavaScript, TypeScript, HTML, CSS, Bun, Deno, Node, Worker, full-stack]
 ---
 <center>
   <img style="width: px;" src="../favicon/android-chrome-192x192.png" />
@@ -19,9 +23,9 @@ title: About Project
 
 "Write once, run anywhere (WORA)" was the famous slogan made by Sun Microsystems in 1995. At the time, this technology allowed for easy full stack engineering allowing you to target dedicated workstations and on premise servers. So long as a Java Runtime Environment existed, you could run your code. Java was unable to keep to their slogan as web browsers became more advanced, mobile devices became ubiquitous, and companies no longer required dedicated servers.
 
-The **codemelted.js Project** aims to deliver on this full stack engineering premise allowing software engineers to easily build fullstack software solutions. Utilizing the `codemelted.js` ES6 module, a software engineer can target Browser / Deno / Worker JavaScript runtimes to build these fullstack solutions. Software Engineers have their choice of JavaScript or TypeScript for these solutions. A software engineer can also utilize the `codemelted.js` module within Bun / Node runtimes and get a subset of the functionality within those projects.
+The **codemelted.js Project** aims to deliver on this full stack engineering premise allowing software engineers to easily build full stack software solutions. Utilizing the `codemelted.js` ES6 module, a software engineer can target Browser / Deno / Worker JavaScript runtimes to build these full stack solutions. Software Engineers have their choice of JavaScript or TypeScript for these solutions. A software engineer can also utilize the `codemelted.js` module within Bun / Node runtimes and get a subset of the functionality within those projects.
 
-This fullstack solution is accomplished by the `codemelted.js` module implementing 14 domain specific use cases. These represent the most common software engineers face. The `codemelted.js` module implements Browser / Deno API wrappers to facilitate these use cases. When a use case cannot be directly fulfilled via Browser / Deno API wrappers, the Rust `codemelted_lib` static library serves as a binding to the `codemelted.js` module and native command.
+This full stack solution is accomplished by the `codemelted.js` module implementing 14 domain specific use cases. These represent the most common software engineers face. The `codemelted.js` module implements Browser / Deno API wrappers to facilitate these use cases. When a use case cannot be directly fulfilled via Browser / Deno API wrappers, the Rust `codemelted_lib` static library serves as a binding to the `codemelted.js` module and native command.
 
 **Table of Contents**
 
@@ -31,21 +35,21 @@ This fullstack solution is accomplished by the `codemelted.js` module implementi
 
 # ES6 Consumable Module
 
-<center><img src="../models/use-case-model.drawio.png" /></center>
+<center><img src="domain-use-cases/models/use-case-model.drawio.png" /></center>
 
 **Application Development**
 
-The table belows explains the types of apps you can build when consuming the `codemelted.js` module.
+The table below explains the types of apps you can build when consuming the `codemelted.js` module.
 
 Target        | Description
 ------------- | -----------
 CLI / SERVICE | With access to multiple Deno / native bindings, you can utilize the Deno runtime to compile or script your own custom CLI solution with TypeScript
-CLOUD   | Download the `codemelted.js` module and include it within your own Deno / Node project to take advantage of the domain use cases in your next cloud solution. <br>*NOTE: Certain use cases won't be available in a V8 runtimes. See codemelted.js Project SDK documentation for details.*
+CLOUD   | Download the `codemelted.js` module and include it within your own Deno / Node project to take advantage of the domain use cases in your next cloud solution. <br>*NOTE: Certain use cases won't be available in a V8 runtime. See codemelted.js Project SDK documentation for details.*
 DESKTOP / WEB | Include the module into your next Single Page App (SPA) / Multi-Page App (MPA) / Progressive Web App (PWA) solution. The ultimate way to get your app to your clients without needing an app store. And with the new `deno --desktop` option, you can bundle that site as an embedded WebView for Mac / Linux / Windows operating systems.
 
 # Command Line Interface (CLI)
 
-<center><img src="../models/cli-model.drawio.png" /></center>
+<center><img src="domain-use-cases/models/cli-model.drawio.png" /></center>
 
 **NOTES:**
 
@@ -59,4 +63,4 @@ This project does not want to utilize ads. To that end, any support for this pro
 
 - <a href="https://www.buymeacoffee.com/codemelteddev"><img src="https://codemelted.com/assets/images/icon-buy-me-a-coffee.png" height="35px" /> Buy Me A Coffee</a>: Direct support for the CodeMeltedDEV content and services offered via the **codemelted.js Project**.
 - <a href="https://github.com/sponsors/CodeMeltedDEV"><img src="https://codemelted.com/assets/images/icon-github.png" height="35px" /> GitHub Sponsorship</a>: Direct support for the **codemelted.js Project** either through a one time donation or a monthly subscription.
-- <a href="https://dev.codemelted.com"><img src="https://codemelted.com/assets/favicon/apple-touch-icon.png" height="35px" /> CodeMeltedDEV Website</a>: Main website where I will blog about this project along with other interest and utilize this project to build out the with features and you can find me for other socials.
+- <a href="https://dev.codemelted.com"><img src="https://codemelted.com/assets/favicon/apple-touch-icon.png" height="35px" /> CodeMeltedDEV Website</a>: Main website where I will blog about this project along with other interest and utilize this project to build out the with features, and you can find me for other socials.
