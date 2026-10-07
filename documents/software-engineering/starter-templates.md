@@ -402,7 +402,7 @@ categories:
 
 ## Object-Oriented Analysis and Design (OOAD)
 
-From the book *Managing Software Requirements (A Use Case Approach) 2nd Ed* it provides a fully fleshed out template for performing a full Object-Oriented Analysis and Design utilizing use cases. To that end, the template has been tweaked to break out *FUNCTIONAL ANALYSIS* still utilizing a use case model as the introduction, but identifies the different ways of deriving and fleshing out functional behavior of a system. From there the *NON-FUNCTIONAL ANALYSIS* allows for the breakdown of all the different non-functional areas of a system usually forgotten or ignored. Finally, the *DESIGN ANALYSIS* allows for designing out the rest of the software / hardware / system boundaries to fully flesh out the design. This leaves a *TRACEABILITY* section to cross-references all the different sections to ensure all have been properly analyzed.
+From the book *Managing Software Requirements (A Use Case Approach) 2nd Ed* it provides a fully fleshed out template for performing a full Object-Oriented Analysis and Design utilizing use cases. To that end, the template has been tweaked to break out *FUNCTIONAL ANALYSIS* still utilizing a use case model as the introduction, but identifies the different ways of deriving and fleshing out functional behavior of a system. From there the *NON-FUNCTIONAL ANALYSIS* allows for the breakdown of all the different non-functional areas of a system usually forgotten or ignored. Finally, the *DESIGN ANALYSIS* allows for designing out the rest of the software / hardware / system boundaries to fully flesh out the design.
 
 This template can be all encompassing or broken up into different OOAD markdown files for larger more complex systems. It is really up the software engineer in managing how this is broken up to make sense. The key is if you build it, keep in sync and up to date with the software solution you are building.
 
@@ -430,7 +430,7 @@ categories:
 - [FUNCTIONAL ANALYSIS](#functional-analysis)
   - [UC-1: Function Feature](#uc-1-function-feature)
 - [NON-FUNCTIONAL ANALYSIS](#non-functional-analysis)
-  - [Useability](#useability)
+  - [Usability](#useability)
   - [Reliability](#reliability)
   - [Performance](#performance)
   - [Supportability](#supportability)
@@ -448,7 +448,6 @@ categories:
   - [Hardware Interfaces](#hardware-interfaces)
   - [Software Interfaces](#software-interfaces)
   - [User Interfaces](#user-interfaces)
-- [TRACEABILITY](#traceability)
 
 # INTRODUCTION
 
@@ -512,7 +511,7 @@ categories:
 
 # NON-FUNCTIONAL ANALYSIS
 
-## Useability
+## Usability
 
 <mark>State the requirements that affect usability.</mark>
 
@@ -542,11 +541,11 @@ categories:
 
 ## Licensing and Security
 
-<mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessability</mark>
+<mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessibility</mark>
 
 ## Legal, Copyright and Other Notices
 
-<mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessibility.
+<mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessibility.</mark>
 
 ## Applicable Standards
 
@@ -576,12 +575,6 @@ categories:
 
 ## User Interfaces
 
-# TRACEABILITY
-
-<mark>Fill out table of the different elements showing how they relate.</mark>
-
-| REQ # | DESIGN # |
-| ----- | -------- |
 ```
 
 ## Process

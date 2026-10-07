@@ -24,9 +24,8 @@ children:
     - [Rust STD](#rust-std)
     - [web.dev](#webdev)
 - [FUNCTIONAL ANALYSIS](#functional-analysis)
-  - [UC-1: Function Feature](#uc-1-function-feature)
 - [NON-FUNCTIONAL ANALYSIS](#non-functional-analysis)
-  - [Useability](#useability)
+  - [Usability](#usability)
   - [Reliability](#reliability)
   - [Performance](#performance)
   - [Supportability](#supportability)
@@ -44,7 +43,6 @@ children:
   - [Hardware Interfaces](#hardware-interfaces)
   - [Software Interfaces](#software-interfaces)
     - [Module Core](#module-core)
-    - [Domain Use Case Implementation](#domain-use-case-implementation)
   - [User Interfaces](#user-interfaces)
 - [TRACEABILITY](#traceability)
 
@@ -64,7 +62,7 @@ children:
 
 ## References
 
-The following are the references to the external Browser / Deno APIs that were wrapped to create the `codemelted.js` module.
+The following are the references to the external SDK documentation to implement the fourteen domain use cases for the `codemelted.js` module.
 
 ### C++ Reference
 
@@ -110,51 +108,28 @@ The following are the references to the external Browser / Deno APIs that were w
 
 # FUNCTIONAL ANALYSIS
 
-<img src="models/use-case-model.drawio.png" />
+<img src="models/module/use-case-model.drawio.png" />
 
-<mark>An introductory use case model or other architecture diagram that may aid in visualizing the different requirements categories below.</mark>
-
-<mark>Add a new model for each complex Function Feature that may need further pictorial and feature breakdown until it is at its lowest testable functional description.</mark>
-
-## UC-1: Function Feature
-
-<mark>IF Describing via Behavioral Driven Development (BDD) User Story Format</mark>
-
-- **Description:** As a [who], I want [what], so that [why].
-- **Scenario 1:** Describe the scenario
-    - *Given:* Sets up the initial context, state, or preconditions of the system before any action happens.
-    - *When:* Describes the specific action, event, or trigger performed by the user or system.
-    - *Then:* Specifies the expected observable outcome or response after the action.
-    - *And:* Extends any of the previous statements to add positive or multiple conditions, actions, or results.
-    - *But:* Adds a negative condition, exception, or contrasting limitation to the preceding steps
-- **Scenario 2:** Describe the scenario
-    - *Given:* Sets up the initial context, state, or preconditions of the system before any action happens.
-    - *When:* Describes the specific action, event, or trigger performed by the user or system.
-    - *Then:* Specifies the expected observable outcome or response after the action.
-    - *And:* Extends any of the previous statements to add positive or multiple conditions, actions, or results.
-    - *But:* Adds a negative condition, exception, or contrasting limitation to the preceding steps
-
-<mark>IF Describing via Use Case Scenario Format:</mark>
-
-- **Description:** A description of what this use case is all about.
-- **Actors:** Who / what is triggering this use case.
-- **Trigger:** The ideal setup necessary for the use case scenario to run.
-- **Main Success Scenario:** The primary, ideal sequence of steps where everything goes right and the user achieves their goal without errors
-- **Alternate Flows:** Different paths or optional behaviors that still lead to success (e.g., a customer pays with PayPal instead of a credit card)
-- **Exception Flows:** Paths handling errors, invalid inputs, or system failures (e.g., a declined credit card or an out-of-stock item)
-- **Post-Condition:** The expectation when the main success scenario completes.
-
-<mark>IF Describing via EARS Function Requirements Format:</mark>
-
-- Ubiquitous (Always Active): The <system name> shall <system response> (e.g., The mobile phone shall have a mass of less than 150 grams
-- State-Driven (Active During a State): While <state>, the <system name> shall <system response> (e.g., While the vehicle is in reverse, the system shall display the rear camera feed)
-- Event-Driven (Triggered by an Event): When <trigger>, the <system name> shall <system response> (e.g., When the user presses the power button, the device shall turn on)
-- Optional Features: Where <feature is present>, the <system name> shall <system response> (e.g., Where the navigation package is installed, the system shall display the map)
-- Unwanted Behavior: If <unwanted trigger>, then the <system name> shall <system response> (e.g., If the password is entered incorrectly three times, then the system shall lock the account)
+| ID    | Link                    | Description      |
+| ----- | ----------------------- | ---------------- |
+| UC-01 | [Async](./async.md)     | <mark>To Be Developed</mark> |
+| UC-02 | [Console](./console.md) | <mark>To Be Developed</mark> |
+| UC-03 | [DB](./db.md)           | <mark>To Be Developed</mark> |
+| UC-04 | [Disk](./disk.md)       | <mark>To Be Developed</mark> |
+| UC-05 | [HW](./hw.md)           | <mark>To Be Developed</mark> |
+| UC-06 | [JSON](./json.md)       | <mark>To Be Developed</mark> |
+| UC-07 | [Logger](./logger.md)   | <mark>To Be Developed</mark> |
+| UC-08 | [Monitor](./monitor.md) | <mark>To Be Developed</mark> |
+| UC-09 | [Network](./network.md) | <mark>To Be Developed</mark> |
+| UC-10 | [NPU](./npu.md)         | <mark>To Be Developed</mark> |
+| UC-11 | [Process](./process.md) | <mark>To Be Developed</mark> |
+| UC-12 | [Runtime](./runtime.md) | <mark>To Be Developed</mark> |
+| UC-13 | [Storage](./storage.md) | <mark>To Be Developed</mark> |
+| UC-14 | [UI](./ui.md)           | <mark>To Be Developed</mark> |
 
 # NON-FUNCTIONAL ANALYSIS
 
-## Useability
+## Usability
 
 <mark>State the requirements that affect usability.</mark>
 
@@ -184,7 +159,7 @@ The following are the references to the external Browser / Deno APIs that were w
 
 ## Licensing and Security
 
-<mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessability</mark>
+<mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessibility</mark>
 
 ## Legal, Copyright and Other Notices
 
@@ -218,17 +193,10 @@ The following are the references to the external Browser / Deno APIs that were w
 
 ### Module Core
 
-<img src="models/module_core.png" />
-
-### Domain Use Case Implementation
-
-- [Async](./async.md)
+<img src="models/module/module_core.png" />
 
 ## User Interfaces
 
 # TRACEABILITY
 
-<mark>Fill out table of the different elements showing how they relate.</mark>
-
-| REQ # | DESIGN # |
-| ----- | -------- |
+Not Applicable.

@@ -22,7 +22,7 @@ categories:
 - [FUNCTIONAL ANALYSIS](#functional-analysis)
   - [UC-1: Function Feature](#uc-1-function-feature)
 - [NON-FUNCTIONAL ANALYSIS](#non-functional-analysis)
-  - [Useability](#useability)
+  - [Usability](#usability)
   - [Reliability](#reliability)
   - [Performance](#performance)
   - [Supportability](#supportability)
@@ -40,7 +40,6 @@ categories:
   - [Hardware Interfaces](#hardware-interfaces)
   - [Software Interfaces](#software-interfaces)
   - [User Interfaces](#user-interfaces)
-- [TRACEABILITY](#traceability)
 
 # INTRODUCTION
 
@@ -104,7 +103,7 @@ categories:
 
 # NON-FUNCTIONAL ANALYSIS
 
-## Useability
+## Usability
 
 <mark>State the requirements that affect usability.</mark>
 
@@ -134,11 +133,11 @@ categories:
 
 ## Licensing and Security
 
-<mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessability</mark>
+<mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessibility</mark>
 
 ## Legal, Copyright and Other Notices
 
-<mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessibility.
+<mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessibility.</mark>
 
 ## Applicable Standards
 
@@ -167,10 +166,3 @@ categories:
 ## Software Interfaces
 
 ## User Interfaces
-
-# TRACEABILITY
-
-<mark>Fill out table of the different elements showing how they relate.</mark>
-
-| REQ # | DESIGN # |
-| ----- | -------- |
