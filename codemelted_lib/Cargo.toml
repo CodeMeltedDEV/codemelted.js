@@ -8,3 +8,4 @@ crate-type = ["staticlib", "rlib"]
 path = 'codemelted_lib.rs'
 
 [dependencies]
+serde_json = "1.0.151"
