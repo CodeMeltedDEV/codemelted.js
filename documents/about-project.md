@@ -6,7 +6,8 @@ description: "The codemelted.js Project aims to deliver on this full stack engin
 tags: [codemelted.js, ES6 Module, JavaScript, TypeScript, HTML, CSS, Bun, Deno, Node, Worker, full-stack]
 ---
 <center>
-  <img style="width: px;" src="../favicon/android-chrome-192x192.png" />
+  <br>
+  <img style="width: 100%;" src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
   <h1>About the codemelted.js Project</h1>
   <a aria-label="Follow @CodeMeltedDEV on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-show-count="true" data-size="small" href="https://github.com/CodeMeltedDEV" title="Follow @CodeMeltedDEV on GitHub">CodeMeltedDEV</a>
   <a aria-label="Watch codemelteddev/codemelted.js on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-eye" data-show-count="true" data-size="small" href="https://github.com/codemelteddev/codemelted.js/subscription" title="Watch codemelteddev/codemelted.js on GitHub">Watch</a>

@@ -2,9 +2,11 @@
 title: codemelted.js Project
 ---
 <center>
-  <img style="width: px; "src="favicon/android-chrome-192x192.png" />
+  <br>
+  <img style="width: 100%; "src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
   <h1>codemelted.js Project</h1>
   <button style="cursor:pointer;" onclick="window.print();">Print</button>
+  <br>
 </center>
 
 - [FEATURES](#features)

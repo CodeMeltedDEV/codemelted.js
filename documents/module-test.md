@@ -6,8 +6,10 @@ description: "Represents the developed tests to validate the codemelted.js modul
 tags: [Browser Mocha/Chai Test, HTML, HTML5, CSS, CSS3, JavaScript, ES6 Module, Web Worker]
 ---
 <center>
-  <img style="width: px; "src="../favicon/android-chrome-192x192.png" />
+  <br>
+  <img style="width: 100%; "src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
   <h1>codemelted.js Module Test</h1>
+  <br>
 </center>
 
 Represents the cmocha / chai tests validate the codemelted.js module from within the Browser runtime.

@@ -6,10 +6,11 @@ description: ""
 tags: []
 categories:
 ---
-
 <center>
-  <mark>Project logo</mark>
+  <br>
+  <img style="width: 100%; "src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
   <h1>Async Use Case</h1>
+  <br>
 </center>
 
 <mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark>

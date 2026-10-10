@@ -35,5 +35,6 @@
     "documents/command-line-interface/index.md",
     "documents/domain-use-cases/index.md",
     "documents/software-engineering/index.md",
-  ]
+  ],
+  "favicon": "https://codemelted.com/favicon.png"
 }

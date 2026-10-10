@@ -6,10 +6,11 @@ description: "This is a collection of templates for performing software engineer
 tags: [software engineering, code templates, markdown templates]
 ---
 <center>
-  <img style="width: px; "src="../../favicon/android-chrome-192x192.png" />
+  <br>
+  <img style="width: 100%; "src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
   <h1>Software Engineering Starter Templates</h1>
   <button style="cursor:pointer;" onclick="window.print();">Print</button>
-  <br><br>
+  <br>
 </center>
 
 This is a collection of templates for performing software engineering tasks and beginning a coding effort. The templates have descriptions within to aid in getting started with the task at hand. The templates can also serve in feeding AI agents to control what and how they build / validate a solution. Finally, these are just templates, modify as necessary for your project needs.

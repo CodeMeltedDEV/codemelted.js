@@ -8,8 +8,10 @@ children:
   - async.md
 ---
 <center>
-  <img style="width: px; "src="../../favicon/android-chrome-192x192.png" />
+  <br>
+  <img style="width: 100%;" src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
   <h1>Object-Oriented Analysis and Design (OOAD)</h1>
+  <br>
 </center>
 
 **Table of Contents**
