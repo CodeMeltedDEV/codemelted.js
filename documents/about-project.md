@@ -35,7 +35,7 @@ This full stack solution is accomplished by the `codemelted.js` module implement
 
 # ES6 Consumable Module
 
-<center><img src="domain-use-cases/models/use-case-model.drawio.png" /></center>
+<center><img src="./domain-use-cases/models/module/use-case-model.drawio.png" /></center>
 
 **Application Development**
 
@@ -49,7 +49,7 @@ DESKTOP / WEB | Include the module into your next Single Page App (SPA) / Multi-
 
 # Command Line Interface (CLI)
 
-<center><img src="domain-use-cases/models/cli-model.drawio.png" /></center>
+<center><img src="./domain-use-cases/models/module/cli-model.drawio.png" /></center>
 
 **NOTES:**
 

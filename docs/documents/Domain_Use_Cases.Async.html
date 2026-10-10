@@ -11,19 +11,68 @@
 <li><a href="Domain_Use_Cases.html">Domain Use Cases</a></li>
 <li><a href="" aria-current="page">Async</a></li></ul></div>
 <div class="tsd-panel tsd-typography"><center>
-  <img style="width: px; "src="../media/android-chrome-192x192.png" />
+  <mark>Project logo</mark>
   <h1>Async Use Case</h1>
-  <button style="cursor:pointer;" onclick="window.print();">Print</button>
 </center>
+<p><mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark></p>
 <p><strong>Table of Contents</strong></p>
 <ul>
-<li><a href="#design">DESIGN</a></li>
-<li><a href="#examples">EXAMPLES</a></li>
+<li><a href="#functional-analysis">FUNCTIONAL ANALYSIS</a>
+<ul>
+<li><a href="#uc-1-function-feature">UC-1: Function Feature</a></li>
 </ul>
-<h1 id="design" class="tsd-anchor-link">DESIGN<a href="#design" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
-<img src="../media/async_usecase.png" />
-<h1 id="examples" class="tsd-anchor-link">EXAMPLES<a href="#examples" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
-</div></div>
+</li>
+<li><a href="#notes">NOTES</a>
+<ul>
+<li><a href="#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="functional-analysis" class="tsd-anchor-link">FUNCTIONAL ANALYSIS<a href="#functional-analysis" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<h2 id="uc-1-function-feature" class="tsd-anchor-link">UC-1: Function Feature<a href="#uc-1-function-feature" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p><mark>IF Describing via Behavioral Driven Development (BDD) User Story Format</mark></p>
+<ul>
+<li><strong>Description:</strong> As a [who], I want [what], so that [why].</li>
+<li><strong>Scenario 1:</strong> Describe the scenario
+<ul>
+<li><em>Given:</em> Sets up the initial context, state, or preconditions of the system before any action happens.</li>
+<li><em>When:</em> Describes the specific action, event, or trigger performed by the user or system.</li>
+<li><em>Then:</em> Specifies the expected observable outcome or response after the action.</li>
+<li><em>And:</em> Extends any of the previous statements to add positive or multiple conditions, actions, or results.</li>
+<li><em>But:</em> Adds a negative condition, exception, or contrasting limitation to the preceding steps</li>
+</ul>
+</li>
+<li><strong>Scenario 2:</strong> Describe the scenario
+<ul>
+<li><em>Given:</em> Sets up the initial context, state, or preconditions of the system before any action happens.</li>
+<li><em>When:</em> Describes the specific action, event, or trigger performed by the user or system.</li>
+<li><em>Then:</em> Specifies the expected observable outcome or response after the action.</li>
+<li><em>And:</em> Extends any of the previous statements to add positive or multiple conditions, actions, or results.</li>
+<li><em>But:</em> Adds a negative condition, exception, or contrasting limitation to the preceding steps</li>
+</ul>
+</li>
+</ul>
+<p><mark>IF Describing via Use Case Scenario Format:</mark></p>
+<ul>
+<li><strong>Description:</strong> A description of what this use case is all about.</li>
+<li><strong>Actors:</strong> Who / what is triggering this use case.</li>
+<li><strong>Trigger:</strong> The ideal setup necessary for the use case scenario to run.</li>
+<li><strong>Main Success Scenario:</strong> The primary, ideal sequence of steps where everything goes right and the user achieves their goal without errors</li>
+<li><strong>Alternate Flows:</strong> Different paths or optional behaviors that still lead to success (e.g., a customer pays with PayPal instead of a credit card)</li>
+<li><strong>Exception Flows:</strong> Paths handling errors, invalid inputs, or system failures (e.g., a declined credit card or an out-of-stock item)</li>
+<li><strong>Post-Condition:</strong> The expectation when the main success scenario completes.</li>
+</ul>
+<p><mark>IF Describing via EARS Function Requirements Format:</mark></p>
+<ul>
+<li>Ubiquitous (Always Active): The <system name> shall <system response> (e.g., The mobile phone shall have a mass of less than 150 grams</li>
+<li>State-Driven (Active During a State): While <state>, the <system name> shall <system response> (e.g., While the vehicle is in reverse, the system shall display the rear camera feed)</li>
+<li>Event-Driven (Triggered by an Event): When <trigger>, the <system name> shall <system response> (e.g., When the user presses the power button, the device shall turn on)</li>
+<li>Optional Features: Where <feature is present>, the <system name> shall <system response> (e.g., Where the navigation package is installed, the system shall display the map)</li>
+<li>Unwanted Behavior: If <unwanted trigger>, then the <system name> shall <system response> (e.g., If the password is entered incorrectly three times, then the system shall lock the account)</li>
+</ul>
+<h1 id="notes" class="tsd-anchor-link">NOTES<a href="#notes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<h2 id="class-diagram" class="tsd-anchor-link">Class Diagram<a href="#class-diagram" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<img src="../media/class-diagram.png" /></div></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -36,7 +85,11 @@
 <div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
 <details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
 <h3>On This Page</h3></summary>
-<div class="tsd-accordion-details"><a href="#design"><span>DESIGN</span></a><a href="#examples"><span>EXAMPLES</span></a></div></details></div>
+<div class="tsd-accordion-details"><a href="#functional-analysis"><span>FUNCTIONAL <wbr/>ANALYSIS</span></a>
+<ul>
+<li><a href="#uc-1-function-feature"><span>UC-<wbr/>1: <wbr/>Function <wbr/>Feature</span></a></li></ul><a href="#notes"><span>NOTES</span></a>
+<ul>
+<li><a href="#class-diagram"><span>Class <wbr/>Diagram</span></a></li></ul></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../modules.html">codemelted.js Project</a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container">

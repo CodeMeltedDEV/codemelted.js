@@ -32,7 +32,7 @@
     "documents/about-project.md",
     "documents/changelog.md",
     "documents/cli.md",
-    "documents/module-tests.md",
+    "documents/module-test.md",
     "documents/domain-use-cases/index.md",
     "documents/software-engineering/index.md",
   ]

@@ -1,5 +1,5 @@
 ---
-title: "Async"
+title: "My Document Title"
 date: YYY-MMM-DD
 author: "Jane Doe"
 description: ""
@@ -9,7 +9,7 @@ categories:
 
 <center>
   <mark>Project logo</mark>
-  <h1>Async Use Case</h1>
+  <h1>Project Title</h1>
 </center>
 
 <mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark>
@@ -19,7 +19,8 @@ categories:
 - [FUNCTIONAL ANALYSIS](#functional-analysis)
   - [UC-1: Function Feature](#uc-1-function-feature)
 - [NOTES](#notes)
-  - [Class Diagram](#class-diagram)
+    - [Architecture](#architecture)
+    - [UI Components](#ui-components)
 
 # FUNCTIONAL ANALYSIS
 
@@ -63,6 +64,10 @@ categories:
 
 # NOTES
 
-## Class Diagram
+### Architecture
 
-<img src="models/domain-use-cases/async/class-diagram.png" />
+<img src="models/ui_usecase.png" />
+
+### UI Components
+
+<img src="models/ui_components.png" />

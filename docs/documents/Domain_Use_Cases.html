@@ -30,14 +30,10 @@
 </li>
 </ul>
 </li>
-<li><a href="#functional-analysis">FUNCTIONAL ANALYSIS</a>
-<ul>
-<li><a href="#uc-1-function-feature">UC-1: Function Feature</a></li>
-</ul>
-</li>
+<li><a href="#functional-analysis">FUNCTIONAL ANALYSIS</a></li>
 <li><a href="#non-functional-analysis">NON-FUNCTIONAL ANALYSIS</a>
 <ul>
-<li><a href="#useability">Useability</a></li>
+<li><a href="#usability">Usability</a></li>
 <li><a href="#reliability">Reliability</a></li>
 <li><a href="#performance">Performance</a></li>
 <li><a href="#supportability">Supportability</a></li>
@@ -59,7 +55,6 @@
 <li><a href="#software-interfaces">Software Interfaces</a>
 <ul>
 <li><a href="#module-core">Module Core</a></li>
-<li><a href="#domain-use-case-implementation">Domain Use Case Implementation</a></li>
 </ul>
 </li>
 <li><a href="#user-interfaces">User Interfaces</a></li>
@@ -75,7 +70,7 @@
 <h2 id="terms" class="tsd-anchor-link">Terms<a href="#terms" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
 <p><mark>Breakdown of acronyms and definitions</mark></p>
 <h2 id="references" class="tsd-anchor-link">References<a href="#references" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p>The following are the references to the external Browser / Deno APIs that were wrapped to create the <code>codemelted.js</code> module.</p>
+<p>The following are the references to the external SDK documentation to implement the fourteen domain use cases for the <code>codemelted.js</code> module.</p>
 <h3 id="c-reference" class="tsd-anchor-link">C++ Reference<a href="#c-reference" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <ul>
 <li><a href="https://en.cppreference.com/cpp/thread/future">C++ Future</a></li>
@@ -120,51 +115,89 @@
 </ul>
 <h1 id="functional-analysis" class="tsd-anchor-link">FUNCTIONAL ANALYSIS<a href="#functional-analysis" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
 <img src="../media/use-case-model.drawio.png" />
-<p><mark>An introductory use case model or other architecture diagram that may aid in visualizing the different requirements categories below.</mark></p>
-<p><mark>Add a new model for each complex Function Feature that may need further pictorial and feature breakdown until it is at its lowest testable functional description.</mark></p>
-<h2 id="uc-1-function-feature" class="tsd-anchor-link">UC-1: Function Feature<a href="#uc-1-function-feature" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p><mark>IF Describing via Behavioral Driven Development (BDD) User Story Format</mark></p>
-<ul>
-<li><strong>Description:</strong> As a [who], I want [what], so that [why].</li>
-<li><strong>Scenario 1:</strong> Describe the scenario
-<ul>
-<li><em>Given:</em> Sets up the initial context, state, or preconditions of the system before any action happens.</li>
-<li><em>When:</em> Describes the specific action, event, or trigger performed by the user or system.</li>
-<li><em>Then:</em> Specifies the expected observable outcome or response after the action.</li>
-<li><em>And:</em> Extends any of the previous statements to add positive or multiple conditions, actions, or results.</li>
-<li><em>But:</em> Adds a negative condition, exception, or contrasting limitation to the preceding steps</li>
-</ul>
-</li>
-<li><strong>Scenario 2:</strong> Describe the scenario
-<ul>
-<li><em>Given:</em> Sets up the initial context, state, or preconditions of the system before any action happens.</li>
-<li><em>When:</em> Describes the specific action, event, or trigger performed by the user or system.</li>
-<li><em>Then:</em> Specifies the expected observable outcome or response after the action.</li>
-<li><em>And:</em> Extends any of the previous statements to add positive or multiple conditions, actions, or results.</li>
-<li><em>But:</em> Adds a negative condition, exception, or contrasting limitation to the preceding steps</li>
-</ul>
-</li>
-</ul>
-<p><mark>IF Describing via Use Case Scenario Format:</mark></p>
-<ul>
-<li><strong>Description:</strong> A description of what this use case is all about.</li>
-<li><strong>Actors:</strong> Who / what is triggering this use case.</li>
-<li><strong>Trigger:</strong> The ideal setup necessary for the use case scenario to run.</li>
-<li><strong>Main Success Scenario:</strong> The primary, ideal sequence of steps where everything goes right and the user achieves their goal without errors</li>
-<li><strong>Alternate Flows:</strong> Different paths or optional behaviors that still lead to success (e.g., a customer pays with PayPal instead of a credit card)</li>
-<li><strong>Exception Flows:</strong> Paths handling errors, invalid inputs, or system failures (e.g., a declined credit card or an out-of-stock item)</li>
-<li><strong>Post-Condition:</strong> The expectation when the main success scenario completes.</li>
-</ul>
-<p><mark>IF Describing via EARS Function Requirements Format:</mark></p>
-<ul>
-<li>Ubiquitous (Always Active): The <system name> shall <system response> (e.g., The mobile phone shall have a mass of less than 150 grams</li>
-<li>State-Driven (Active During a State): While <state>, the <system name> shall <system response> (e.g., While the vehicle is in reverse, the system shall display the rear camera feed)</li>
-<li>Event-Driven (Triggered by an Event): When <trigger>, the <system name> shall <system response> (e.g., When the user presses the power button, the device shall turn on)</li>
-<li>Optional Features: Where <feature is present>, the <system name> shall <system response> (e.g., Where the navigation package is installed, the system shall display the map)</li>
-<li>Unwanted Behavior: If <unwanted trigger>, then the <system name> shall <system response> (e.g., If the password is entered incorrectly three times, then the system shall lock the account)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Link</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UC-01</td>
+<td><a href="Domain_Use_Cases.Async.html">Async</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+<tr>
+<td>UC-02</td>
+<td><a href="../media/console.md">Console</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+<tr>
+<td>UC-03</td>
+<td><a href="../media/db.md">DB</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+<tr>
+<td>UC-04</td>
+<td><a href="../media/disk.md">Disk</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+<tr>
+<td>UC-05</td>
+<td><a href="../media/hw.md">HW</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+<tr>
+<td>UC-06</td>
+<td><a href="../media/json.md">JSON</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+<tr>
+<td>UC-07</td>
+<td><a href="../media/logger.md">Logger</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+<tr>
+<td>UC-08</td>
+<td><a href="../media/monitor.md">Monitor</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+<tr>
+<td>UC-09</td>
+<td><a href="../media/network.md">Network</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+<tr>
+<td>UC-10</td>
+<td><a href="../media/npu.md">NPU</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+<tr>
+<td>UC-11</td>
+<td><a href="../media/process.md">Process</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+<tr>
+<td>UC-12</td>
+<td><a href="../media/runtime.md">Runtime</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+<tr>
+<td>UC-13</td>
+<td><a href="../media/storage.md">Storage</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+<tr>
+<td>UC-14</td>
+<td><a href="../media/ui.md">UI</a></td>
+<td><mark>To Be Developed</mark></td>
+</tr>
+</tbody>
+</table>
 <h1 id="non-functional-analysis" class="tsd-anchor-link">NON-FUNCTIONAL ANALYSIS<a href="#non-functional-analysis" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
-<h2 id="useability" class="tsd-anchor-link">Useability<a href="#useability" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<h2 id="usability" class="tsd-anchor-link">Usability<a href="#usability" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
 <p><mark>State the requirements that affect usability.</mark></p>
 <h2 id="reliability" class="tsd-anchor-link">Reliability<a href="#reliability" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
 <p><mark>State the requirements for reliability</mark></p>
@@ -179,7 +212,7 @@
 <h2 id="purchased-components" class="tsd-anchor-link">Purchased Components<a href="#purchased-components" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
 <p><mark>List the purchased components used with the system, licensing or usage restrictions, and compatibility/interoperability requirements</mark></p>
 <h2 id="licensing-and-security" class="tsd-anchor-link">Licensing and Security<a href="#licensing-and-security" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<p><mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessability</mark></p>
+<p><mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessibility</mark></p>
 <h2 id="legal-copyright-and-other-notices" class="tsd-anchor-link">Legal, Copyright and Other Notices<a href="#legal-copyright-and-other-notices" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
 <p><mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessibility.</p>
 <h2 id="applicable-standards" class="tsd-anchor-link">Applicable Standards<a href="#applicable-standards" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
@@ -197,21 +230,9 @@
 <h2 id="software-interfaces" class="tsd-anchor-link">Software Interfaces<a href="#software-interfaces" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
 <h3 id="module-core" class="tsd-anchor-link">Module Core<a href="#module-core" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <img src="../media/module_core.png" />
-<h3 id="domain-use-case-implementation" class="tsd-anchor-link">Domain Use Case Implementation<a href="#domain-use-case-implementation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
-<ul>
-<li><a href="Domain_Use_Cases.Async.html">Async</a></li>
-</ul>
 <h2 id="user-interfaces" class="tsd-anchor-link">User Interfaces<a href="#user-interfaces" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
 <h1 id="traceability" class="tsd-anchor-link">TRACEABILITY<a href="#traceability" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
-<p><mark>Fill out table of the different elements showing how they relate.</mark></p>
-<table>
-<thead>
-<tr>
-<th>REQ #</th>
-<th>DESIGN #</th>
-</tr>
-</thead>
-</table>
+<p>Not Applicable.</p>
 </div></div>
 <div class="col-sidebar">
 <div class="page-menu">
@@ -236,11 +257,9 @@
 <li><a href="#c-reference"><span>C++ <wbr/>Reference</span></a></li>
 <li><a href="#mozilla-developer-network-mdn"><span>Mozilla <wbr/>Developer <wbr/>Network (<wbr/>MDN)</span></a></li>
 <li><a href="#rust-std"><span>Rust <wbr/>STD</span></a></li>
-<li><a href="#webdev"><span>web.dev</span></a></li></ul></li></ul><a href="#functional-analysis"><span>FUNCTIONAL <wbr/>ANALYSIS</span></a>
+<li><a href="#webdev"><span>web.dev</span></a></li></ul></li></ul><a href="#functional-analysis"><span>FUNCTIONAL <wbr/>ANALYSIS</span></a><a href="#non-functional-analysis"><span>NON-<wbr/>FUNCTIONAL <wbr/>ANALYSIS</span></a>
 <ul>
-<li><a href="#uc-1-function-feature"><span>UC-<wbr/>1: <wbr/>Function <wbr/>Feature</span></a></li></ul><a href="#non-functional-analysis"><span>NON-<wbr/>FUNCTIONAL <wbr/>ANALYSIS</span></a>
-<ul>
-<li><a href="#useability"><span>Useability</span></a></li>
+<li><a href="#usability"><span>Usability</span></a></li>
 <li><a href="#reliability"><span>Reliability</span></a></li>
 <li><a href="#performance"><span>Performance</span></a></li>
 <li><a href="#supportability"><span>Supportability</span></a></li>
@@ -259,8 +278,7 @@
 <li><a href="#software-interfaces"><span>Software <wbr/>Interfaces</span></a></li>
 <li>
 <ul>
-<li><a href="#module-core"><span>Module <wbr/>Core</span></a></li>
-<li><a href="#domain-use-case-implementation"><span>Domain <wbr/>Use <wbr/>Case <wbr/>Implementation</span></a></li></ul></li>
+<li><a href="#module-core"><span>Module <wbr/>Core</span></a></li></ul></li>
 <li><a href="#user-interfaces"><span>User <wbr/>Interfaces</span></a></li></ul><a href="#traceability"><span>TRACEABILITY</span></a></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../modules.html">codemelted.js Project</a>

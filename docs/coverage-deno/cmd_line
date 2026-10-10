@@ -1,1 +1,0 @@
-genhtml -o coverage --ignore-errors empty,unused,inconsistent,inconsistent,range --dark-mode coverage/lcov.info
