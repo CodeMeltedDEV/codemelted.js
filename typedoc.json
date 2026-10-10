@@ -25,6 +25,7 @@
     "powershell",
     "tsx",
     "typescript",
+    "rust",
     "yaml"
   ],
   "ignoredHighlightLanguages": ["mermaid"],

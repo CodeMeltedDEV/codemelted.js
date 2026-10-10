@@ -1,5 +1,38 @@
-//! <mark>UNDER DEVELOPMENT</mark>
+// ============================================================================
+//! | Key       | Value                                                        |
+//! | --------- | ------------------------------------------------------------ |
+//! | AUTHOR    | mark.shaffer@codemelted.com / dev.codemelted.com             |
+//! | COPYRIGHT | © 2025-Present Mark Shaffer. All Rights Reserved.            |
+//! | VERSION   | v26.0.0-alpha (Last Updated 2026-OCT-XX)                     |
+//!
+//! # FEATURES
+//!
+//! <mark>TBD</mark>
+//!
+//! # GETTING STARTED
+//!
+//! <mark>TBD</mark>
+//!
+//! # USAGE
+//!
+//! <mark>TBD</mark>
+//!
+//! # CHANGE LOG
+//!
+//! ## v26.0.0 (Last Updated 2026-OCT-DD)
+//!
+//! [Download]()
+//!
+//! Nothing to really report from this module. This was a `codemelted.js`
+//! focused release. This currently has stubs of research for how I want to
+//! design the API.
+//!
+//! # TODOS
+//!
+//! <mark>TBD</mark>
+//!
 //! # LICENSE
+//!
 //! MIT License
 //!
 //! © 2025-2026 Mark Shaffer. All Rights Reserved.
@@ -21,14 +54,11 @@
 //! LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 //! FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 //! DEALINGS IN THE SOFTWARE.
-
-#![doc(html_logo_url =
-  "https://codemelted.com/assets/favicon/apple-touch-icon.png")]
-
-
 // ============================================================================
 // [MODULE CORE IMPLEMENTATION] ===============================================
 // ============================================================================
+#![doc(html_logo_url =
+  "https://codemelted.com/assets/favicon/apple-touch-icon.png")]
 
 mod module_core {
   use std::sync::Mutex;
@@ -83,16 +113,12 @@ mod module_core {
   }
 }
 
-
-
 // ============================================================================
 // [CRATE PUBLIC API] =========================================================
 // ============================================================================
 
 pub mod api {
   pub use crate::module_core::CResult;
-
-
 
   /// Provides the ability to export the static library API utilizing functions
   /// with and without a return type.

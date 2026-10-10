@@ -14,6 +14,6 @@ children:
   <br>
 </center>
 
-<mark>TO BE FURTHER DEVELOPED</mark>
-
-- [Starter Templates](./starter-templates.md)
+| Area | Description                                                            |
+| ---- | ---------------------------------------------------------------------- |
+| [Starter Templates](./starter-templates.md) | This is a collection of templates for performing software engineering tasks and beginning a coding effort. The templates have descriptions within to aid in getting started with the task at hand. The templates can also serve in feeding AI agents to control what and how they build / validate a solution. Finally, these are just templates, modify as necessary for your project needs. |
