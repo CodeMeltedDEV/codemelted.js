@@ -5,9 +5,172 @@
  *      src="https://codemelted.com/assets/images/logo-codemelted-js.png"
  * />
  *
- * Something something star wars.
+ * | Key       | Value                                                        |
+ * | --------- | ------------------------------------------------------------ |
+ * | AUTHOR    | mark.shaffer@codemelted.com / dev.codemelted.com             |
+ * | COPYRIGHT | © 2025-Present Mark Shaffer. All Rights Reserved.            |
+ * | VERSION   | v26.0.0-alpha (Last Updated 2026-OCT-XX)                     |
+ *
+ * # FEATURES
+ *
+ * The `codemelted.js` is an ES6 developed module focusing on client-side
+ * front end domain use cases. This is accomplished by leveraging the Web APIs
+ * available within a Browser / Web Worker runtimes. The Web APIs provide
+ * everything a client-side app requires to build Single Page App (SPA),
+ * Progressive Web App (PWA), or just general static websites. All of this
+ * without the need of a heavy framework.
+ *
+ * > Any module API violation will result in a `CModuleError` thrown with a
+ * full stack trace of the violation.
+ *
+ * # GETTING STARTED
+ *
+ * ## Clone / Fork
+ *
+ * When you clone / fork the *codemelted.js Project* repo, you will need to
+ * install tools to properly build the project. The following represents how to
+ * set up those tools.
+ *
+ * 1. Install [PowerShell Core](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell?view=powershell-7.6)
+ * for your given operating system.
+ * 2. Navigate to *codemelted.js Project* repo location.
+ * 3. Open a terminal and execute `./build.ps1 --setup`. Follow the
+ * instructions to install all the necessary repo tooling.
+ * 4. Once completed, execute `./build.ps1 --help` to gain an understanding
+ * of how to build the project in the future.
+ *
+ * ## Content Delivery Network (CDN)
+ *
+ * The `codemelted.js` module is hosted on GitHub and delivered via the
+ * `jsdelivr` CDN. The following represents the URLs for accessing the module.
+ * These can be utilized with `import` statements within JavaScript
+ * or as part of the `<script type="module"></script>` tags of a website.
+ *
+ * - **Latest Version (Risky):**
+ *
+ * ```txt
+ * https://cdn.jsdelivr.net/gh/codemelteddev/codemelted.js/codemelted.js
+ * ```
+ *
+ * - **Version Controlled (Safest):**
+ *
+ * ```txt
+ * https://cdn.jsdelivr.net/gh/codemelteddev/codemelted.js@XX.Y.Z/codemelted.js
+ * ```
+ *
+ * **NOTES:**
+ * 1. The `@XX.Y.Z` corresponds to the releases of the *codemelted.js Project*
+ * as identified on GitHub.
+ * 2. `XX` corresponds to the year of the release. A change in this value resets
+ * `Y` and `Z` to `0` respectively.
+ * 3. `Y` corresponds to an API breaking change. A change in this number
+ * resets `Z`.
+ * 4. `Z` corresponds to a newly delivered feature / bug fix that should not break
+ * other API functions.
+ *
+ * # USAGE
+ *
+ * **ES6 Module Import Example**
+ *
+ * ```js
+ * // Import whole module statically via URL or local path
+ * import * as codemelted from "path/to/codemelted.js";
+ *
+ * // Import elements to use statically via URL or local path
+ * import { exported_element } from "path/to/codemelted.js";
+ *
+ * // Dynamically import all module elements to named variable
+ * let codemelted = await import("path/to/codemelted.js");
+ * ```
+ *
+ * **Via Script Tag in HTML File**
+ *
+ * ```html
+ * <script type="module">
+ * // Use the import examples above to utilize the script functions.
+ * </script>
+ * ```
+ *
+ * And with your imports in place, explore the [SDK](#sdk) to utilize the
+ * domain use case API of your choice. They will have the details of the API
+ * call along with examples.
+ *
+ * # CHANGE LOG
+ *
+ * ## v26.0.0 (Last Updated 2026-OCT-DD)
+ *
+ * [Download]()
+ *
+ * Initial alpha release of the module. Alpha because additional testing is
+ * necessary to ensure the module is production ready. Until then
+ * iteration on the domain use cases specific to this module will be in active
+ * development. The export functions and classes reflect the currently
+ * developed use cases that are under test.
+ *
+ * # TODOS
+ *
+ * - Research and implement async_lock() from the Web Locks API.
+ * - Research and implement ui_xxx() functions for Fullscreen API,
+ * Picture in Picture API, Navigation API, Resize Observer API, and Screen
+ * Wake Lock API.
+ * - Research Web Cryptography API and how to apply to the module.
+ * - db_xxx() use case. Define IndexedDB portion and expose.
+ * - hw_xxx() use case. Implement currently researched protocols and expose.
+ * - hw_xxx() use case. Implement not yet researched protocols and expose.
+ * - network_xxx() use case. Get fetch and beacon done. Move queryable items
+ * to runtime
+ * - network_xxx() use case. Get client side CBroadcastChannel / CEventSource
+ * hooked up and exposed
+ * - network_xxx() sue case. Get client side socket based protocols implemented
+ * and exposed.
+ * - npu_compute() use case. Develop tests and expose to the greater project.
+ * - runtime_xxx() use case. Add runtime_query() to query different values from
+ * the runtime. This will not throw just return a signal of "unknown" for the
+ * value.
+ * - ui_xxx() use case. Build out protocols
+ * - ui_xxx() use case. Finish the ui_notify with custom dialog.
+ * - ui_xxx() use case. Start building UI components and come up with a standard
+ * for using them within HTML to build user interfaces.
+ * - ui_xxx() use case. Define tests to fully flesh and test this out.
+ * - Perform OOAD analysis, fill out, and add TODOs for remainder of this project
+ * based on necessary Deno wrappers and what will go into the Rust static lib
+ * project.
+ *
+ * # LICENSE
+ *
+ * MIT License
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the 'Software'),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge,  publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included
+ * in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ *
+ * # SDK
+ *
+ * The following lists represent the implementation of the `codemelted.js`
+ * module. The *Functions* represents the actual domain use case API
+ * functions. All other items represent the supporing objects of the
+ * *Functions* API.
+ *
  * @module codemelted.js SDK
  */
+// =============================================================================
+// [MODULE CORE] ===============================================================
+// =============================================================================
+
 /**
  * Captures information about the `codemelted.js` module.
  * @typedef {object}
@@ -24,25 +187,7 @@
 export const ABOUT_MODULE = Object.freeze({
 author: "mark.shaffer@codemelted.com / dev.codemelted.com",
 copyright: "© 2025 - 2026 Mark Shaffer. All Rights Reserved.",
-license: `MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the 'Software'), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge,  publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included
-in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+license: `
 `,
 version: "v26.0.0 [Last Updated 2026-SEP-19]",
 history:`
@@ -51,33 +196,7 @@ history:`
   JavaScript runtimes that have been fully tested and documented.
 `,
 todos:`
-- Research and implement async_lock() from the Web Locks API.
-- Research and implement ui_xxx() functions for Fullscreen API,
-   Picture in Picture API, Navigation API, Resize Observer API, and Screen
-   Wake Lock API.
-- Research Web Cryptography API and how to apply to the module.
-- console_xxx() use cases for deno. Define and expose.
-- db_xxx() use case. Define IndexedDB portion and expose.
-- hw_xxx() use case. Implement currently researched protocols and expose.
-- hw_xxx() use case. Implement not yet researched protocols and expose.
-- network_xxx() use case. Get fetch and beacon done. Move queryable items
-  to runtime
-- network_xxx() use case. Get client side CBroadcastChannel / CEventSource
-  hooked up and exposed
-- network_xxx() sue case. Get client side socket based protocols implemented
-  and exposed.
-- npu_compute() use case. Develop tests and expose to the greater project.
-- runtime_xxx() use case. Add runtime_query() to query different values from
-  the runtime. This will not throw just return a signal of "unknown" for the
-  value.
-- ui_xxx() use case. Build out protocols
-- ui_xxx() use case. Finish the ui_notify with custom dialog.
-- ui_xxx() use case. Start building UI components and come up with a standard
-  for using them within HTML to build user interfaces.
-- ui_xxx() use case. Define tests to fully flesh and test this out.
-- Perform OOAD analysis, fill out, and add TODOs for remainder of this project
-  based on necessary Deno wrappers and what will go into the Rust static lib
-  project.
+
 `,
 });
 

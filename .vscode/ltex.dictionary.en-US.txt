@@ -8,3 +8,4 @@ CodeMeltedDEV
 CMDLET
 codemelted
 rs
+jsdelivr

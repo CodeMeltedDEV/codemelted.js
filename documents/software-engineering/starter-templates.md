@@ -19,7 +19,7 @@ This is a collection of templates for performing software engineering tasks and 
 
 - [CODE](#code)
   - [CSS Styles](#css-styles)
-  - [JavaScript / TypeScript Module](#javascript--typescript-module)
+  - [JavaScript Module](#javascript-module)
   - [Linux / Unix Shell Script](#linux--unix-shell-script)
   - [PowerShell Script](#powershell-script)
   - [Webpage](#webpage)
@@ -93,50 +93,51 @@ SOFTWARE.
 /* ========================================================================= */
 ```
 
-## JavaScript / TypeScript Module
+## JavaScript Module
 
 Any complicated JavaScript full-stack solution should utilize ES6 modules. This allows for segmenting code into organized chunks. The below template is validated via `typedoc` which universally makes the nicest documentation between the different JavaScript V8 runtimes and web pages alike. Extra information is stored within this example to allow for one-off module management. For larger projects, this additional information would be unnecessary. The `// @ts-check` at the top of the module is key for utilizing modern type checking within major code editors and linters.
 
 ```javascript
 // @ts-check
 // ============================================================================
-export const ABOUT_MODULE = Object.freeze({
-author: "EMAIL / WEBSITE",
-copyright: "© 2025 - 2026 AUTHOR. All Rights Reserved.",
-license: `MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the 'Software'), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge,  publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included
-in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-`,
-version: "v26.0.0 [Last Updated 2026-MMM-DD]",
-history:`
-- vXX.Y.Z [2026-MMM-DD]:
-`,
-todos:`
-1. Identify something needing doing within the file.
-website: "WEBSITE REFERENCE",
-`
-});
-// =============================================================================
 /**
- * Introduce the module.
+ * <mark>Add Image Tag if you have one.</mark>
+ *
+ * | Key       | Value                                                        |
+ * | --------- | ------------------------------------------------------------ |
+ * | AUTHOR    | EMAIL / WEBSITE                                              |
+ * | COPYRIGHT | © YYYY NAME. All Rights Reserved.                            |
+ * | VERSION   | v26.X.Y (Last Updated YYYY-DD-MM)                            |
+ *
+ * <mark>Introduce the module.</mark>
+ *
+ * # FEATURES
+ *
+ * <mark>Identify the important aspects of the project and what makes it cool.</mark>
+ *
+ * # GETTING STARTED
+ *
+ * <mark>Identify the steps necessary to be successful with the repo.</mark>
+ *
+ * # USAGE
+ *
+ * <mark>Identify how to use the repo once getting started is done.</mark>
+ *
+ * # CHANGE LOG
+ *
+ * ##  History
+ *
+ * - [vYY.X.Y (Last Updated YYYY-MMM-DD)](): Put what changed
+ *
+ * ## Todos
+ *
+ * - <mark>Track things that need changing.</mark>
+ *
+ * # LICENSE
+ *
+ * <mark>Identify the license that governs this repo.</mark>
+ *
  * @module starter_module
- * @see https://reference.com
  */
 // =============================================================================
 // [MODULE CORE] ===============================================================
@@ -160,7 +161,7 @@ Every now and again you will need to build quick utilities in a terminal shell. 
 # =============================================================================
 # FILE: WHAT IS THIS SCRIPT FOR
 # AUTHOR: email / website
-# COPYRIGHT: © 2025 - 2026 NAME. All Rights Reserved.
+# COPYRIGHT: © YYYY NAME. All Rights Reserved.
 # LICENSE: MIT License
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy

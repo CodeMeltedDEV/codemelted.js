@@ -31,7 +31,6 @@
   "projectDocuments": [
     "documents/domain-use-cases/index.md",
     "documents/software-engineering/index.md",
-    "documents/changelog.md",
     "documents/cli.md",
     "documents/module-test.md",
     "documents/codemelted-rs.md",
