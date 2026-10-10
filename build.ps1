@@ -78,7 +78,7 @@ function main {
 
   function make_rust {
     message "Now building the codemelted_lib static library."
-    Set-Location $PSScriptRoot/codemelted-cli
+    Set-Location $PSScriptRoot/codemelted.rs
     # TODO: Will need to add additional targets when the time comes
     cargo clean
     cargo test

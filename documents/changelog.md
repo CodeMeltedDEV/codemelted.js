@@ -8,7 +8,7 @@ tags: [changelog, codemelted.js, ES6 Module, TypeScript, JavaScript]
 <center>
   <br>
   <img style="width: 100%; "src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>codemelted.js Project Change Log</h1>
+  <h1>Change Log</h1>
   <br>
 </center>
 

@@ -1,6 +1,14 @@
 // @ts-check
 // ============================================================================
 /**
+ * <img style="width: 100%;"
+ *      src="https://codemelted.com/assets/images/logo-codemelted-js.png"
+ * />
+ *
+ * Something something star wars.
+ * @module codemelted.js SDK
+ */
+/**
  * Captures information about the `codemelted.js` module.
  * @typedef {object}
  * @property {string} author Who made this sticking project anyways.
@@ -197,6 +205,14 @@ export class CModuleError extends Error {
     console.error("codemelted.js module error encountered.", err);
   }
 
+  static check_runtime() {
+    const valid_runtime = "HTMLElement" in globalThis ||
+      "WorkerGlobalScope" in globalThis;
+    if (!valid_runtime) {
+      throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
+    }
+  }
+
   /**
    * Provides custom printout of the module error providing the name, message,
    * and stack_trace to chain together the call failure sequence.
@@ -224,6 +240,7 @@ export class CModuleError extends Error {
     }
   }
 }
+CModuleError.check_runtime();
 
 /**
  * Provides a result where either the value or the error can be signaled for
@@ -287,12 +304,6 @@ export class CResult {
       throw new CModuleError("CLogRecord construction error.", err);
     }
   }
-}
-
-// Ensure we are in a runtime that will support us, if not, then bail.
-if (!runtime_available({request: "ask_runtime", name: "HTMLElement"}) &&
-    !runtime_available({request: "ask_runtime", name: "WorkerGlobalScope"})) {
-  throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
 }
 
 // [PROTOCOL BASE DEFINITION] -------------------------------------------------
