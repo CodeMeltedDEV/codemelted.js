@@ -82,7 +82,7 @@ function main {
 
   function make_rust {
     message "Now building the codemelted_lib static library."
-    Set-Location $PSScriptRoot/codemelted_lib
+    Set-Location $PSScriptRoot/Invoke-CodeMelted/codemelted
     # TODO: Will need to add additional targets when the time comes
     cargo clean
     cargo test
@@ -99,6 +99,8 @@ function main {
     }
     # TODO: Will need to copy all those additional target compiles
     #       to the lib folder.
+    Copy-Item target/doc $PSScriptRoot/docs/codemelted -Force -Recurse `
+      -ErrorAction Stop
     Set-Location $PSScriptRoot
     message "codemelted_lib static library build completed."
   }

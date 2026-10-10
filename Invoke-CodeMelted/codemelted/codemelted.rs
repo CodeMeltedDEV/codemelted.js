@@ -85,7 +85,7 @@ mod module_core {
 // [CRATE PUBLIC API] =========================================================
 // ============================================================================
 
-pub mod codemelted_lib_api {
+pub mod api {
   pub use crate::module_core::CResult;
 
 
@@ -130,7 +130,7 @@ pub mod codemelted_lib_api {
 use std::os::raw::c_char;
 use crate::module_core::CResult;
 
-codemelted_lib_api::ffi! {
+api::ffi! {
 
   pub extern "C" fn codemelted_lib_request() -> bool {
     false
@@ -156,7 +156,7 @@ codemelted_lib_api::ffi! {
       return false;
     }
 
-    let stringified = match crate::codemelted_lib_api::response() {
+    let stringified = match crate::api::response() {
       Some(v) => {
         v.stringify()
       },
@@ -174,6 +174,6 @@ codemelted_lib_api::ffi! {
   }
 
   pub extern "C" fn codemelted_lib_response_size() -> usize {
-    crate::codemelted_lib_api::response_size()
+    crate::api::response_size()
   }
 }

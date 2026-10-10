@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["request","response","response_size"],"struct":["CResult"]};
