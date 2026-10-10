@@ -5,8 +5,8 @@ author: "Mark Shaffer"
 description: "TBD"
 tags: []
 children:
-  - cmdlet.md
-  - dynamic-library.md
+  - cli.md
+  - sdk.md
 ---
 <center>
   <br>
@@ -15,5 +15,5 @@ children:
   <br>
 </center>
 
-- [PowerShell CMDLET](./cmdlet.md)
-- [Dynamic Library](./dynamic-library.md)
+- [codemelted CLI](./cli.md)
+- [codemelted.rs SDK](./sdk.md)
