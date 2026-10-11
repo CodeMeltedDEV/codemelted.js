@@ -16,7 +16,7 @@
   <h1>Async Use Case</h1>
   <br>
 </center>
-<p><mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark></p>
+<p>Complex applications require the ability to asynchronously time slice up work as to not block the main synchronous processing thread.</p>
 <p><strong>Table of Contents</strong></p>
 <ul>
 <li><a href="#functional-analysis">FUNCTIONAL ANALYSIS</a>
@@ -43,6 +43,28 @@
 </ul>
 <h1 id="notes" class="tsd-anchor-link">NOTES<a href="#notes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h1>
 <h2 id="references" class="tsd-anchor-link">References<a href="#references" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://en.cppreference.com/cpp/thread/future">C++ Future</a></td>
+<td>To get a general reference design for designing the <code>CFuture</code> object.</td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></td>
+<td>A way of dividing up the webpage main thread with different work elements.</td>
+</tr>
+<tr>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">Worker</a></td>
+<td>Providing a way to spawn background thread processing for a webpage.</td>
+</tr>
+</tbody>
+</table>
 </div></div>
 <div class="col-sidebar">
 <div class="page-menu">

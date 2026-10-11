@@ -13,15 +13,14 @@ categories:
   <br>
 </center>
 
-<mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark>
+A visual way for humans to interact with electronic devices, such as computers, smartphones, and ATMs, using graphics instead of text commands.
 
 **Table of Contents**
 
 - [FUNCTIONAL ANALYSIS](#functional-analysis)
   - [UC-1: Function Feature](#uc-1-function-feature)
 - [NOTES](#notes)
-    - [Architecture](#architecture)
-    - [UI Components](#ui-components)
+  - [References](#references)
 
 # FUNCTIONAL ANALYSIS
 
@@ -65,10 +64,9 @@ categories:
 
 # NOTES
 
-### Architecture
+## References
 
-<img src="models/ui/ui_usecase.png" />
-
-### UI Components
-
-<img src="models/ui/ui_components.png" />
+| Reference                                                                                                      | Description                                                                             |
+|----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| [Screen](https://developer.mozilla.org/en-US/docs/Web/API/Screen)                                              | Queryable elements about a device screen for a webpage to access.                       |
+| [Using Custom Elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements) | Why use a whole framework for UI elements on a webpage. Make your own the way you want. |

@@ -13,7 +13,7 @@ categories:
   <br>
 </center>
 
-<mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark>
+A string based key / value pair combination for simple information storage and retrieval.
 
 **Table of Contents**
 
@@ -39,3 +39,10 @@ categories:
 # NOTES
 
 ## References
+
+| Reference                                                                                | Description                                                                                                                 |
+|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| [CookieStore](https://developer.mozilla.org/en-US/docs/Web/API/CookieStore)              | The modern way webpages can store cookies vs. the old way on a host computer.                                               |
+| [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)     | Provides a webpage with a string key / value storage mechanism that lasts after page closes and is opened in a new session. |
+| [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) | A key / value string storage active for the webpage session. Cleared when page is closed.                                   |
+

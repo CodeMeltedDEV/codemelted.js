@@ -13,7 +13,7 @@ categories:
   <br>
 </center>
 
-<mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark>
+JSON (JavaScript Object Notation) is a lightweight, plain-text format used to store and transfer structured data between a server and an application.
 
 **Table of Contents**
 

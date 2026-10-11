@@ -13,7 +13,7 @@ categories:
   <br>
 </center>
 
-<mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark>
+A system of interconnected computing devices that communicate and share resources, data, and applications over wired or wireless connections.
 
 **Table of Contents**
 
@@ -39,3 +39,14 @@ categories:
 # NOTES
 
 ## References
+
+| Reference                                                                                   | Description                                                                     |
+|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| [Beacon](https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API)                       | Sets up a quick post call to a backend server from a webpage.                   |
+| [Broadcast Channel](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API) | Allows for a broadcast mechanism between open pages on the same domain.         |
+| [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)                 | Provides a webpage the ability to receive a stream of Server-Sent Events.       |
+| [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)                         | Provides a webpage the ability to perform REST API transactions with a server.  |
+| [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)                     | The web standard for TCP bidirectional communication between a client / server. |
+| [WebRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)                       | Mechanism to get real time audio / video communication between webpage peers.   |
+| [WebTransport](https://developer.mozilla.org/en-US/docs/Web/API/WebTransport)               | The web standard for UDP socket communication between different web clients.    |
+

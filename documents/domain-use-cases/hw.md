@@ -13,7 +13,7 @@ categories:
   <br>
 </center>
 
-<mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark>
+Hardware peripherals are auxiliary devices connected to a computer to expand its capabilities. Applications connect to these peripherals via protocols specific to that hardware.
 
 **Table of Contents**
 
@@ -39,3 +39,12 @@ categories:
 # NOTES
 
 ## References
+
+| Reference                                                                       | Description                                                                                   |
+|---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth)         | Allows for a webpage to connect to a Bluetooth peripheral.                                    |
+| [Geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) | Provides a webpage with access to WGS84 coordinates to know where it is located in the world. |
+| [USB](https://developer.mozilla.org/en-US/docs/Web/API/USB)                     | Provides a webpage access to USB hardware peripherals attached to a computer.                 |
+| [Web Serial](https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API)   | Provides a webpage access to RS-232 hardware peripherals attached to a computer.              |
+| [Web MIDI](https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API)       | Provides a webpage access to MIDI attached devices to a computer.                             |
+

@@ -13,7 +13,7 @@ categories:
   <br>
 </center>
 
-<mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark>
+An ability to measure aspects of the host computer / operating system of a developed application is key in identifying metrics that can point to issues with the host system.
 
 **Table of Contents**
 

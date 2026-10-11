@@ -13,7 +13,7 @@ categories:
   <br>
 </center>
 
-<mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark>
+Applications have to interact with files on disk. That means reading and writing to them along with managing them.
 
 **Table of Contents**
 
@@ -39,3 +39,11 @@ categories:
 # NOTES
 
 ## References
+
+| Reference                                                                                                 | Description                                                                                       |
+|-----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| [File System](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API)                           | Provides the objects necessary to work with data from the host file system of the loaded webpage. |
+| [HTMLAnchorElement Download](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/download) | The fallback way of saving data from a webpage.                                                   |
+| [Input File](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file)             | Demonstrates how a webpage can open and upload a file for processing.                             |
+| [Save a File](https://web.dev/articles/files/save-a-file)                                                 | Demonstrates how a webpage can save a file to disk using old and new techniques.                  |
+

@@ -13,7 +13,7 @@ categories:
   <br>
 </center>
 
-<mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark>
+A utility that automatically records, tracks, and stores sequential data, system events, or user actions over time.
 
 **Table of Contents**
 
@@ -39,3 +39,7 @@ categories:
 # NOTES
 
 ## References
+
+| Reference                                                           | Description                                                        |
+|---------------------------------------------------------------------|--------------------------------------------------------------------|
+| [Console](https://developer.mozilla.org/en-US/docs/Web/API/console) | Everything you wanted to know on how to log data within a webpage. |

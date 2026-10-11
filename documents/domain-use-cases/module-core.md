@@ -13,7 +13,7 @@ categories:
   <br>
 </center>
 
-<mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark>
+Defines the reusable objects / API violation rules that apply to the entire module and not just a specific use case.
 
 **Table of Contents**
 
@@ -39,3 +39,8 @@ categories:
 # NOTES
 
 ## References
+
+| Reference                                                         | Description                                                                              |
+|-------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| [Rust Result](https://doc.rust-lang.org/std/result/)              | A concept replicated in the `codemelted.js` module as `try-catch` is horrible construct. |
+| [Window](https://developer.mozilla.org/en-US/docs/Web/API/Window) | Represents the `globalThis` within the Browser runtime.                                  |

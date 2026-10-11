@@ -13,7 +13,7 @@ categories:
   <br>
 </center>
 
-<mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark>
+The supporting software, libraries, and virtual layer that sit between the app and the operating system to make the program run.
 
 **Table of Contents**
 
@@ -39,3 +39,9 @@ categories:
 # NOTES
 
 ## References
+
+| Reference                                                                   | Description                                                                                                       |
+|-----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) | Represents how webpages communicate events and provides mechanism for the webpage to register for them.           |
+| [Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)       | Provides a webpage with basic information of their network location.                                              |
+| [Navigator](https://developer.mozilla.org/en-US/docs/Web/API/Navigator)     | Attaches a bunch of different APIs that require detection as they may not be available in different web browsers. |

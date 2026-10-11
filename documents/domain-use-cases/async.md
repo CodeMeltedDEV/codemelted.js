@@ -13,7 +13,7 @@ categories:
   <br>
 </center>
 
-<mark>Brief introduction to the feature being requested. Could be from a Jira board, assigned problem report, customer request, or the start of a bigger project. This focuses mainly functionality of a singular request and may serve as a bigger piece of a whole.</mark>
+Complex applications require the ability to asynchronously time slice up work as to not block the main synchronous processing thread.
 
 **Table of Contents**
 
@@ -39,3 +39,9 @@ categories:
 # NOTES
 
 ## References
+
+| Reference                                                                                           | Description                                                                |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| [C++ Future](https://en.cppreference.com/cpp/thread/future)                                         | To get a general reference design for designing the `CFuture` object.      |
+| [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) | A way of dividing up the webpage main thread with different work elements. |
+| [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker)                                   | Providing a way to spawn background thread processing for a webpage.       |
