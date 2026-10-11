@@ -20,38 +20,13 @@ categories:
 - [FUNCTIONAL ANALYSIS](#functional-analysis)
   - [UC-1: Function Feature](#uc-1-function-feature)
 - [NOTES](#notes)
+  - [References](#references)
 
 # FUNCTIONAL ANALYSIS
 
-
+<mark>Further Refined Use Case Model</mark>
 
 ## UC-1: Function Feature
-
-<mark>IF Describing via Behavioral Driven Development (BDD) User Story Format</mark>
-
-- **Description:** As a [who], I want [what], so that [why].
-- **Scenario 1:** Describe the scenario
-    - *Given:* Sets up the initial context, state, or preconditions of the system before any action happens.
-    - *When:* Describes the specific action, event, or trigger performed by the user or system.
-    - *Then:* Specifies the expected observable outcome or response after the action.
-    - *And:* Extends any of the previous statements to add positive or multiple conditions, actions, or results.
-    - *But:* Adds a negative condition, exception, or contrasting limitation to the preceding steps
-- **Scenario 2:** Describe the scenario
-    - *Given:* Sets up the initial context, state, or preconditions of the system before any action happens.
-    - *When:* Describes the specific action, event, or trigger performed by the user or system.
-    - *Then:* Specifies the expected observable outcome or response after the action.
-    - *And:* Extends any of the previous statements to add positive or multiple conditions, actions, or results.
-    - *But:* Adds a negative condition, exception, or contrasting limitation to the preceding steps
-
-<mark>IF Describing via Use Case Scenario Format:</mark>
-
-- **Description:** A description of what this use case is all about.
-- **Actors:** Who / what is triggering this use case.
-- **Trigger:** The ideal setup necessary for the use case scenario to run.
-- **Main Success Scenario:** The primary, ideal sequence of steps where everything goes right and the user achieves their goal without errors
-- **Alternate Flows:** Different paths or optional behaviors that still lead to success (e.g., a customer pays with PayPal instead of a credit card)
-- **Exception Flows:** Paths handling errors, invalid inputs, or system failures (e.g., a declined credit card or an out-of-stock item)
-- **Post-Condition:** The expectation when the main success scenario completes.
 
 <mark>IF Describing via EARS Function Requirements Format:</mark>
 
@@ -62,3 +37,5 @@ categories:
 - Unwanted Behavior: If <unwanted trigger>, then the <system name> shall <system response> (e.g., If the password is entered incorrectly three times, then the system shall lock the account)
 
 # NOTES
+
+## References

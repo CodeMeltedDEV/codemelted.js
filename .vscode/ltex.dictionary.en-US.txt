@@ -9,3 +9,11 @@ CMDLET
 codemelted
 rs
 jsdelivr
+WebTransport
+sessionStorage
+HTMLAnchorElement
+localStorage
+EventTarget
+EventSource
+CookieStore
+Queryable

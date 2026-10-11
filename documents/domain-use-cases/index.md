@@ -6,199 +6,92 @@ description: "TBD"
 tags: []
 children:
   - async.md
+  - console.md
+  - crypto.md
+  - db.md
+  - hw.md
+  - json.md
+  - logger.md
+  - math.md
+  - module-core.md
+  - monitor.md
+  - network.md
+  - process.md
+  - runtime.md
+  - storage.md
+  - ui.md
 ---
 <center>
   <br>
   <img style="width: 100%;" src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>Object-Oriented Analysis and Design (OOAD)</h1>
+  <h1>Domain Use Cases</h1>
   <br>
 </center>
 
 **Table of Contents**
 
-- [INTRODUCTION](#introduction)
-  - [Purpose](#purpose)
-  - [Scope](#scope)
-  - [Terms](#terms)
-  - [References](#references)
-    - [C++ Reference](#c-reference)
-    - [Mozilla Developer Network (MDN)](#mozilla-developer-network-mdn)
-    - [Rust STD](#rust-std)
-    - [web.dev](#webdev)
-- [FUNCTIONAL ANALYSIS](#functional-analysis)
-- [NON-FUNCTIONAL ANALYSIS](#non-functional-analysis)
-  - [Usability](#usability)
-  - [Reliability](#reliability)
-  - [Performance](#performance)
-  - [Supportability](#supportability)
-  - [Design Constraints](#design-constraints)
-  - [Documentation](#documentation)
-  - [Purchased Components](#purchased-components)
-  - [Licensing and Security](#licensing-and-security)
-  - [Legal, Copyright and Other Notices](#legal-copyright-and-other-notices)
-  - [Applicable Standards](#applicable-standards)
-  - [Internationalization and Localization](#internationalization-and-localization)
-  - [Physical Deliverables](#physical-deliverables)
-  - [Installation and Deployment](#installation-and-deployment)
-- [DESIGN ANALYSIS](#design-analysis)
-  - [Communication Interfaces](#communication-interfaces)
-  - [Hardware Interfaces](#hardware-interfaces)
-  - [Software Interfaces](#software-interfaces)
-    - [Module Core](#module-core)
-  - [User Interfaces](#user-interfaces)
-- [TRACEABILITY](#traceability)
+- [Model](#model)
+- [References](#references)
 
-# INTRODUCTION
+# Model
 
-## Purpose
+<center>
+  <img src="models/module/use-case-model.drawio.png" />
+  <br><br>
+</center>
 
-<mark>The purpose outlines the reason for creating the process. It answers the question “why is this being done?” and provides direction, motivation, and clarity for all stakeholders involved. A well-defined purpose sets the overarching goals and desired outcomes, ensuring that everyone understands the intent behind the document.</mark>
+| UC | Link                            | Description                                                                                                                                                                                     |
+|:--:|---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 00 | [Module Core](./module-core.md) | Defines the reusable objects / API violation rules that apply to the entire module and not just a specific use case.                                                                            |
+| 01 | [Async](./async.md)             | Complex applications require the ability to asynchronously time slice up work as to not block the main synchronous processing thread.                                                           |
+| 02 | [Console](./console.md)         | Command Line Interface (CLI) apps sometimes require basic input / output interaction with a user. Basic prompts working over STDIN / STDOUT / STDERR provides this capability.                  |
+| 03 | [Crypto](./crypto.md)           | Apps needs to secure information from unauthorized usage. Cryptographic algorithms allow for hiding or coding information so that only authorized parties can read and process it.              |
+| 04 | [Database](./db.md)             | Complicated data requires a way to be stored, recalled, and utilized. Embedded database technologies (IndexedDB `codemelted.js` / SQLite3 `codemelted.rs`) allow for this complex data storage. |
+| 05 | [Disk](./disk.md)               | Applications have to interact with files on disk. That mean reading and writing to them along with managing them.                                                                               |
+| 06 | [Hardware](./hw.md)             | Hardware peripherals are auxiliary devices connected to a computer to expand its capabilities. Applications connect to these peripherals via protocols specific to that hardware.               |
+| 07 | [JSON](./json.md)               | JSON (JavaScript Object Notation) is a lightweight, plain-text format used to store and transfer structured data between a server and an application.                                           |
+| 08 | [Logger](./logger.md)           | A utility that automatically records, tracks, and stores sequential data, system events, or user actions over time.                                                                             |
+| 09 | [Math](./math.md)               | A collection of mathematical formulas for computational purposes.                                                                                                                               |
+| 10 | [Monitor](./monitor.md)         | An ability to measure aspects of the host computer / operating system of a developed application is key in identifying metrics that can point to issues with the host system.                   |
+| 11 | [Network](./network.md)         | A system of interconnected computing devices that communicate and share resources, data, and applications over wired or wireless connections.                                                   |
+| 12 | [Process](./process.md)         | An instance of a computer program that is actively being executed by the operating system and the CPU. Bidirectional communication occurs via STDIN / STDOUT / STDERR.                          |
+| 13 | [Runtime](./runtime.md)         | The supporting software, libraries, and virtual layer that sit between the app and the operating system to make the program run.                                                                |
+| 14 | [Storage](./storage.md)         | A string based key / value pair combination for simple information storage and retrieval.                                                                                                       |
+| 15 | [User Interface](./ui.md)       | A visual way for humans to interact with electronic devices, such as computers, smartphones, and ATMs, using graphics instead of text commands.                                                 |
 
-## Scope
+# References
 
-<mark>The scope specifies the boundaries, extent, and limitations of the process. It answers “what is included and what is excluded?” and defines the deliverables, tasks, responsibilities, and areas covered. Scope ensures that the project remains focused and manageable, preventing unnecessary expansion or deviation from the original goals.</mark>
+The following are the references to the external SDK documentation to implement the domain use cases for the `codemelted.js` and `codemelted.rs` modules.
 
-## Terms
-
-<mark>Breakdown of acronyms and definitions</mark>
-
-## References
-
-The following are the references to the external SDK documentation to implement the fourteen domain use cases for the `codemelted.js` module.
-
-### C++ Reference
-
-- [C++ Future](https://en.cppreference.com/cpp/thread/future)
-
-### Mozilla Developer Network (MDN)
-
-- [Beacon](https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API)
-- [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth)
-- [Broadcast Channel](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API)
-- [CookieStore](https://developer.mozilla.org/en-US/docs/Web/API/CookieStore)
-- [Console](https://developer.mozilla.org/en-US/docs/Web/API/console)
-- [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
-- [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)
-- [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-- [File System](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API)
-- [Geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
-- [Input File](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file)
-- [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
-- [Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)
-- [HTMLAnchorElement Download](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/download)
-- [Navigator](https://developer.mozilla.org/en-US/docs/Web/API/Navigator)
-- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Screen](https://developer.mozilla.org/en-US/docs/Web/API/Screen)
-- [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
-- [USB](https://developer.mozilla.org/en-US/docs/Web/API/USB)
-- [Using Custom Elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements)
-- [Web Serial](https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API)
-- [Web MIDI](https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API)
-- [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
-- [WebRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)
-- [WebTransport](https://developer.mozilla.org/en-US/docs/Web/API/WebTransport)
-- [Window](https://developer.mozilla.org/en-US/docs/Web/API/Window)
-- [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker)
-
-### Rust STD
-
-- [Result](https://doc.rust-lang.org/std/result/)
-
-### web.dev
-
-- [web.dev: Save a File](https://web.dev/articles/files/save-a-file)
-
-# FUNCTIONAL ANALYSIS
-
-<img src="models/module/use-case-model.drawio.png" />
-
-| ID    | Link                    | Description      |
-| ----- | ----------------------- | ---------------- |
-| UC-01 | [Async](./async.md)     | <mark>To Be Developed</mark> |
-| UC-02 | [Console](./console.md) | <mark>To Be Developed</mark> |
-| UC-03 | [DB](./db.md)           | <mark>To Be Developed</mark> |
-| UC-04 | [Disk](./disk.md)       | <mark>To Be Developed</mark> |
-| UC-05 | [HW](./hw.md)           | <mark>To Be Developed</mark> |
-| UC-06 | [JSON](./json.md)       | <mark>To Be Developed</mark> |
-| UC-07 | [Logger](./logger.md)   | <mark>To Be Developed</mark> |
-| UC-08 | [Monitor](./monitor.md) | <mark>To Be Developed</mark> |
-| UC-09 | [Network](./network.md) | <mark>To Be Developed</mark> |
-| UC-10 | [NPU](./npu.md)         | <mark>To Be Developed</mark> |
-| UC-11 | [Process](./process.md) | <mark>To Be Developed</mark> |
-| UC-12 | [Runtime](./runtime.md) | <mark>To Be Developed</mark> |
-| UC-13 | [Storage](./storage.md) | <mark>To Be Developed</mark> |
-| UC-14 | [UI](./ui.md)           | <mark>To Be Developed</mark> |
-
-# NON-FUNCTIONAL ANALYSIS
-
-## Usability
-
-<mark>State the requirements that affect usability.</mark>
-
-## Reliability
-
-<mark>State the requirements for reliability</mark>
-
-## Performance
-
-<mark>State the performance characteristics of the system, expressed quantitatively where possible and related to use cases where applicable.</mark>
-
-## Supportability
-
-<mark>State the requirements that enhance system supportability or maintainability</mark>
-
-## Design Constraints
-
-<mark>State the design or development constraints imposed on the system or development process.</mark>
-
-## Documentation
-
-<mark>State the requirements or user and/or administrator documentation.</mark>
-
-## Purchased Components
-
-<mark>List the purchased components used with the system, licensing or usage restrictions, and compatibility/interoperability requirements</mark>
-
-## Licensing and Security
-
-<mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessibility</mark>
-
-## Legal, Copyright and Other Notices
-
-<mark>Describe the licensing and usage enforcement requirements or other restrictions for usage, security, and accessibility.
-
-## Applicable Standards
-
-<mark>Reference any applicable standards and the specific sections of any such standards that apply.</mark>
-
-## Internationalization and Localization
-
-<mark>State any requirements for support and application of different user languages and dialects</mark>
-
-## Physical Deliverables
-
-<mark>Define any specific deliverable artifacts required by the user or customer</mark>
-
-## Installation and Deployment
-
-<mark>Describe any specific deliverable artifacts required by the user or customer</mark>
-
-# DESIGN ANALYSIS
-
-<mark>Define the interfaces that must be supported by the application. Utilize necessary UML and modeling definitions to reflect it.</mark>
-
-## Communication Interfaces
-
-## Hardware Interfaces
-
-## Software Interfaces
-
-### Module Core
-
-<img src="models/module/module_core.png" />
-
-## User Interfaces
-
-# TRACEABILITY
-
-Not Applicable.
+| Reference                                                                                                      |  UC  | Description                                                                                                                 |
+|----------------------------------------------------------------------------------------------------------------|:----:|-----------------------------------------------------------------------------------------------------------------------------|
+| [Beacon](https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API)                                          |  11  | Sets up a quick post call to a backend server from a webpage.                                                               |
+| [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth)                                        |  06  | Allows for a webpage to connect to a Bluetooth peripheral.                                                                  |
+| [Broadcast Channel](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API)                    |  11  | Allows for a broadcast mechanism between open pages on the same domain.                                                     |
+| [C++ Future](https://en.cppreference.com/cpp/thread/future)                                                    |  01  | To get a general reference design for designing the `CFuture` object.                                                       |
+| [CookieStore](https://developer.mozilla.org/en-US/docs/Web/API/CookieStore)                                    |  14  | The modern way webpages can store cookies vs. the old way on a host computer.                                                                                                                       |
+| [Console](https://developer.mozilla.org/en-US/docs/Web/API/console)                                            |  08  | Everything you wanted to know on how to log data within a webpage.                                                                                                                         |
+| [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)                                    | CORE | Provides a webpage the ability to receive a stream of Server-Sent Events.                                                                                                                     |
+| [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)                                    |  11  | Represents how webpages communicate events and provides mechanism for the webpage to register for them.                                                                                                                         |
+| [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)                                            |  13  | Provides a webpage the ability to perform REST API transactions with a server.                                                                                                                         |
+| [File System](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API)                                |  11  | Provides the objects necessary to work with data from the host file system of the loaded webpage.                                                                                                                         |
+| [Geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)                                |  06  | Provides a webpage with access to WGS84 coordinates to know where it is located in the world.                                                                                                                         |
+| [Input File](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file)                  |  05  | Demonstrates how a webpage can open and upload a file for processing.                                                                                                                         |
+| [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)                           |  14  | Provides a webpage with a string key / value storage mechanism that lasts after page closes and is opened in a new session. |
+| [Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)                                          |  06  | Provides a webpage with basic information of their network location.                                                        |
+| [HTMLAnchorElement Download](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/download)      |  05  | The fallback way of saving data from a webpage.                                                                             |
+| [Navigator](https://developer.mozilla.org/en-US/docs/Web/API/Navigator)                                        |  13  | Attaches a bunch of different APIs that require detection as they may not be available in different web browsers.           |
+| [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)            |  01  | A way of dividing up the webpage main thread with different work elements.                                                  |
+| [Rust Result](https://doc.rust-lang.org/std/result/)                                                           | CORE | A concept replicated in the `codemelted.js` module as `try-catch` is horrible construct.                                    |
+| [Save a File](https://web.dev/articles/files/save-a-file)                                                      |  05  | Demonstrates how a webpage can save a file to disk using old and new techniques.                                            |
+| [Screen](https://developer.mozilla.org/en-US/docs/Web/API/Screen)                                              |  15  | Queryable elements about a device screen for a webpage to access.                                                           |
+| [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)                       |  14  | A key / value string storage active for the webpage session. Cleared when page is closed.                                   |
+| [USB](https://developer.mozilla.org/en-US/docs/Web/API/USB)                                                    |  06  | Provides a webpage access to USB hardware peripherals attached to a computer.                                               |
+| [Using Custom Elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements) |  15  | Why use a whole framework for UI elements on a webpage. Make your own the way you want.                                     |
+| [Web Serial](https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API)                                  |  06  | Provides a webpage access to RS-232 hardware peripherals attached to a computer.                                            |
+| [Web MIDI](https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API)                                      |  06  | Provides a webpage access to MIDI attached devices to a computer.                                                           |
+| [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)                                        |  11  | The web standard for TCP bidirectional communication between a client / server.                                             |
+| [WebRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)                                          |  11  | Mechanism to get real time audio / video communication between webpage peers.                                               |
+| [WebTransport](https://developer.mozilla.org/en-US/docs/Web/API/WebTransport)                                  |  11  | The web standard for UDP socket communication between different web clients.                                                |
+| [Window](https://developer.mozilla.org/en-US/docs/Web/API/Window)                                              | CORE | Represents the `globalThis` within the Browser runtime.                                                                     |
+| [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker)                                              |  01  | Providing a way to spawn background thread processing for a webpage.                                                        |
