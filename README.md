@@ -2,7 +2,7 @@
 title: "codemelted.js Project"
 date: 2026-OCT-11
 author: "Mark Shaffer"
-description: "The codemelted.js Project aims to give software engineers the ability to deliver on this full stack engineering premise."
+description: "The codemelted.js Project aims to give software engineers the ability to deliver on the full stack engineering premise. Accomplished via a pair of modules that will facilitate this endeavor."
 tags: [codemelted.js, ES6 Module, JavaScript, TypeScript, HTML, CSS, Web Worker, full-stack, codemelted.rs, Rust, Native, TAURI, Android, iOS, BSD, Mac, Linux, Windows]
 image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
@@ -11,7 +11,7 @@ twitter_site: "@CodeMeltedDEV"
 
 "Write once, run anywhere (WORA)" was the famous slogan made by Sun Microsystems in 1995. At the time, this technology allowed for easy full stack engineering allowing you to target dedicated workstations and on premise servers. So long as a Java Runtime Environment existed, you could run your code. Java was unable to keep to their slogan as web browsers became more advanced, mobile devices became ubiquitous, and companies no longer required dedicated servers.
 
-The **codemelted.js Project** aims to give software engineers the ability to deliver on this full stack engineering premise.
+The *codemelted.js Project* aims to give software engineers the ability to deliver on the full stack engineering premise. Accomplished via a pair of modules that will facilitate this endeavor.
 
 **Table of Contents**
 
