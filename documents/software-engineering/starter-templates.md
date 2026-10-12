@@ -124,13 +124,7 @@ Any complicated JavaScript full-stack solution should utilize ES6 modules. This 
  *
  * <mark>Identify how to use the repo once getting started is done.</mark>
  *
- * # CHANGE LOG
- *
- * ##  History
- *
- * - [vYY.X.Y (Last Updated YYYY-MMM-DD)](): Put what changed
- *
- * ## Todos
+ * ## TODOS
  *
  * - <mark>Track things that need changing.</mark>
  *
@@ -275,7 +269,6 @@ Rust has a very powerful way of organizing modules. Understanding that module sy
 //! | --------- | ----------------------------------------------------------- |
 //! | AUTHOR    | EMAIL / WEBITE.                                             |
 //! | COPYRIGHT | © YYYY NAME. All Rights Reserved.                           |
-//! | VERSION   | v26.0.0-alpha (Last Updated 2026-OCT-XX)                    |
 //!
 //! # FEATURES
 //!
@@ -288,10 +281,6 @@ Rust has a very powerful way of organizing modules. Understanding that module sy
 //! # USAGE
 //!
 //! <mark>Identify how to use the repo once getting started is done.</mark>
-//!
-//! # CHANGE LOG
-//!
-//! ## vYY.X.Y (Last Updated YYYY-MMM-DD)
 //!
 //! # TODOS
 //!

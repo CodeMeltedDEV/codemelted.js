@@ -95,18 +95,6 @@
  * domain use case API of your choice. They will have the details of the API
  * call along with examples.
  *
- * # CHANGE LOG
- *
- * ## v26.0.0 (Last Updated 2026-OCT-DD)
- *
- * [Download]()
- *
- * Initial alpha release of the module. Alpha because additional testing is
- * necessary to ensure the module is production ready. Until then
- * iteration on the domain use cases specific to this module will be in active
- * development. The export functions and classes reflect the currently
- * developed use cases that are under test.
- *
  * # TODOS
  *
  * - Research and implement async_lock() from the Web Locks API.

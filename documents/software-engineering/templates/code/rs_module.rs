@@ -3,7 +3,6 @@
 //! | --------- | ----------------------------------------------------------- |
 //! | AUTHOR    | EMAIL / WEBITE.                                             |
 //! | COPYRIGHT | © YYYY NAME. All Rights Reserved.                           |
-//! | VERSION   | v26.0.0-alpha (Last Updated 2026-OCT-XX)                    |
 //!
 //! # FEATURES
 //!
@@ -16,10 +15,6 @@
 //! # USAGE
 //!
 //! <mark>Identify how to use the repo once getting started is done.</mark>
-//!
-//! # CHANGE LOG
-//!
-//! ## vYY.X.Y (Last Updated YYYY-MMM-DD)
 //!
 //! # TODOS
 //!

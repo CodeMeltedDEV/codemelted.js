@@ -1,9 +1,8 @@
 // ============================================================================
-//! | Key       | Value                                                        |
-//! | --------- | ------------------------------------------------------------ |
-//! | AUTHOR    | mark.shaffer@codemelted.com / dev.codemelted.com             |
-//! | COPYRIGHT | © 2025-Present Mark Shaffer. All Rights Reserved.            |
-//! | VERSION   | v26.0.0-alpha (Last Updated 2026-OCT-XX)                     |
+//! | Key       | Value                                                       |
+//! | --------- | ----------------------------------------------------------- |
+//! | AUTHOR    | mark.shaffer@codemelted.com / dev.codemelted.com            |
+//! | COPYRIGHT | © 2025-Present Mark Shaffer. All Rights Reserved.           |
 //!
 //! # FEATURES
 //!
@@ -16,16 +15,6 @@
 //! # USAGE
 //!
 //! <mark>TBD</mark>
-//!
-//! # CHANGE LOG
-//!
-//! ## v26.0.0 (Last Updated 2026-OCT-DD)
-//!
-//! [Download]()
-//!
-//! Nothing to really report from this module. This was a `codemelted.js`
-//! focused release. This currently has stubs of research for how I want to
-//! design the API.
 //!
 //! # TODOS
 //!

@@ -25,124 +25,40 @@
   <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
 </center>
 <p>&quot;Write once, run anywhere (WORA)&quot; was the famous slogan made by Sun Microsystems in 1995. At the time, this technology allowed for easy full stack engineering allowing you to target dedicated workstations and on premise servers. So long as a Java Runtime Environment existed, you could run your code. Java was unable to keep to their slogan as web browsers became more advanced, mobile devices became ubiquitous, and companies no longer required dedicated servers.</p>
-<p>The <strong>codemelted.js Project</strong> aims to give software engineers the ability to deliver on this full stack engineering premise. This will be accomplished via two overly engineered modules. The <code>codemelted.js</code> ES6 module will deliver the frontend side of the stack by allowing quick development of Single Page App (SPA) / Progressive Web App (PWA) web stack solutions. The <code>codemelted.rs</code> will provide the backend native piece. Written in Rust, it will provide both a consumable crate to aid in building custom native solutions along with delivering the <code>codemelted</code> Command Line Interface (CLI).</p>
+<p>The <strong>codemelted.js Project</strong> aims to give software engineers the ability to deliver on this full stack engineering premise.</p>
 <p><strong>Table of Contents</strong></p>
 <ul>
-<li><a href="#consumable-modules">Consumable Modules</a>
-<ul>
-<li><a href="#javascript">JavaScript</a></li>
-<li><a href="#rust">Rust</a></li>
-</ul>
-</li>
-<li><a href="#deliverable-products">Deliverable Products</a>
-<ul>
-<li><a href="#building-apps">Building Apps</a></li>
+<li><a href="#consumable-modules">Consumable Modules</a></li>
 <li><a href="#native-cli">Native CLI</a></li>
+<li><a href="#building-apps">Building Apps</a></li>
 <li><a href="#pwa-companion">PWA Companion</a></li>
-</ul>
-</li>
 <li><a href="#support">Support</a></li>
 </ul>
 <h1 id="consumable-modules" class="tsd-anchor-link">Consumable Modules<a href="#consumable-modules" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
-<center><img src="media/use-case-model.drawio.png" /></center>
-<p><strong>Domain Use Cases:</strong> 15 use cases covering the most common areas a software engineer needs as a solution wrapped in an easy to consume API via the consumable modules.</p>
+<p>Fifteen domain use cases were identified covering the most common areas a software engineer needs a solution. Two modules are being developed to implement these use cases between the frontend and backend tech stacks. With these two modules, software engineers will be able to craft elegant software solutions to any problem they may face utilizing whatever tools that may be at their disposal.</p>
+<center>
+  <img src="media/use-case-model.drawio.png" />
+  <br><br>
+</center>
 <table>
 <thead>
 <tr>
-<th>Use Case</th>
+<th>Module</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Async</td>
-<td>Something something star wars.</td>
+<td><code>codemelted.js</code></td>
+<td>An ES6 module that will deliver the frontend tech stack by allowing quick development of Single Page App (SPA) / Progressive Web App (PWA) web stack solutions. Can also be utilized with the TAURI framework in conjunction with the <code>codemelted.rs</code> module to create Desktop / Mobile applications.</td>
 </tr>
 <tr>
-<td>Console</td>
-<td>Something something star wars.</td>
-</tr>
-<tr>
-<td>Crypto</td>
-<td>Something something star wars.</td>
-</tr>
-<tr>
-<td>Database</td>
-<td>Something something star wars.</td>
-</tr>
-<tr>
-<td>Disk</td>
-<td>Something something star wars.</td>
-</tr>
-<tr>
-<td>Hardware</td>
-<td>Something something star wars.</td>
-</tr>
-<tr>
-<td>JSON</td>
-<td>Something something star wars.</td>
-</tr>
-<tr>
-<td>Logger</td>
-<td>Something something star wars.</td>
-</tr>
-<tr>
-<td>Math</td>
-<td>Something something star wars.</td>
-</tr>
-<tr>
-<td>Monitor</td>
-<td>Something something star wars.</td>
-</tr>
-<tr>
-<td>Network</td>
-<td>Something something star wars.</td>
-</tr>
-<tr>
-<td>Process</td>
-<td>Something something star wars.</td>
-</tr>
-<tr>
-<td>Runtime</td>
-<td>Something something star wars.</td>
-</tr>
-<tr>
-<td>Storage</td>
-<td>Something something star wars.</td>
-</tr>
-<tr>
-<td>User Interface</td>
-<td>Something something star wars.</td>
+<td><code>codemelted.rs</code></td>
+<td>Provides the backend tech stack as a native memory safe compiled solution. It will provide a consumable crate to build these solutions, a native command line interface to script solutions, and serve as a dynamic library for inclusion in other higher level applications.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="javascript" class="tsd-anchor-link">JavaScript<a href="#javascript" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<h2 id="rust" class="tsd-anchor-link">Rust<a href="#rust" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<h1 id="deliverable-products" class="tsd-anchor-link">Deliverable Products<a href="#deliverable-products" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
-<h2 id="building-apps" class="tsd-anchor-link">Building Apps<a href="#building-apps" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
-<table>
-<thead>
-<tr>
-<th>Target</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CLI / CLOUD / SERVICE</td>
-<td>Something something start wars.</td>
-</tr>
-<tr>
-<td>DESKTOP / MOBILE</td>
-<td>Something something start wars.</td>
-</tr>
-<tr>
-<td>PWA / WEB</td>
-<td>Something something start wars.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="native-cli" class="tsd-anchor-link">Native CLI<a href="#native-cli" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<h1 id="native-cli" class="tsd-anchor-link">Native CLI<a href="#native-cli" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
 <center>
   <img src="media/cli-model.drawio.png" />
   <br><br>
@@ -169,7 +85,81 @@
 </tr>
 </tbody>
 </table>
-<h2 id="pwa-companion" class="tsd-anchor-link">PWA Companion<a href="#pwa-companion" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<h1 id="building-apps" class="tsd-anchor-link">Building Apps<a href="#building-apps" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CLI / CLOUD / SERVICE</td>
+<td>Use the <code>codemelted.rs</code> module crate to compile Rust services specific to your backend tech stack needs.</td>
+</tr>
+<tr>
+<td>PWA / WEB</td>
+<td>Use the <code>codemelted.js</code> ES6 module front end tech stack to build SPA / PWA independent of your chosen backend tech stack.</td>
+</tr>
+<tr>
+<td>DESKTOP / MOBILE</td>
+<td>Use both modules in conjunction with the TAURI Rust framework to make performant memory safe Desktop / Mobile native applications.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="pwa-companion" class="tsd-anchor-link">PWA Companion<a href="#pwa-companion" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<p>The <code>js.codemelted.com</code> domain is more than just a website. It serves a Software Engineer's companion for building full stack tech solutions. It is a <a href="https://typedoc.org/">TypeDoc</a> built site with added useful information, services, and utilizes the very modules this project is building.</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain Use Cases</td>
+<td>The software engineering applied to building the <code>codemelted.js</code> and <code>codemelted.rs</code> modules.</td>
+</tr>
+<tr>
+<td>Software Engineering</td>
+<td>A knowledge base for applying the discipline to build full stack solution especially in the era of Artificial Intelligence (AI).</td>
+</tr>
+<tr>
+<td>Command Line Interface</td>
+<td>The <code>codemelted</code> native CLI. Contains all the information for installing and utilizing this service.</td>
+</tr>
+<tr>
+<td><code>codemelted.js</code> Validation</td>
+<td>The mocha / chai test page for validating the module. Allows for quick testing across different browser runtimes.</td>
+</tr>
+<tr>
+<td>Module SDKs</td>
+<td>Access to the core of the <code>codemelted.js</code> and <code>codemelted.rs</code> modules. Provides all the information necessary for install and utilizing these modules within your next project.</td>
+</tr>
+<tr>
+<td>AI Agent (Future)</td>
+<td>A Gemini AI Notebook to utilize to build solutions for the project modules or access general information based on this sites' information.</td>
+</tr>
+<tr>
+<td>Code Editor (Future)</td>
+<td>An online editor for quickly writing snippets of code and UML models based on the project modules and starter templates.</td>
+</tr>
+<tr>
+<td>Chat (Future)</td>
+<td>Bringing back online text chat rooms in the style of AOL / MSN with audio and video chat so like-minded software engineers can collaborate.</td>
+</tr>
+<tr>
+<td>CodeMeltedDEV Blog (Future)</td>
+<td>An app sheet access to the software engineer's blog about this project and other happenings.</td>
+</tr>
+<tr>
+<td>External Services (Future)</td>
+<td>Access to external services that make the PWA a one-stop solution for a software engineer regardless of how they access this PWA.</td>
+</tr>
+</tbody>
+</table>
 <h1 id="support" class="tsd-anchor-link">Support<a href="#support" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
 <p>Support for this project is appreciated. We are just getting started so follow the links below to track / support this project.</p>
 <table>
@@ -189,8 +179,8 @@
 <td>Direct support for the <strong>codemelted.js Project</strong> either through a one time donation or a monthly subscription.</td>
 </tr>
 <tr>
-<td><a href="https://dev.codemelted.com"><img src="https://codemelted.com/assets/favicon/apple-touch-icon.png" height="35px" /> CodeMeltedDEV Website</a></td>
-<td>Main website where I will blog about this project along with other interest and utilize this project to build out web features. It is where you can find my socials to follow for updates all things happening.</td>
+<td><a href="https://dev.codemelted.com"><img src="https://codemelted.com/assets/favicon/apple-touch-icon.png" height="35px" /> CodeMeltedDEV Blog</a></td>
+<td>My website where I will blog about this project along with other interest and utilize this project to build out web features. It is where you can find my socials to follow for updates all things happening.</td>
 </tr>
 </tbody>
 </table>
@@ -207,14 +197,7 @@
 <div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
 <details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg>
 <h3>On This Page</h3></summary>
-<div class="tsd-accordion-details"><a href="#consumable-modules"><span>Consumable <wbr/>Modules</span></a>
-<ul>
-<li><a href="#javascript"><span>Java<wbr/>Script</span></a></li>
-<li><a href="#rust"><span>Rust</span></a></li></ul><a href="#deliverable-products"><span>Deliverable <wbr/>Products</span></a>
-<ul>
-<li><a href="#building-apps"><span>Building <wbr/>Apps</span></a></li>
-<li><a href="#native-cli"><span>Native <wbr/>CLI</span></a></li>
-<li><a href="#pwa-companion"><span>PWA <wbr/>Companion</span></a></li></ul><a href="#support"><span>Support</span></a></div></details></div>
+<div class="tsd-accordion-details"><a href="#consumable-modules"><span>Consumable <wbr/>Modules</span></a><a href="#native-cli"><span>Native <wbr/>CLI</span></a><a href="#building-apps"><span>Building <wbr/>Apps</span></a><a href="#pwa-companion"><span>PWA <wbr/>Companion</span></a><a href="#support"><span>Support</span></a></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="modules.html">codemelted.js Project</a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container">

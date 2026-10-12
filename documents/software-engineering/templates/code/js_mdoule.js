@@ -23,13 +23,7 @@
  *
  * <mark>Identify how to use the repo once getting started is done.</mark>
  *
- * # CHANGE LOG
- *
- * ##  History
- *
- * - [vYY.X.Y (Last Updated YYYY-MMM-DD)](): Put what changed
- *
- * ## Todos
+ * # TODOS
  *
  * - <mark>Track things that need changing.</mark>
  *

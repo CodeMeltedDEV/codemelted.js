@@ -17,3 +17,5 @@ EventTarget
 EventSource
 CookieStore
 Queryable
+TAURI
+TypeDoc
