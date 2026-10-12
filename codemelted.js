@@ -3800,6 +3800,8 @@ export function npu_compute({formula, args}) {
  * runtime.
  * @property {string} Orientation Determines if Orientation is available
  * (i.e. GPS and 3D space device orientation.)
+ * @property {string} Print Determines if the print function exists on
+ * globalThis or not.
  * @property {string} Pwa Determines if the browser window represents an
  * installed Progressive Web Application.
  * @property {string} SerialPort Determines if SerialPort protocols are
@@ -3845,6 +3847,7 @@ export const AVAILABILITY_REQUEST = Object.freeze({
   Node: "node",
   Open: "open",
   Orientation: "orientation",
+  Print: "print",
   Pwa: "pwa",
   SerialPort: "serial_port",
   SecureContext: "secure_context",
@@ -3998,6 +4001,10 @@ export function runtime_available({request, name="", obj = globalThis}) {
           property: "geolocation",
           obj: globalThis["navigator"]
         });
+      case AVAILABILITY_REQUEST.Print:
+        return is_available({
+          property: "print"
+        });
       case AVAILABILITY_REQUEST.Pwa:
         return is_available({property: "matchMedia"}) &&
           globalThis.matchMedia("(display-mode: standalone)"
@@ -4099,6 +4106,7 @@ export function runtime_event({
       throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
     }
     json_check_type({type: "string", data: type, should_throw: true});
+    console.log("handler = ", handler);
     json_check_type({
       type: "function",
       data: handler,
@@ -5187,14 +5195,14 @@ export class CHtmlComponent extends HTMLElement {
   #connected_move_cb;
   /** @type {CHtmlComponentCB | undefined} */
   #disconnected_cb;
-  /** @type {ShadowRoot} */
+  /** @type {ShadowRoot | undefined} */
   #shadow_root;
 
   /**
    * Provides access to the shadow DOM for constructing the custom component.
    * @protected
    * @readonly
-   * @type {ShadowRoot}
+   * @type {ShadowRoot | undefined}
    */
   get shadow_root() { return this.#shadow_root; }
 
@@ -5342,6 +5350,8 @@ export class CHtmlComponent extends HTMLElement {
    * handles the {@link connectedMoveCallback} method.
    * @param {CHtmlComponentCB} [params.disconnected_cb] The callback that
    * handles the {@link disconnectedCallback} method.
+   * @param {"none" | "open" | "closed"} [params.shadow_mode="none"] Whether
+   * attach a shadow root and if we do, what mode it will be in.
    */
   constructor({
     adopted_cb,
@@ -5349,7 +5359,8 @@ export class CHtmlComponent extends HTMLElement {
     connected_cb,
     connected_move_cb,
     disconnected_cb,
-  }) {
+    shadow_mode="none",
+  } = {}) {
     super();
     try {
       if (adopted_cb) {
@@ -5397,7 +5408,9 @@ export class CHtmlComponent extends HTMLElement {
       this.#connected_cb = connected_cb;
       this.#connected_move_cb = connected_move_cb;
       this.#disconnected_cb = disconnected_cb;
-      this.#shadow_root = this.attachShadow({mode: "open"});
+      if (shadow_mode !== "none") {
+        this.#shadow_root = this.attachShadow({mode: shadow_mode});
+      }
     } catch (err) {
       CModuleError.handle_error(err);
       throw new CModuleError(CModuleError.MISUSE);
@@ -5406,25 +5419,32 @@ export class CHtmlComponent extends HTMLElement {
 }
 
 /**
- * <cm-app-toolbar> Web Component
+ * `<cm-app-toolbar>` Web Component
  *
  * A unified, dual-mode application toolbar supporting:
  *
- * - position="top"    -> Fixed header pinned to top: 0 with
- *   <header role="banner"> and bottom border
- * - position="bottom" -> Fixed footer pinned to bottom: 0 with
- *   <footer role="contentinfo"> and top border
+ * - position="top"    -> Fixed header pinned to `top: 0` with
+ *   `<header role="banner">` and bottom border
+ * - position="bottom" -> Fixed footer pinned to `bottom: 0` with
+ *   `<footer role="contentinfo">` and top border
  *
  * Coordinates (top/bottom/left/right) are strictly managed by the component.
  *
  * Exposed CSS Variables:
- *   --toolbar-height      (default: 60px)
- *   --toolbar-bg          (default: rgba(15, 23, 42, 0.9))
- *   --toolbar-color       (default: #f8fafc)
- *   --toolbar-border      (default: 1px solid rgba(51, 65, 85, 0.7))
- *   --toolbar-z-index     (default: 1000)
- *   --toolbar-padding     (default: 0 1.25rem)
- *   --toolbar-gap         (default: 0.75rem)
+ * - `--toolbar-height`      (default: 60px)
+ * - `--toolbar-bg`          (default: rgba(15, 23, 42, 0.9))
+ * - `--toolbar-color`       (default: #f8fafc)
+ * - `--toolbar-border`      (default: 1px solid rgba(51, 65, 85, 0.7))
+ * - `--toolbar-z-index`     (default: 1000)
+ * - `--toolbar-padding`     (default: 0 1.25rem)
+ * - `--toolbar-gap`         (default: 0.75rem)
+ *
+ * **HTML Example:**
+ * ```html
+ * <cm-app-toolbar position="top">
+ *   <!-- Toolbar Items Go Here -->
+ * </cm-app-toolbar>
+ * ```
  *
  * @extends {CHtmlComponent}
  */
@@ -5462,6 +5482,7 @@ export class CAppToolbar extends CHtmlComponent {
     const tag_name = is_bottom ? "footer" : "header";
     const role = is_bottom ? "contentinfo" : "banner";
 
+    // @ts-ignore Constructor sets mode to "open"
     this.shadow_root.innerHTML = `
       <style>
         :host {
@@ -5539,6 +5560,7 @@ export class CAppToolbar extends CHtmlComponent {
    */
   constructor() {
     super({
+      shadow_mode: "open",
       attribute_changed_cb: (name, old_value, new_value) => {
         if (name === "position" && old_value !== new_value) {
           this.render();
@@ -5554,70 +5576,274 @@ export class CAppToolbar extends CHtmlComponent {
           this.set_attribute("position", "top");
         }
         this.render();
-      }
+      },
     });
   }
 }
 CHtmlComponent.register_component("cm-app-toolbar", CAppToolbar);
 
+/**
+ * `<cm-button>` Web Component Documentation
+ *
+ * A highly flexible, accessible custom button element that perfectly aligns
+ * text and media (emojis or images) horizontally or vertically.
+ *
+ * LAYOUT CONFIGURATIONS
+ *
+ * By default, the button places media on the LEFT and text on the RIGHT.
+ * To change this, pass the "layout" attribute:
+ *
+ * 1. Default (Side-by-Side):
+ * ```html
+ * <cm-button label="Launch" icon="🚀" tooltip="We are launching today">
+ * </cm-button>
+ * ```
+ *
+ * 2. Stacked (Media Top, Text Bottom):
+ * ```html
+ * <cm-button
+ *   label="Launch"
+ *   icon="icon.png"
+ *   tooltip="We are launching today"
+ *   layout="stacked">
+ * </cm-button>
+ * ```
+ *
+ * EXPOSED CSS VARIABLES (THEMING)
+ *
+ * Override these properties using inline styles or an external stylesheet:
+ *
+ * Layout & Spacing:
+ * -  `--padding`         : Internal padding of the button (Default: 10px 20px)
+ * -  `--gap`             : Spacing between the media and text (Default: 8px)
+ * -  `--border-radius`   : Roundness of the button corners (Default: 4px)
+ * -  `--border`          : Button border style (Default: 1px solid #ccc)
+ *
+ * Typography:
+ * -  `--font-size`       : Text size (Default: 16px)
+ * -  `--font-weight`     : Font weight/thickness (Default: 500)
+ *
+ * Color States:
+ * -  `--bg-color`        : Normal background color (Default: #f0f0f0)
+ * -  `--hover-bg-color`  : Background color on hover (Default: #e0e0e0)
+ * -  `--color`           : Normal text color (Default: #333333)
+ * -  `--hover-color`     : Text color on hover (Default: #000000)
+ *
+ * **Example:**
+ * ```css
+ * cm-button {
+ *   --border: none;
+ * }
+ * ```
+ *
+ * ACCESSIBILITY & EVENTS
+ *
+ * - Standard native "click" events automatically bubble up to this component.
+ * - Built-in Keyboard Accessibility allows users to focus the button using
+ *   the "Tab" key and trigger it using "Enter" or "Space".
+ *
+ * @extends {CHtmlComponent}
+ */
+export class CButton extends CHtmlComponent {
+  static get observedAttributes() {
+    return ["layout", "icon-only"];
+  }
 
+  /**
+   * Constructor for the component.
+   * @param {object} params The named parameters for inheriting classes
+   * implementing set reusable buttons of a given style.
+   * @param {string} [params.label] The optional label to apply.
+   * @param {string} [params.icon] The optional icon to apply.
+   * @param {string} [params.tooltip] The optional tooltip to apply.
+   * @param {CEventHandler} [params.click_handler] Optional handler for the click
+   * event.
+   */
+  constructor({label, icon, tooltip, click_handler} = {}) {
+    super({
+      shadow_mode: "open",
+      connected_cb: () => {
+        // Get our attributes and validate.
+        const hide_icon = !!this.get_attribute("icon-only");
+        this.title = this.get_attribute("tooltip") ?? tooltip ?? "";
+        let lbl = this.get_attribute("label") ?? label;
+        if (hide_icon) {
+          lbl = "";
+        }
+        const ico = this.get_attribute("icon") ?? icon;
+        if (!lbl && !ico) {
+          throw new CModuleError(
+            "<cm-button> expects label or icon to be set"
+          );
+        }
 
-// TODO: ATTEMPTING TO BUILD A COMPONENT
-// /**
-//  * Provides a Material3 icon based button where the icon is to the left of
-//  * the label (if specified) or it is just the icon.
-//  * <br><br>
-//  * <b>DECLARE:</b><br>
-//  * ```html
-//  * <cm-icon-button
-//  *   cm_icon="emoji or URL"
-//  *   cm_label="Label (optional)"
-//  *   cm_tooltip="Tooltip (optional)"
-//  * ></cm-icon-button>
-//  * ```
-//  * <br><br>
-//  * <b>STYLE:</b><br>
-//  * ```css
-//  *
-//  * ```
-//  * @extends {CHtmlComponent}
-//  */
-// class CIconButton extends CHtmlComponent {
-//   constructor() {
-//     super({
-//       connected_cb: () => {
-//         try {
-//           // Get the attributes and validate them.
-//           this.title = this.getAttribute("cm_tooltip") ?? "";
-//           let label = this.getAttribute("cm_label") ?? "";
-//           let icon = this.getAttribute("cm_icon") ?? "";
+        // Setup our media tag within our button.
+        const is_emoji = (/** @type {string} */ str) =>
+          /\p{Extended_Pictographic}/u.test(str);
+        let media = !ico
+          ? undefined
+          : is_emoji(ico)
+            ? ico
+            : `<img src="${ico}" />`;
 
-//           // Setup our style
-//           // TODO: Setup :host
-//           // TODO: Have :host fill container
-//           let style = `
-//             <style>
+        // Now build the component.
+        // @ts-ignore Constructor sets mode to "open"
+        this.shadow_root.innerHTML = `
+          <style>
+            :host {
+              display: inline-block;
+              cursor: pointer;
+              --btn-padding: 10px 20px;
+              --btn-gap: 8px;
+              --btn-border-radius: 4px;
+              --btn-border: 1px solid #ccc;
+              --btn-font-weight: 500;
+              --btn-font-size: 16px;
+              --btn-bg: #f0f0f0;
+              --btn-hover-bg: #e0e0e0;
+              --btn-color: #333333;
+              --btn-hover-color: #000000;
+            }
 
-//             </style>
-//           `;
+            button {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: 100%;
+              cursor: inherit;
+              font-family: inherit;
+              box-sizing: border-box;
+              transition: background-color 0.2s ease,
+                color 0.2s ease,
+                outline 0.1s ease;
 
-//           // Now go build the component
-//           if (label.length === 1) {
+              flex-direction: row;
+              gap: var(--gap, var(--btn-gap));
+              padding: var(--padding, var(--btn-padding));
+              border-radius: var(--border-radius, var(--btn-border-radius));
+              border: var(--border, var(--btn-border));
+              font-weight: var(--font-weight, var(--btn-font-weight));
+              font-size: var(--font-size, var(--btn-font-size));
+              background-color: var(--bg-color, var(--btn-bg));
+              color: var(--color, var(--btn-color));
 
-//           } else if (label.length > 1) {
+              min-height: calc(var(--font-size, var(--btn-font-size)) * 1.5 +
+                (var(--padding, var(--btn-padding)) * 2));
+            }
 
-//           } else {
-//             throw new CModuleError(
-//               `${CModuleError.MISUSE}: cm_icon must be emoji or url`
-//             );
-//           }
+            button:focus-visible {
+              outline: 2px solid var(--hover-bg-color, var(--btn-hover-bg));
+              outline-offset: 2px;
+            }
 
-//         } catch (err) {
-//           CModuleError.handle_error(err);
-//           throw new CModuleError(CModuleError.MISUSE, err);
-//         }
-//       }
-//     });
-//   }
-// }
-// CHtmlComponent.register_component("cm-icon-button", CIconButton);
+            :host([layout="stacked"]) button {
+              flex-direction: column;
+            }
+
+            :host(:hover) button {
+              background-color: var(--hover-bg-color, var(--btn-hover-bg));
+              color: var(--hover-color, var(--btn-hover-color));
+            }
+
+            ::slotted([slot="media"]) {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              height: 100%;
+              max-height: 1.5em;
+              width: auto;
+              object-fit: contain;
+            }
+          </style>
+
+          <button>
+            <slot name="media">${media}</slot>
+            <slot>${lbl}</slot>
+          </button>
+        `;
+        // Register any event handler if specified.
+        if (click_handler) {
+          runtime_event({
+            request: EVENT_REQUEST.Add,
+            type: "click",
+            handler: click_handler,
+            target: this
+          });
+        }
+      },
+      disconnected_cb: () => {
+        if (click_handler) {
+          runtime_event({
+            request: EVENT_REQUEST.Remove,
+            type: "click",
+            handler: click_handler,
+            target: this
+          });
+        }
+      }
+    });
+  }
+}
+CHtmlComponent.register_component("cm-button", CButton);
+
+/**
+ * `<cm-print-button>` Subcomponent Documentation
+ *
+ * A specialized instance of `<cm-button>` that completely locks down
+ * the text ("Print") and icon (🖨️) so they cannot be overwritten.
+ *
+ * USAGE
+ *
+ * Content passed between the tags is ignored to preserve structural intent:
+ *
+ * ```html
+ * <cm-print-button></cm-print-button>
+ * <cm-print-button icon-only></cm-print-button>
+ * ```
+ *
+ * THEMING (SAME EXPOSED CSS VARIABLES)
+ *
+ * This component accepts the exact same styling variables as `<cm-button>`:
+ *  --padding, --gap, --border-radius, --border, --font-size, --font-weight,
+ *  --bg-color, --hover-bg-color, --color, --hover-color
+ *
+ * **Example:**
+ *
+ * ```css
+ * cm-print-button {
+ *   --border: none;
+ * }
+ * ```
+ *
+ * > [!NOTE]
+ * > Even though this extends CButton, you need to manage styles on specific
+ * > tag name as shown above.
+ *
+ * SELF-MANAGED AVAILABILITY
+ *
+ * Upon entering the DOM, this component automatically determines if print is
+ * available. If the internal verification fails, the button quietly applies
+ * "display: none" to itself internally logging a warning to the console.
+ *
+ * @extends {CButton}
+ */
+export class CPrintButton extends CButton {
+  /**
+   * Construct our component.
+   */
+  constructor() {
+    super({
+      icon: "🖨️",
+      label: "Print",
+      tooltip: "Prints the current page",
+      click_handler: async (_ev) => {
+        ui_action({request: ACTION_REQUEST.Print});
+      }
+    });
+    if (!runtime_available({request: AVAILABILITY_REQUEST.Print})) {
+      this.style.display = "none";
+    }
+  }
+}
+CHtmlComponent.register_component("cm-print-button", CPrintButton);

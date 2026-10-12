@@ -7,12 +7,7 @@ image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [Console, Logging, Debugging]
 ---
-<center>
-  <br>
-  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>Logger Use Case</h1>
-  <br>
-</center>
+<cm-page-header title="Logger Use Case"></cm-page-header>
 
 A utility that automatically records, tracks, and stores sequential data, system events, or user actions over time.
 

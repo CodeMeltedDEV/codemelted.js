@@ -7,12 +7,7 @@ image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [HTML, HTML5, CSS, CSS3, JavaScript, Custom HTML Components]
 ---
-<center>
-  <br>
-  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>User Interface Use Case</h1>
-  <br>
-</center>
+<cm-page-header title="User Interface Use Case"></cm-page-header>
 
 A visual way for humans to interact with electronic devices, such as computers, smartphones, and ATMs, using graphics instead of text commands.
 

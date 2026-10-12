@@ -7,12 +7,7 @@ image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [STDIN, STDOUT, STDERR, CLI, Command Line Interface]
 ---
-<center>
-  <br>
-  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>Console Use Case</h1>
-  <br>
-</center>
+<cm-page-header title="Console Use Case"></cm-page-header>
 
 Command Line Interface (CLI) apps sometimes require basic input / output interaction with a user. Basic prompts working over STDIN / STDOUT / STDERR provides this capability.
 

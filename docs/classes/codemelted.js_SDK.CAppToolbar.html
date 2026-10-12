@@ -1,14 +1,14 @@
-<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>CAppToolbar | codemelted.js Project</title><link rel="icon" href="https://js.codemelted.com/assets/favicon/favicon.ico"/><meta name="description" content="Documentation for codemelted.js Project"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script><meta property="og:type" content="website"/><meta property="og:title" content="CAppToolbar"/><meta property="og:description" content="<cm-app-toolbar> Web Component
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>CAppToolbar | codemelted.js Project</title><link rel="icon" href="https://js.codemelted.com/assets/favicon/favicon.ico"/><meta name="description" content="Documentation for codemelted.js Project"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script><meta property="og:type" content="website"/><meta property="og:title" content="CAppToolbar"/><meta property="og:description" content="`<cm-app-toolbar>` Web Component
 
 A unified, dual-mode application toolbar supporting:
 
-- position=&quot;top&quot;    -> Fixed header pinned to top: 0 with
-  <hea..."/><meta property="og:url" content="https://js.codemelted.com/classes/codemelted.js_SDK.CAppToolbar.html"/><meta property="og:image" content="https://js.codemelted.com/assets/images/logo-codemelted-js.png"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:site" content="@CodeMeltedDEV"/><meta name="twitter:title" content="CAppToolbar"/><meta name="twitter:description" content="<cm-app-toolbar> Web Component
+- position=&quot;top&quot;    -> Fixed header pinned to `top: 0` with
+  ..."/><meta property="og:url" content="https://js.codemelted.com/classes/codemelted.js_SDK.CAppToolbar.html"/><meta property="og:image" content="https://js.codemelted.com/assets/images/logo-codemelted-js.png"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:site" content="@CodeMeltedDEV"/><meta name="twitter:title" content="CAppToolbar"/><meta name="twitter:description" content="`<cm-app-toolbar>` Web Component
 
 A unified, dual-mode application toolbar supporting:
 
-- position=&quot;top&quot;    -> Fixed header pinned to top: 0 with
-  <hea..."/><meta name="twitter:image" content="https://js.codemelted.com/assets/images/logo-codemelted-js.png"/><style>
+- position=&quot;top&quot;    -> Fixed header pinned to `top: 0` with
+  ..."/><meta name="twitter:image" content="https://js.codemelted.com/assets/images/logo-codemelted-js.png"/><style>
 @media (prefers-color-scheme: dark) {
   :root {
     --md-sys-color-primary: #f6be46;
@@ -180,25 +180,31 @@ A unified, dual-mode application toolbar supporting:
 <li><a href="" aria-current="page">CAppToolbar</a></li></ul>
 <h1>Class CAppToolbar</h1></div>
 <section class="tsd-panel tsd-comment">
-<div class="tsd-comment tsd-typography"><p><cm-app-toolbar> Web Component</p>
+<div class="tsd-comment tsd-typography"><p><code>&lt;cm-app-toolbar&gt;</code> Web Component</p>
 <p>A unified, dual-mode application toolbar supporting:</p>
 <ul>
-<li>position=&quot;top&quot;    -&gt; Fixed header pinned to top: 0 with<header role="banner"> and bottom border
-</li>
-<li>position=&quot;bottom&quot; -&gt; Fixed footer pinned to bottom: 0 with<footer role="contentinfo"> and top border
-</li>
+<li>position=&quot;top&quot;    -&gt; Fixed header pinned to <code>top: 0</code> with
+<code>&lt;header role=&quot;banner&quot;&gt;</code> and bottom border</li>
+<li>position=&quot;bottom&quot; -&gt; Fixed footer pinned to <code>bottom: 0</code> with
+<code>&lt;footer role=&quot;contentinfo&quot;&gt;</code> and top border</li>
 </ul>
 <p>Coordinates (top/bottom/left/right) are strictly managed by the component.</p>
-<p>Exposed CSS Variables:
---toolbar-height      (default: 60px)
---toolbar-bg          (default: rgba(15, 23, 42, 0.9))
---toolbar-color       (default: #f8fafc)
---toolbar-border      (default: 1px solid rgba(51, 65, 85, 0.7))
---toolbar-z-index     (default: 1000)
---toolbar-padding     (default: 0 1.25rem)
---toolbar-gap         (default: 0.75rem)</p>
+<p>Exposed CSS Variables:</p>
+<ul>
+<li><code>--toolbar-height</code>      (default: 60px)</li>
+<li><code>--toolbar-bg</code>          (default: rgba(15, 23, 42, 0.9))</li>
+<li><code>--toolbar-color</code>       (default: #f8fafc)</li>
+<li><code>--toolbar-border</code>      (default: 1px solid rgba(51, 65, 85, 0.7))</li>
+<li><code>--toolbar-z-index</code>     (default: 1000)</li>
+<li><code>--toolbar-padding</code>     (default: 0 1.25rem)</li>
+<li><code>--toolbar-gap</code>         (default: 0.75rem)</li>
+</ul>
+<p><strong>HTML Example:</strong></p>
+<pre><code class="html"><span class="hl-9">&lt;</span><span class="hl-10">cm-app-toolbar</span><span class="hl-3"> </span><span class="hl-11">position</span><span class="hl-3">=</span><span class="hl-12">&quot;top&quot;</span><span class="hl-9">&gt;</span><br/><span class="hl-3">  </span><span class="hl-0">&lt;!-- Toolbar Items Go Here --&gt;</span><br/><span class="hl-9">&lt;/</span><span class="hl-10">cm-app-toolbar</span><span class="hl-9">&gt;</span>
+</code><button type="button">Copy</button></pre>
+
 </div></section>
-<section class="tsd-panel tsd-hierarchy" data-refl="857">
+<section class="tsd-panel tsd-hierarchy" data-refl="859">
 <h4>Hierarchy (<a href="../hierarchy.html#codemelted.js SDK.CAppToolbar">View Summary</a>)</h4>
 <ul class="tsd-hierarchy">
 <li class="tsd-hierarchy-item"><a href="codemelted.js_SDK.CHtmlComponent.html" class="tsd-signature-type tsd-kind-class">CHtmlComponent</a>

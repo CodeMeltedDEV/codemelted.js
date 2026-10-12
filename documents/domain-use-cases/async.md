@@ -7,12 +7,7 @@ image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [Async Processing, Async IO, Threading]
 ---
-<center>
-  <br>
-  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>Async Use Case</h1>
-  <br>
-</center>
+<cm-page-header title="Async Use Case"></cm-page-header>
 
 Complex applications require the ability to asynchronously time slice up work as to not block the main synchronous processing thread.
 

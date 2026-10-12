@@ -7,12 +7,7 @@ image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [Runtime, Operating System, Virtualization]
 ---
-<center>
-  <br>
-  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>Runtime Use Case</h1>
-  <br>
-</center>
+<cm-page-header title="Runtime Use Case"></cm-page-header>
 
 The supporting software, libraries, and virtual layer that sit between the app and the operating system to make the program run.
 

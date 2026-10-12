@@ -7,12 +7,7 @@ image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [File I/O, Read, Write, Disk Management, File Management]
 ---
-<center>
-  <br>
-  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>Disk Use Case</h1>
-  <br>
-</center>
+<cm-page-header title="Disk Use Case"></cm-page-header>
 
 Applications have to interact with files on disk. That means reading and writing to them along with managing them.
 

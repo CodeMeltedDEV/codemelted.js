@@ -7,12 +7,7 @@ image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [Key Value Pairs, Local Storage, Session Storage, Cookie Store, Local File]
 ---
-<center>
-  <br>
-  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>Storage Use Case</h1>
-  <br>
-</center>
+<cm-page-header title="Storage Use Case"></cm-page-header>
 
 A string based key / value pair combination for simple information storage and retrieval.
 

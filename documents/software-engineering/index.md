@@ -9,12 +9,7 @@ twitter_site: "@CodeMeltedDEV"
 children:
   - starter-templates.md
 ---
-<center>
-  <br>
-  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>Software Engineering Knowledge Base</h1>
-  <br>
-</center>
+<cm-page-header title="Software Engineering Knowledge Base"></cm-page-header>
 
 | Area | Description                                                            |
 | ---- | ---------------------------------------------------------------------- |

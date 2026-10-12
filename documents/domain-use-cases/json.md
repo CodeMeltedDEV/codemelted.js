@@ -7,12 +7,7 @@ image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [JSON, Stringify, Parse]
 ---
-<center>
-  <br>
-  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>JSON Use Case</h1>
-  <br>
-</center>
+<cm-page-header title="JSON Use Case"></cm-page-header>
 
 JSON (JavaScript Object Notation) is a lightweight, plain-text format used to store and transfer structured data between a server and an application.
 

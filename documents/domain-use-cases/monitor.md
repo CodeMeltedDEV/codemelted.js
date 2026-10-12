@@ -7,12 +7,7 @@ image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [CPU Utilization, Memory Utilization, Disk Utilization]
 ---
-<center>
-  <br>
-  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>Monitor Use Case</h1>
-  <br>
-</center>
+<cm-page-header title="Monitor Use Case"></cm-page-header>
 
 An ability to measure aspects of the host computer / operating system of a developed application is key in identifying metrics that can point to issues with the host system.
 

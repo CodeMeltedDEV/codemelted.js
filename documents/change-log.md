@@ -7,12 +7,7 @@ tags: [Software Engineering, Developer, Programmer, ACM, IEEE]
 image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 ---
-<center>
-  <br>
-  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>codemelted.js ProejctChange Log</h1>
-  <br>
-</center>
+<cm-page-header title="Change Log"></cm-page-header>
 
 The *codemelted.js Project Change Log* reflects updates to the `codemelted.js` / `codemelted.rs` along with update to the `js.codemelted.com` PWA.
 

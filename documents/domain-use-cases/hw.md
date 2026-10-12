@@ -7,12 +7,7 @@ image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [Hardware, Peripheral, Bluetooth, BLE, Serial, RS-232, USB, MIDI]
 ---
-<center>
-  <br>
-  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>Hardware Use Case</h1>
-  <br>
-</center>
+<cm-page-header title="Hardware Use Case"></cm-page-header>
 
 Hardware peripherals are auxiliary devices connected to a computer to expand its capabilities. Applications connect to these peripherals via protocols specific to that hardware.
 

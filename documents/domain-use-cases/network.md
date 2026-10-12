@@ -7,12 +7,7 @@ image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [fetch, REST API, TCP, UDP, Web Socket, WebRTC, Web Transport, Beacon]
 ---
-<center>
-  <br>
-  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>Network Use Case</h1>
-  <br>
-</center>
+<cm-page-header title="Network Use Case"></cm-page-header>
 
 A system of interconnected computing devices that communicate and share resources, data, and applications over wired or wireless connections.
 

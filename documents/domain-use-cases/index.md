@@ -1,5 +1,5 @@
 ---
-title: "Domain Use Case"
+title: "Domain Use Cases"
 date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "Fifteen domain use cases were identified covering the most common areas a software engineer needs a solution."
@@ -23,12 +23,7 @@ children:
   - storage.md
   - ui.md
 ---
-<center>
-  <br>
-  <img style="width: 100%;" src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
-  <h1>Domain Use Cases</h1>
-  <br>
-</center>
+<cm-page-header title="Domain Use Cases"></cm-page-header>
 
 <center>
   <img src="models/module/use-case-model.drawio.png" />
