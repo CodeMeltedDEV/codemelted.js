@@ -3,10 +3,11 @@ title: "Domain Use Case"
 date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "Fifteen domain use cases were identified covering the most common areas a software engineer needs a solution."
-image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [Software Engineering, Rust, JavaScript, Front End, Back End, Full Stack, Use Cases]
 children:
+  - module-core.md
   - async.md
   - console.md
   - crypto.md
@@ -15,7 +16,6 @@ children:
   - json.md
   - logger.md
   - math.md
-  - module-core.md
   - monitor.md
   - network.md
   - process.md
@@ -25,7 +25,7 @@ children:
 ---
 <center>
   <br>
-  <img style="width: 100%;" src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
+  <img style="width: 100%;" src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
   <h1>Domain Use Cases</h1>
   <br>
 </center>

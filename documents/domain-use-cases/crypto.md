@@ -3,13 +3,13 @@ title: "Crypto Use Case"
 date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "Apps needs to secure information from unauthorized usage. Cryptographic algorithms allow for hiding or coding information so that only authorized parties can read and process it."
-image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [cybersecurity, cyber, cryptography]
 ---
 <center>
   <br>
-  <img style="width: 100%; "src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
+  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
   <h1>Crypto Use Case</h1>
   <br>
 </center>

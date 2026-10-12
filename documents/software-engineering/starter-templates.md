@@ -4,12 +4,12 @@ date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "A collection of templates for performing software engineering tasks and beginning a coding effort."
 tags: [Software Engineering, Developer, Programmer, ACM, IEEE]
-image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 ---
 <center>
   <br>
-  <img style="width: 100%; "src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
+  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
   <h1>Software Engineering Starter Templates</h1>
   <button style="cursor:pointer;" onclick="window.print();">Print</button>
   <br>

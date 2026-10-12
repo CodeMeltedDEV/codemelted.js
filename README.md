@@ -4,12 +4,12 @@ date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "The codemelted.js Project aims to give software engineers the ability to deliver on this full stack engineering premise."
 tags: [codemelted.js, ES6 Module, JavaScript, TypeScript, HTML, CSS, Web Worker, full-stack, codemelted.rs, Rust, Native, TAURI, Android, iOS, BSD, Mac, Linux, Windows]
-image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 ---
 <center>
   <br>
-  <img style="width: 100%;" src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
+  <img style="width: 100%;" src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
   <a aria-label="Follow @CodeMeltedDEV on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-show-count="true" data-size="small" href="https://github.com/CodeMeltedDEV" title="Follow @CodeMeltedDEV on GitHub">CodeMeltedDEV</a>
   <a aria-label="Watch codemelteddev/codemelted.js on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-eye" data-show-count="true" data-size="small" href="https://github.com/codemelteddev/codemelted.js/subscription" title="Watch codemelteddev/codemelted.js on GitHub">Watch</a>
   <a aria-label="Sponsor @CodeMeltedDEV on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-heart" data-size="small" href="https://github.com/sponsors/CodeMeltedDEV" title="Sponsor @CodeMeltedDEV and the codemelted.js Project on GitHub">Sponsor</a>

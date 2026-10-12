@@ -4,12 +4,12 @@ date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "Represents the cmocha / chai tests validate the codemelted.js module from within the Browser runtime."
 tags: [JavaScript, web, mocha, chai, test runner]
-image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 ---
 <center>
   <br>
-  <img style="width: 100%; "src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
+  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
   <h1>ccodemelted.js Validation</h1>
   <br>
 </center>

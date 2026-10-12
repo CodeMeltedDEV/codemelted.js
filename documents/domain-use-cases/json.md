@@ -3,13 +3,13 @@ title: "JSON Use Case"
 date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "JSON (JavaScript Object Notation) is a lightweight, plain-text format used to store and transfer structured data between a server and an application."
-image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [JSON, Stringify, Parse]
 ---
 <center>
   <br>
-  <img style="width: 100%; "src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
+  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
   <h1>JSON Use Case</h1>
   <br>
 </center>

@@ -3,13 +3,13 @@ title: "Math Use Case"
 date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "A collection of mathematical formulas for computational purposes."
-image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [Mathematics, Formulas, Physics, Science, Statistics]
 ---
 <center>
   <br>
-  <img style="width: 100%; "src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
+  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
   <h1>Math Use Case</h1>
   <br>
 </center>

@@ -3,13 +3,13 @@ title: "Logger Use Case"
 date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "A utility that automatically records, tracks, and stores sequential data, system events, or user actions over time."
-image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+image: "https://js.codemelted.com/assets/images/logo-codemelted-js.png"
 twitter_site: "@CodeMeltedDEV"
 tags: [Console, Logging, Debugging]
 ---
 <center>
   <br>
-  <img style="width: 100%; "src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
+  <img style="width: 100%; "src="https://js.codemelted.com/assets/images/logo-codemelted-js.png" />
   <h1>Logger Use Case</h1>
   <br>
 </center>

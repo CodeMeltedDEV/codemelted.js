@@ -2,7 +2,7 @@
 // ============================================================================
 /**
  * <img style="width: 100%;"
- *      src="https://codemelted.com/assets/images/logo-codemelted-js.png"
+ *      src="https://js.codemelted.com/assets/images/logo-codemelted-js.png"
  * />
  *
  * | Key       | Value                                                        |

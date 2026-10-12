@@ -22,6 +22,7 @@ tests/codemelted.js
 
 # Ignore our compiled binaries
 dist/
+node_modules/
 
 # Stupid mac os files to not check into source control
 .DS_Store

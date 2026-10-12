@@ -1,5 +1,10 @@
 {
   "name": "codemelted.js Project",
+
+  "favicon": "https://js.codemelted.com/assets/favicon/favicon.ico",
+  "customDescription": "The codemelted.js Project aims to give software engineers the ability to deliver on this full stack engineering premise.",
+  "customImage": "https://js.codemelted.com/assets/images/logo-codemelted-js.png",
+  "customTwitter": "@CodeMeltedDEV",
   "alwaysCreateEntryPointModule": true,
   "excludeExternals": true,
   "excludeProtected": true,
@@ -9,7 +14,12 @@
   "readme": "README.md",
   "hideGenerator": true,
   "entryPoints": [
-    "./codemelted.js",
+    "./codemelted.js"
+  ],
+  "plugin": [
+    "./assets/js/typedoc-plugin-og.js",
+    "typedoc-material-theme",
+    "@boneskull/typedoc-plugin-mermaid"
   ],
   "out": "docs",
   "highlightLanguages": [
@@ -37,10 +47,4 @@
     "documents/module-test.md",
     "documents/codemelted-rs.md"
   ],
-  "favicon": "https://codemelted.com/favicon.png",
-  "plugin": ["./assets/js/typedoc-plugin-og.js"],
-  "$schema": "https://typedoc.org",
-  "customDescription": "The codemelted.js Project aims to give software engineers the ability to deliver on this full stack engineering premise.",
-  "customImage": "https://codemelted.com/assets/images/logo-codemelted-js.png",
-  "customTwitter": "@CodeMeltedDEV"
 }
