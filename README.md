@@ -80,14 +80,16 @@ The `js.codemelted.com` domain is more than just a website. It serves a Software
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Domain Use Cases            | The software engineering applied to building the `codemelted.js` and `codemelted.rs` modules.                                                                                   |
 | Software Engineering        | A knowledge base for applying the discipline to build full stack solution especially in the era of Artificial Intelligence (AI).                                                |
-| Command Line Interface      | The `codemelted` native CLI. Contains all the information for installing and utilizing this service.                                                                            |
+| `codemelted` CLI              | The `codemelted` native CLI. Contains all the information for installing and utilizing this service.                                                                            |
 | `codemelted.js` Validation  | The mocha / chai test page for validating the module. Allows for quick testing across different browser runtimes.                                                               |
 | Module SDKs                 | Access to the core of the `codemelted.js` and `codemelted.rs` modules. Provides all the information necessary for install and utilizing these modules within your next project. |
+| GitHub Control Integration  | Provides controls to directly access the GitHub repo for this project, fork it, download it, you get it.                                                                        |
 | AI Agent (Future)           | A Gemini AI Notebook to utilize to build solutions for the project modules or access general information based on this sites' information.                                      |
 | Code Editor (Future)        | An online editor for quickly writing snippets of code and UML models based on the project modules and starter templates.                                                        |
 | Chat (Future)               | Bringing back online text chat rooms in the style of AOL / MSN with audio and video chat so like-minded software engineers can collaborate.                                     |
 | CodeMeltedDEV Blog (Future) | An app sheet access to the software engineer's blog about this project and other happenings.                                                                                    |
 | External Services (Future)  | Access to external services that make the PWA a one-stop solution for a software engineer regardless of how they access this PWA.                                               |
+| Page Controls (Future)      | The full ability to print, share (utilizing OpenGraph), and read the page aloud via Text To Speech (TTS)                                                                        |
 
 # Support
 
