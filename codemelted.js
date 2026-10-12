@@ -1,6 +1,165 @@
 // @ts-check
 // ============================================================================
 /**
+ * <img style="width: 100%;"
+ *      src="https://codemelted.com/assets/images/logo-codemelted-js.png"
+ * />
+ *
+ * | Key       | Value                                                        |
+ * | --------- | ------------------------------------------------------------ |
+ * | AUTHOR    | mark.shaffer@codemelted.com / dev.codemelted.com             |
+ * | COPYRIGHT | © 2025-Present Mark Shaffer. All Rights Reserved.            |
+ * | VERSION   | v26.0.0-alpha (Last Updated 2026-OCT-XX)                     |
+ *
+ * # FEATURES
+ *
+ * The `codemelted.js` is an ES6 developed module focusing on client-side
+ * front end domain use cases. This is accomplished by leveraging the Web APIs
+ * available within a Browser / Web Worker runtimes. The Web APIs provide
+ * everything a client-side app requires to build Single Page App (SPA),
+ * Progressive Web App (PWA), or just general static websites. All of this
+ * without the need of a heavy framework.
+ *
+ * > Any module API violation will result in a `CModuleError` thrown with a
+ * full stack trace of the violation.
+ *
+ * # GETTING STARTED
+ *
+ * ## Clone / Fork
+ *
+ * When you clone / fork the *codemelted.js Project* repo, you will need to
+ * install tools to properly build the project. The following represents how to
+ * set up those tools.
+ *
+ * 1. Install [PowerShell Core](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell?view=powershell-7.6)
+ * for your given operating system.
+ * 2. Navigate to *codemelted.js Project* repo location.
+ * 3. Open a terminal and execute `./build.ps1 --setup`. Follow the
+ * instructions to install all the necessary repo tooling.
+ * 4. Once completed, execute `./build.ps1 --help` to gain an understanding
+ * of how to build the project in the future.
+ *
+ * ## Content Delivery Network (CDN)
+ *
+ * The `codemelted.js` module is hosted on GitHub and delivered via the
+ * `jsdelivr` CDN. The following represents the URLs for accessing the module.
+ * These can be utilized with `import` statements within JavaScript
+ * or as part of the `<script type="module"></script>` tags of a website.
+ *
+ * - **Latest Version (Risky):**
+ *
+ * ```txt
+ * https://cdn.jsdelivr.net/gh/codemelteddev/codemelted.js/codemelted.js
+ * ```
+ *
+ * - **Version Controlled (Safest):**
+ *
+ * ```txt
+ * https://cdn.jsdelivr.net/gh/codemelteddev/codemelted.js@XX.Y.Z/codemelted.js
+ * ```
+ *
+ * **NOTES:**
+ * 1. The `@XX.Y.Z` corresponds to the releases of the *codemelted.js Project*
+ * as identified on GitHub.
+ * 2. `XX` corresponds to the year of the release. A change in this value resets
+ * `Y` and `Z` to `0` respectively.
+ * 3. `Y` corresponds to an API breaking change. A change in this number
+ * resets `Z`.
+ * 4. `Z` corresponds to a newly delivered feature / bug fix that should not break
+ * other API functions.
+ *
+ * # USAGE
+ *
+ * **ES6 Module Import Example**
+ *
+ * ```js
+ * // Import whole module statically via URL or local path
+ * import * as codemelted from "path/to/codemelted.js";
+ *
+ * // Import elements to use statically via URL or local path
+ * import { exported_element } from "path/to/codemelted.js";
+ *
+ * // Dynamically import all module elements to named variable
+ * let codemelted = await import("path/to/codemelted.js");
+ * ```
+ *
+ * **Via Script Tag in HTML File**
+ *
+ * ```html
+ * <script type="module">
+ * // Use the import examples above to utilize the script functions.
+ * </script>
+ * ```
+ *
+ * And with your imports in place, explore the [SDK](#sdk) to utilize the
+ * domain use case API of your choice. They will have the details of the API
+ * call along with examples.
+ *
+ * # TODOS
+ *
+ * - Research and implement async_lock() from the Web Locks API.
+ * - Research and implement ui_xxx() functions for Fullscreen API,
+ * Picture in Picture API, Navigation API, Resize Observer API, and Screen
+ * Wake Lock API.
+ * - Research Web Cryptography API and how to apply to the module.
+ * - db_xxx() use case. Define IndexedDB portion and expose.
+ * - hw_xxx() use case. Implement currently researched protocols and expose.
+ * - hw_xxx() use case. Implement not yet researched protocols and expose.
+ * - network_xxx() use case. Get fetch and beacon done. Move queryable items
+ * to runtime
+ * - network_xxx() use case. Get client side CBroadcastChannel / CEventSource
+ * hooked up and exposed
+ * - network_xxx() sue case. Get client side socket based protocols implemented
+ * and exposed.
+ * - npu_compute() use case. Develop tests and expose to the greater project.
+ * - runtime_xxx() use case. Add runtime_query() to query different values from
+ * the runtime. This will not throw just return a signal of "unknown" for the
+ * value.
+ * - ui_xxx() use case. Build out protocols
+ * - ui_xxx() use case. Finish the ui_notify with custom dialog.
+ * - ui_xxx() use case. Start building UI components and come up with a standard
+ * for using them within HTML to build user interfaces.
+ * - ui_xxx() use case. Define tests to fully flesh and test this out.
+ * - Perform OOAD analysis, fill out, and add TODOs for remainder of this project
+ * based on necessary Deno wrappers and what will go into the Rust static lib
+ * project.
+ *
+ * # LICENSE
+ *
+ * MIT License
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the 'Software'),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge,  publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included
+ * in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ *
+ * # SDK
+ *
+ * The following lists represent the implementation of the `codemelted.js`
+ * module. The *Functions* represents the actual domain use case API
+ * functions. All other items represent the supporing objects of the
+ * *Functions* API.
+ *
+ * @module codemelted.js SDK
+ */
+// =============================================================================
+// [MODULE CORE] ===============================================================
+// =============================================================================
+
+/**
  * Captures information about the `codemelted.js` module.
  * @typedef {object}
  * @property {string} author Who made this sticking project anyways.
@@ -16,25 +175,7 @@
 export const ABOUT_MODULE = Object.freeze({
 author: "mark.shaffer@codemelted.com / dev.codemelted.com",
 copyright: "© 2025 - 2026 Mark Shaffer. All Rights Reserved.",
-license: `MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the 'Software'), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge,  publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included
-in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+license: `
 `,
 version: "v26.0.0 [Last Updated 2026-SEP-19]",
 history:`
@@ -43,42 +184,10 @@ history:`
   JavaScript runtimes that have been fully tested and documented.
 `,
 todos:`
-- Research and implement async_lock() from the Web Locks API.
-- Research and implement ui_xxx() functions for Fullscreen API,
-   Picture in Picture API, Navigation API, Resize Observer API, and Screen
-   Wake Lock API.
-- Research Web Cryptography API and how to apply to the module.
-- console_xxx() use cases for deno. Define and expose.
-- db_xxx() use case. Define IndexedDB portion and expose.
-- db_xxx() use case. Define SQLite3 deno portion and expose.
-- disk_xxx() use case. Make the file read / write work with Deno.
-- disk_xxx() use case. Add file operations for Deno.
-- hw_xxx() use case. Implement currently researched protocols and expose.
-- hw_xxx() use case. Implement not yet researched protocols and expose.
-- network_xxx() use case. Get fetch and beacon done. Move queryable items
-  to runtime
-- network_xxx() use case. Get client side CBroadcastChannel / CEventSource
-  hooked up and exposed
-- network_xxx() sue case. Get client side socket based protocols implemented
-  and exposed.
-- network_xxx() use case. Research server side Deno socket based protocols
-  and determine how to implement and implement if easy or fill out more TODOs.
-- npu_compute() use case. Develop tests and expose to the greater project.
-- runtime_xxx() use case. Add runtime_query() to query different values from
-  the runtime. This will not throw just return a signal of "unknown" for the
-  value.
-- runtime_xxx() use case. Build the CRuntimeBinding to be able to link up to
-  third party items (i.e. our custom static library / external JS libs, etc.)
-- ui_xxx() use case. Build out protocols
-- ui_xxx() use case. Finish the ui_notify with custom dialog.
-- ui_xxx() use case. Start building UI components and come up with a standard
-  for using them within HTML to build user interfaces.
-- ui_xxx() use case. Define tests to fully flesh and test this out.
-- Perform OOAD analysis, fill out, and add TODOs for remainder of this project
-  based on necessary Deno wrappers and what will go into the Rust static lib
-  project.
+
 `,
 });
+
 // ============================================================================
 // [MODULE CORE] ==============================================================
 // ============================================================================
@@ -203,6 +312,14 @@ export class CModuleError extends Error {
     console.error("codemelted.js module error encountered.", err);
   }
 
+  static check_runtime() {
+    const valid_runtime = "HTMLElement" in globalThis ||
+      "WorkerGlobalScope" in globalThis;
+    if (!valid_runtime) {
+      throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
+    }
+  }
+
   /**
    * Provides custom printout of the module error providing the name, message,
    * and stack_trace to chain together the call failure sequence.
@@ -225,11 +342,12 @@ export class CModuleError extends Error {
   constructor(message, cause) {
     super(message, cause ? {cause: cause} : undefined);
     if ("captureStackTrace" in Error) {
-      // @ts-ignore IF statement above protects us from this.
+      // @ts-ignore Check above ensures this will work.
       Error.captureStackTrace(this, CModuleError);
     }
   }
 }
+CModuleError.check_runtime();
 
 /**
  * Provides a result where either the value or the error can be signaled for
@@ -565,7 +683,6 @@ export class CFuture {
    */
   #do_execute() {
     return new Promise((resolve) => {
-      // @ts-ignore node returns an object instead of a number
       this.#timeout_id = setTimeout(() => {
         try {
           const answer = this.#task(this.#data);
@@ -663,7 +780,6 @@ export class CTimerProtocol extends CProtocol {
     try {
       json_check_type({type: "number", data: interval, should_throw: true});
       this.#interval = interval;
-      // @ts-ignore node returns an object.
       this.#timer_id = globalThis.setInterval(() => {
         this.report({
           event_fired: PROTOCOL_EVENT.Message,
@@ -781,7 +897,6 @@ export class CWorkerProtocol extends CProtocol {
       name: "hardwareConcurrency",
       obj: globalThis["navigator"]
     })
-      // @ts-ignore This will be within the browser context
       ? globalThis.navigator.hardwareConcurrency
       : 1;
   }
@@ -850,7 +965,7 @@ export class CWorkerProtocol extends CProtocol {
       json_check_type({type: "object", data: options, should_throw: true});
       this.#worker = new globalThis.Worker(
         new URL(url, import.meta.url).href,
-        // @ts-ignore CWorkerOptions matches WorkerOptions from browser.
+        // @ts-ignore CWorkerOptions is a reflections of what a Worker takes.
         options
       );
       this.#worker.onerror = (evt) => {
@@ -1170,7 +1285,6 @@ export function disk_read_file({data_type, accept="*"}) {
 
       // Go read the file from disk.
       // Build our in-memory control to select the file.
-      // @ts-ignore document will exist in browser context.
       const w = globalThis.document.createElement('input');
       w.type = "file";
       w.accept = accept;
@@ -1179,11 +1293,8 @@ export function disk_read_file({data_type, accept="*"}) {
       w.onchange = async (/** @type {Event} */ ev) => {
         try {
           let value = null;
-          // @ts-ignore HTMLInputElement will exist in browser context.
           const file = ev.target instanceof HTMLInputElement
-            // @ts-ignore Will exist in a browser context
             ? ev.target.files != null
-              // @ts-ignore Will exist in a browser context
               ? ev.target.files[0]
               : null
             : null;
@@ -1244,13 +1355,13 @@ export function disk_write_file({data, filename}) {
   ) => {
     try {
       // Show the file save dialog.
-      // @ts-ignore Experimental but available
+      // @ts-ignore A check determines if this is available.
       const handle = await showSaveFilePicker({
         filename,
       });
       // Write the blob to the file.
       const writable = await handle.createWritable();
-      // @ts-ignore Typescript does not know what is happening here.
+      // @ts-ignore This is how you send data to the blob.
       const blob = new Blob([data]);
       await writable.write(blob);
       await writable.close();
@@ -1288,15 +1399,13 @@ export function disk_write_file({data, filename}) {
       } else {
         // Traditional download with name specified shall be utilized.
         try {
-          // @ts-ignore Typescript does not know what is happening here.
+          // @ts-ignore
           const blob = new Blob([data]);
           const blobURL = URL.createObjectURL(blob);
-          // @ts-ignore document will exist in browser context.
           const a = globalThis.document.createElement('a');
           a.href = blobURL;
           a.download = filename;
           a.style.display = "none";
-          // @ts-ignore document will exist in browser context.
           a.click();
           setTimeout(() => {
             URL.revokeObjectURL(blobURL);
@@ -1605,27 +1714,17 @@ export function disk_write_file({data, filename}) {
 //    */
 //   update(data) {
 //     let now = new Date();
-//     // @ts-ignore DeviceOrientationEvent part of browser runtime.
 //     if (data instanceof DeviceOrientationEvent) {
 //       this.#timestamp = now;
-//       // @ts-ignore data will have specified property
 //       this.#alpha = data.alpha;
-//       // @ts-ignore data will have specified property
 //       this.#beta = data.beta;
-//       // @ts-ignore data will have specified property
 //       this.#gamma = data.gamma;
-//     // @ts-ignore GeolocationCoordinates part of browser runtime.
 //     } else if (data instanceof GeolocationCoordinates) {
 //       this.#timestamp = now;
-//       // @ts-ignore data will have specified property
 //       this.#heading = data.heading;
-//       // @ts-ignore data will have specified property
 //       this.#speed = data.speed;
-//       // @ts-ignore data will have specified property
 //       this.#latitude = data.latitude;
-//       // @ts-ignore data will have specified property
 //       this.#longitude = data.longitude;
-//       // @ts-ignore data will have specified property
 //       this.#altitude = data.altitude;
 //     }
 //   }
@@ -1727,7 +1826,7 @@ export class CSerialPortData {
           request === CSerialPortData.REQUEST_TO_SEND) {
         json_check_type({type: "boolean", data: data, should_throw: true});
         this.#request = request;
-        // @ts-ignore json_check_type handle checking for valid boolean.
+        // @ts-ignore
         this.#data = data;
       } else if (request === CSerialPortData.QUERY_DATA) {
         this.#request = request;
@@ -1853,10 +1952,8 @@ export class CSerialPortEvent {
 //    */
 //   terminate() {
 //     try {
-//       // @ts-ignore Object exists in browser runtime.
 //       globalThis.navigator.geolocation.clearWatch(this.#watch_id);
 //       this.#watch_id = -1;
-//       // @ts-ignore Object exists in browser runtime.
 //       globalThis.removeEventListener(
 //         "deviceorientation",
 //         this.#on_device_orientation
@@ -1895,7 +1992,6 @@ export class CSerialPortEvent {
 //         throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
 //       }
 //       json_check_type({type: "object", data: options, should_throw: true});
-//       // @ts-ignore Object exists in browser runtime.
 //       this.#on_device_orientation =
 //         (/** @type {DeviceOrientationEvent} */ evt) => {
 //           this.#data.update(evt);
@@ -1904,14 +2000,11 @@ export class CSerialPortEvent {
 //             data: Object.assign({}, this.#data)
 //           });
 //       };
-//       // @ts-ignore Object exists in browser runtime.
 //       globalThis.addEventListener(
 //         "deviceorientation",
 //         this.#on_device_orientation
 //       );
-//       // @ts-ignore Property exists in browser runtime.
 //       this.#watch_id = globalThis.navigator.geolocation.watchPosition(
-//         // @ts-ignore This will work in Browser runtime.
 //         (/** @type {GeolocationPosition} */ evt) => {
 //           this.#data.update(evt.coords);
 //           this.report({
@@ -1919,7 +2012,6 @@ export class CSerialPortEvent {
 //             data: Object.assign({}, this.#data)
 //           });
 //         },
-//         // @ts-ignore This will work in Browser runtime.
 //         (/** @type {GeolocationPositionError} */evt) => {
 //           this.report({
 //             event_fired: PROTOCOL_EVENT.Error,
@@ -1992,7 +2084,6 @@ export class CSerialPortEvent {
 //             });
 //           }
 //           const reader = this.#port.readable.getReader();
-//           // @ts-ignore This will exist in the browser runtime.
 //           const { value, done } = await reader.read();
 //           reader.releaseLock();
 //           this.on_data_rx({
@@ -2088,7 +2179,6 @@ export class CSerialPortEvent {
 //                                    obj: globalThis["navigator"]})) {
 //         throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
 //       }
-//       // @ts-ignore SerialPort exists as a type in Browser context.
 //       json_check_type({type: SerialPort, data: port, should_throw: true});
 //       this.#port = port;
 //     } catch (err) {
@@ -2534,7 +2624,7 @@ export function logger_level(level) {
       json_has_key({obj: level, key: "label", should_throw: true});
       _logger_level = level;
     }
-    // @ts-ignore Property exists on the struct.
+    // @ts-ignore
     return _logger_level.label;
   } catch (err) {
     CModuleError.handle_error(err);
@@ -2563,22 +2653,22 @@ export function logger_log({level, data}) {
     }
 
     // Check to see if our logging is on or off.
-    // @ts-ignore Property exists on the struct.
+    // @ts-ignore
     if (_logger_level.label == "OFF") {
       return;
     }
 
     // It's on, go create the log record and go log some stuff.
     const record = new CLogRecord({level: level, data: data});
-    // @ts-ignore Property exists on the struct.
+    // @ts-ignore
     if (record.level().level >= _logger_level.level) {
-      // @ts-ignore Property exists on the struct.
+      // @ts-ignore
       switch (record.level().label) {
         case "DEBUG":
         case "INFO":
           console.log(
             record.time().toISOString(),
-            // @ts-ignore Property exists on the struct.
+            // @ts-ignore
             record.level().label,
             record.data()
           );
@@ -2586,7 +2676,7 @@ export function logger_log({level, data}) {
         case "WARNING":
           console.warn(
             record.time().toISOString(),
-            // @ts-ignore Property exists on the struct.
+            // @ts-ignore
             record.level().label,
             record.data()
           );
@@ -2594,7 +2684,7 @@ export function logger_log({level, data}) {
         case "ERROR":
           console.error(
             record.time().toISOString(),
-            // @ts-ignore Property exists on the struct.
+            // @ts-ignore
             record.level().label,
             record.data()
           );
@@ -3252,7 +3342,6 @@ export class CEventSourceProtocol extends CProtocol {
 //  */
 // class CWebSocketProtocol extends CProtocol {
 //   /** @type {WebSocket} */
-//   // @ts-ignore The #connect_socket() creates this member field.
 //   #socket;
 
 //   /**
@@ -3316,7 +3405,6 @@ export class CEventSourceProtocol extends CProtocol {
 //         throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
 //       }
 //       json_check_type({type: "string", data: url, should_throw: true});
-//       // @ts-ignore URL will not be null.
 //       this.#socket = new globalThis.WebSocket(url);
 //       this.#socket.onclose = (evt) => {
 //         this.report({
@@ -3414,7 +3502,6 @@ export function network_query(request) {
           name: "onLine",
           obj: globalThis["navigator"]
         })
-          // @ts-ignore This will exist in the browser context.
           ? globalThis.navigator.onLine
           : false;
       case NETWORK_REQUEST.Hostname:
@@ -3451,7 +3538,6 @@ export function network_beacon({url, data}) {
       throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
     }
     json_check_type({type: "string", data: url, should_throw: true});
-    // @ts-ignore Will exist in a browser context.
     return globalThis.navigator.sendBeacon(url, data);
   } catch (err) {
     CModuleError.handle_error(err);
@@ -3894,7 +3980,6 @@ export function runtime_available({request, name="", obj = globalThis}) {
           {
             return false;
           }
-          // @ts-ignore This will be within the browser context
           return globalThis.self === globalThis.top;
         } catch {
           return false;
@@ -3917,12 +4002,10 @@ export function runtime_available({request, name="", obj = globalThis}) {
         });
       case AVAILABILITY_REQUEST.Pwa:
         return is_available({property: "matchMedia"}) &&
-          // @ts-ignore This is in a browser context
           globalThis.matchMedia("(display-mode: standalone)"
         ).matches;
       case AVAILABILITY_REQUEST.SecureContext:
         return is_available({property: "isSecureContext"}) &&
-          // @ts-ignore This is in a browser context
           globalThis.isSecureContext;
       case AVAILABILITY_REQUEST.SerialPort:
         return is_available({
@@ -3943,7 +4026,6 @@ export function runtime_available({request, name="", obj = globalThis}) {
           property: "maxTouchPoints",
           obj: globalThis["navigator"]
         }) &&
-          // @ts-ignore This is in a browser context
           globalThis.navigator.maxTouchPoints > 0;
       case AVAILABILITY_REQUEST.Usb:
         return is_available({
@@ -4101,12 +4183,10 @@ export async function storage_clear(type = STORAGE_TYPE.Local) {
           if (!runtime_available({request: AVAILABILITY_REQUEST.CookieStore})) {
             throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
           }
-          // @ts-ignore Will exist in a browser context
           const cookies = await globalThis.cookieStore.getAll();
           for (const cookie of cookies) {
             const name = cookie.name;
             if (name) {
-              // @ts-ignore Will exist in a browser context
               await globalThis.cookieStore.delete(name);
             }
           }
@@ -4159,7 +4239,6 @@ export async function storage_get({type = STORAGE_TYPE.Local, key}) {
         if (!runtime_available({request: AVAILABILITY_REQUEST.CookieStore})) {
           throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
         }
-        // @ts-ignore Will exist in a browser context
         const entry = await globalThis.cookieStore.get(key)
         return entry
           ? entry.value != undefined
@@ -4213,7 +4292,6 @@ export async function storage_key({type = STORAGE_TYPE.Local, index}) {
         if (!runtime_available({request: AVAILABILITY_REQUEST.CookieStore})) {
           throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
         }
-        // @ts-ignore Will exist in a browser context
         const cookies = await globalThis.cookieStore.getAll();
         const key = cookies.at(index)?.name;
         return key != undefined
@@ -4267,19 +4345,16 @@ export async function storage_length(type = STORAGE_TYPE.Local) {
         if (!runtime_available({request: AVAILABILITY_REQUEST.CookieStore})) {
           throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
         }
-        // @ts-ignore Will exist in browser context
         return (await globalThis.cookieStore.getAll()).length;
       case STORAGE_TYPE.Local:
         if (!runtime_available({request: AVAILABILITY_REQUEST.LocalStorage})) {
           throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
         }
-        // @ts-ignore Will exist in browser context
         return globalThis.localStorage.length;
       case STORAGE_TYPE.Session:
         if (!runtime_available({request: AVAILABILITY_REQUEST.SessionStorage})) {
           throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
         }
-        // @ts-ignore Will exist in browser context
         return globalThis.sessionStorage.length;
       default:
         throw new CModuleError(CModuleError.MISUSE);
@@ -4315,21 +4390,19 @@ export async function storage_remove({type = STORAGE_TYPE.Local, key}) {
         if (!runtime_available({request: AVAILABILITY_REQUEST.CookieStore})) {
           throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
         }
-        // @ts-ignore Will exist in browser context
+        // @ts-ignore
         await globalThis.cookieStore.delete(key, value);
         break;
       case STORAGE_TYPE.Local:
         if (!runtime_available({request: AVAILABILITY_REQUEST.LocalStorage})) {
           throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
         }
-        // @ts-ignore Will exist in browser context
         globalThis.localStorage.removeItem(key);
         break;
       case STORAGE_TYPE.Session:
         if (!runtime_available({request: AVAILABILITY_REQUEST.SessionStorage})) {
           throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
         }
-        // @ts-ignore Will exist in browser context
         globalThis.sessionStorage.removeItem(key);
         break;
       default:
@@ -4369,21 +4442,18 @@ export async function storage_set({type = STORAGE_TYPE.Local, key, value}) {
         if (!runtime_available({request: AVAILABILITY_REQUEST.CookieStore})) {
           throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
         }
-        // @ts-ignore Will exist in browser context
         await globalThis.cookieStore.set(key, value);
         break;
       case STORAGE_TYPE.Local:
         if (!runtime_available({request: AVAILABILITY_REQUEST.LocalStorage})) {
           throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
         }
-        // @ts-ignore Will exist in browser context
         globalThis.localStorage.setItem(key, value);
         break;
       case STORAGE_TYPE.Session:
         if (!runtime_available({request: AVAILABILITY_REQUEST.SessionStorage})) {
           throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
         }
-        // @ts-ignore Will exist in browser context
         globalThis.sessionStorage.setItem(key, value);
         break;
       default:
@@ -4652,25 +4722,6 @@ export const TARGET_TYPE = Object.freeze({
 // [PUBLIC API] ---------------------------------------------------------------
 
 /**
- * Fake object for Deno Runtime
- * @private
- * @typedef {object} HTMLElement
- */
-
-/**
- * Fake object for Deno Runtime
- * @private
- * @typedef {object} ShadowRoot
- */
-
-// Add the objects necessary to make non-browser base runtimes happy for
-// TypeScript tsc completion within Bun.
-if (!runtime_available({request: AVAILABILITY_REQUEST.Browser})) {
-  // @ts-ignore Fakes adding a HTMLElement when in a non-browser runtime.
-  globalThis["HTMLElement"] = class { };
-}
-
-/**
  * Provides the ability to carry out actions with the open browser window.
  * @param {object} params The named parameters.
  * @param {ACTION_REQUEST} params.request The enumerated value to carry
@@ -4707,72 +4758,68 @@ export async function ui_action({
     switch (request) {
       case ACTION_REQUEST.Copy:
         json_check_type({type: "string", data: data, should_throw: true});
-        // @ts-ignore Data was checked above.
+        // @ts-ignore
         await globalThis.navigator.clipboard.writeText(data);
         break;
       case ACTION_REQUEST.Focus:
-        // @ts-ignore Will exist in a browser context
         globalThis.focus();
         break;
       case ACTION_REQUEST.MoveBy:
         json_check_type({type: "number", data: x, should_throw: true});
         json_check_type({type: "number", data: y, should_throw: true});
-        // @ts-ignore check types above will validate number is not null.
+        // @ts-ignore
         globalThis.moveBy(x, y);
         break;
       case ACTION_REQUEST.MoveTo:
         json_check_type({type: "number", data: x, should_throw: true});
         json_check_type({type: "number", data: y, should_throw: true});
-        // @ts-ignore check types above will validate number is not null.
+        // @ts-ignore
         globalThis.moveTo(x, y);
         break;
       case ACTION_REQUEST.Paste:
-        // @ts-ignore Will exist in a browser context
         value = await globalThis.navigator.clipboard.readText();
         break;
       case ACTION_REQUEST.PostMessage:
-        // @ts-ignore Will exist in a browser context
         globalThis.postMessage(data, target_origin);
         break;
       case ACTION_REQUEST.Print:
-        // @ts-ignore Will exist in a browser context
         globalThis.print();
         break;
       case ACTION_REQUEST.ResizeBy:
         json_check_type({type: "number", data: x, should_throw: true});
         json_check_type({type: "number", data: y, should_throw: true});
-        // @ts-ignore check types above will validate number is not null.
+        // @ts-ignore
         globalThis.resizeBy(x, y);
         break;
       case ACTION_REQUEST.ResizeTo:
         json_check_type({type: "number", data: x, should_throw: true});
         json_check_type({type: "number", data: y, should_throw: true});
-        // @ts-ignore check types above will validate number is not null.
+        // @ts-ignore
         globalThis.resizeTo(x, y);
         break;
       case ACTION_REQUEST.Scroll:
         json_check_type({type: "number", data: x, should_throw: true});
         json_check_type({type: "number", data: y, should_throw: true});
-        // @ts-ignore check types above will validate number is not null.
+        // @ts-ignore
         globalThis.scroll(x, y);
         break;
       case ACTION_REQUEST.ScrollBy:
         json_check_type({type: "number", data: x, should_throw: true});
         json_check_type({type: "number", data: y, should_throw: true});
-        // @ts-ignore check types above will validate number is not null.
+        // @ts-ignore
         globalThis.scrollBy(x, y);
         break;
       case ACTION_REQUEST.ScrollTo:
         json_check_type({type: "number", data: x, should_throw: true});
         json_check_type({type: "number", data: y, should_throw: true});
-        // @ts-ignore check types above will validate number is not null.
+        // @ts-ignore
         globalThis.scrollTo(x, y);
         break;
       case ACTION_REQUEST.Share:
         if (!runtime_available({request: AVAILABILITY_REQUEST.Share})) {
           throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
         }
-        // @ts-ignore This is in a browser context
+        // @ts-ignore
         await globalThis.navigator.share(data);
         break;
       case ACTION_REQUEST.Vibrate:
@@ -4780,7 +4827,6 @@ export async function ui_action({
           throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
         }
         json_check_type({type: Array, data: pattern, should_throw: true});
-        // @ts-ignore Will exist in the browser context
         value = globalThis.navigator.vibrate(pattern);
         break;
       default:
@@ -4821,15 +4867,12 @@ export function ui_document({request, name}) {
     }
     switch (request) {
       case DOCUMENT_REQUEST.CssVariable: {
-        // @ts-ignore Will exist in the browser context
         const cs = globalThis.window.getComputedStyle(
-          // @ts-ignore Will exist in the browser context
           globalThis.document.documentElement
         );
         return cs.getPropertyValue(name) ?? "";
       }
       case DOCUMENT_REQUEST.ElementById: {
-        // @ts-ignore Will exist in the browser context
         const el = globalThis.document.getElementById(name);
         if (!el) {
           throw new CModuleError(CModuleError.MISUSE + name + " not found");
@@ -4837,21 +4880,19 @@ export function ui_document({request, name}) {
         return el;
       }
       case DOCUMENT_REQUEST.ElementsByClassName: {
-        // @ts-ignore Will exist in the browser context
         const col1 = globalThis.document.getElementsByClassName(name);
         if (col1.length === 0) {
           throw new CModuleError(CModuleError.MISUSE + name + " not found");
         }
-        // @ts-ignore It will be a HTMLElement[]
+        // @ts-ignore
         return Array.from(col1);
       }
       case DOCUMENT_REQUEST.ElementsByTagName: {
-        // @ts-ignore Will exist in the browser context
         const col2 = globalThis.document.getElementsByTagName(name);
         if (col2.length === 0) {
           throw new CModuleError(CModuleError.MISUSE + name + " not found");
         }
-        // @ts-ignore It will be a HTMLElement[]
+        // @ts-ignore
         return Array.from(col2);
       }
       default:
@@ -4882,17 +4923,17 @@ export async function ui_notify({request, message}) {
     switch (request) {
       case NOTIFY_REQUEST.Alert:
         json_check_type({type: "string", data: message, should_throw: true});
-        // @ts-ignore This is in a browser context
+        // @ts-ignore
         globalThis.alert(data);
         break;
       case NOTIFY_REQUEST.Confirm:
         json_check_type({type: "string", data: message, should_throw: true});
-        // @ts-ignore This is in a browser context
+        // @ts-ignore
         value = globalThis.confirm(data);
         break;
       case NOTIFY_REQUEST.Prompt:
         json_check_type({type: "string", data: message, should_throw: true});
-        // @ts-ignore This is in a browser context
+        // @ts-ignore
         value = globalThis.prompt(data) ?? "";
         break;
       default:
@@ -4921,61 +4962,42 @@ export function ui_screen(request) {
     }
     switch (request) {
       case SCREEN_REQUEST.AvailableHeight:
-        // @ts-ignore Will exist in the browser context
         return globalThis.screen.availHeight;
       case SCREEN_REQUEST.AvailableWidth:
-        // @ts-ignore Will exist in the browser context
         return globalThis.screen.availWidth;
       case SCREEN_REQUEST.ColorDepth:
-        // @ts-ignore Will exist in the browser context
         return globalThis.screen.colorDepth;
       case SCREEN_REQUEST.DevicePixelRatio:
-        // @ts-ignore Will exist in the browser context
         return globalThis.devicePixelRatio;
       case SCREEN_REQUEST.Height:
-        // @ts-ignore Will exist in the browser context
         return globalThis.screen.height;
       case SCREEN_REQUEST.InnerHeight:
-        // @ts-ignore Will exist in the browser context
         return globalThis.innerHeight;
       case SCREEN_REQUEST.InnerWidth:
-        // @ts-ignore Will exist in the browser context
         return globalThis.innerWidth;
       case SCREEN_REQUEST.OuterHeight:
-        // @ts-ignore Will exist in the browser context
         return globalThis.outerHeight;
       case SCREEN_REQUEST.OuterWidth:
-        // @ts-ignore Will exist in the browser context
         return globalThis.outerWidth;
       case SCREEN_REQUEST.PixelDepth:
-        // @ts-ignore Will exist in the browser context
         return globalThis.screen.pixelDepth;
       case SCREEN_REQUEST.ScreenLeft:
-        // @ts-ignore Will exist in the browser context
         return globalThis.screenLeft;
       case SCREEN_REQUEST.ScreenOrientationAngle:
-        // @ts-ignore Will exist in the browser context
         return globalThis.screen.orientation.angle;
       case SCREEN_REQUEST.ScreenOrientationType:
-        // @ts-ignore Will exist in the browser context
         return globalThis.screen.orientation.type;
       case SCREEN_REQUEST.ScreenTop:
-        // @ts-ignore Will exist in the browser context
         return globalThis.screenTop;
       case SCREEN_REQUEST.ScreenX:
-        // @ts-ignore Will exist in the browser context
         return globalThis.screenX;
       case SCREEN_REQUEST.ScreenY:
-        // @ts-ignore Will exist in the browser context
         return globalThis.screenY;
       case SCREEN_REQUEST.ScrollX:
-        // @ts-ignore Will exist in the browser context
         return globalThis.scrollX;
       case SCREEN_REQUEST.ScrollY:
-        // @ts-ignore Will exist in the browser context
         return globalThis.scrollY
       case SCREEN_REQUEST.Width:
-        // @ts-ignore Will exist in the browser context
         return globalThis.screen.width
       default:
         throw new CModuleError(CModuleError.MISUSE);
@@ -5115,18 +5137,16 @@ export function ui_open({
 
     // Determine how we are opening the item.
     if (popup_window) {
-      // @ts-ignore Will return a number.
+      // @ts-ignore
       const top = (ui_screen(SCREEN_REQUEST.Height) - height) / 2;
-      // @ts-ignore Will return a number.
+      // @ts-ignore
       const left = (ui_screen(SCREEN_REQUEST.Width) - width) / 2;
       const settings = `toolbar=no, location=no, ` +
         `directories=no, status=no, menubar=no, ` +
         `scrollbars=no, resizable=yes, copyhistory=no, ` +
         `width=${width}, height=${height}, top=${top}, left=${left}`;
-      // @ts-ignore Property exists in a browser runtime.
       return globalThis.open(url_to_launch, "_blank", settings);
     }
-    // @ts-ignore Property exists in a browser runtime.
     return globalThis.open(url_to_launch, target);
   } catch (err) {
     CModuleError.handle_error(err);
@@ -5159,7 +5179,6 @@ export function ui_open({
  * Rust desktop / mobile TAURI app.
  * @abstract
  */
-// @ts-ignore HTMLElement will exist in the browser context.
 export class CHtmlComponent extends HTMLElement {
   /** @type {CHtmlComponentCB | undefined} */
   #adopted_cb;
@@ -5195,7 +5214,6 @@ export class CHtmlComponent extends HTMLElement {
    * to assign to the attribute.
    */
   set_attribute(name, value) {
-    // @ts-ignore Will exist in browser context.
     this.setAttribute(name, value);
   }
 
@@ -5211,7 +5229,6 @@ export class CHtmlComponent extends HTMLElement {
    * or null if the element doesn't have an attribute with the given name.
    */
   get_attribute(name) {
-    // @ts-ignore Will exist in browser context.
     return this.getAttribute(name);
   }
 
@@ -5229,9 +5246,9 @@ export class CHtmlComponent extends HTMLElement {
       request: DOCUMENT_REQUEST.CssVariable,
       name: attr
     });
-    // @ts-ignore It will return a string value
+    // @ts-ignore
     return css_value.length > 0
-      // @ts-ignore It will return a string value
+      // @ts-ignore
       ? css_value
       : attr;
   }
@@ -5311,11 +5328,8 @@ export class CHtmlComponent extends HTMLElement {
    * @returns {void}
    */
   refresh() {
-    // @ts-ignore This will exist on the browser context.
     const display = this.style.display;
-    // @ts-ignore This will exist on the browser context.
     this.style.display = "";
-    // @ts-ignore This will exist on the browser context.
     this.style.display = display;
   }
 
@@ -5331,10 +5345,8 @@ export class CHtmlComponent extends HTMLElement {
       name: "customElements"
     });
     if (available) {
-      // @ts-ignore This will exist in a browser context.
       const is_defined =  !!globalThis.customElements.get(name);
       if (!is_defined) {
-        // @ts-ignore This will exist in a browser context.
         customElements.define(name, element_def);
       }
     }
@@ -5414,7 +5426,6 @@ export class CHtmlComponent extends HTMLElement {
       this.#connected_move_cb = connected_move_cb;
       this.#disconnected_cb = disconnected_cb;
       if (shadow_mode !== "none") {
-        // @ts-ignore Will exist in the browser context
         this.#shadow_root = this.attachShadow({mode: "closed"});
       }
     } catch (err) {
@@ -5483,88 +5494,3 @@ export class CHtmlComponent extends HTMLElement {
 //   }
 // }
 // CHtmlComponent.register_component("cm-icon-button", CIconButton);
-
-// ============================================================================
-// [CODEMELTED CLI IMPLEMENTATION] ============================================
-// ============================================================================
-
-// ----------------------------------------------------------------------------
-// [DATA DEFINITION] ----------------------------------------------------------
-// ----------------------------------------------------------------------------
-
-/**
- * Holds the output for the CLI usage.
- * @readonly
- * @type {string}
- */
-const HELP_OUTPUT = `
--------------------------------------------------------------------------------
-*        codemelted native CLI - ${ABOUT_MODULE.version}           *
--------------------------------------------------------------------------------
-ABOUT:
-
-AUTHOR: ${ABOUT_MODULE.author}
-
-SYNTAX: codemelted [action] [options]
-
-  --npu-compute formula arg1 [arg2 ...] : Executes the specified formula and
-                                          displays the result.
-
-  --help : Displays command help to STDOUT
-`;
-
-const ARGS_MAP = Object.freeze({
-  "--help":  cli_help
-});
-
-// ----------------------------------------------------------------------------
-// [HELPER FUNCTIONS] ---------------------------------------------------------
-// ----------------------------------------------------------------------------
-
-/**
- * Displays the help system.
- * @param {string[]} _args Not used
- * @returns {void}
- */
-function cli_help(_args) {
-  console.log(HELP_OUTPUT);
-}
-
-// ----------------------------------------------------------------------------
-// [MAIN ENTRY POINT] ---------------------------------------------------------
-// ----------------------------------------------------------------------------
-
-/**
- * Main entry point for the script.
- * @returns {void}
- */
-function cli_main() {
-  try {
-    // Parse the arguments and then
-    const args = globalThis.Deno.args;
-    if (args.length === 0) {
-      throw "codemelted CLI expects parameters. Execute " +
-        "'codemelted --help' for syntax of command.";
-    }
-    const action = args[0];
-    if (!json_has_key({obj: ARGS_MAP, key: action})) {
-      throw `codemelted received invalid action '${action}'`;
-    }
-
-    // @ts-ignore Dictionary will have functions mapped to the action key.
-    ARGS_MAP[action](args);
-    globalThis.Deno.exit(0);
-  } catch (err) {
-    console.log(err);
-    globalThis.Deno.exit(1);
-  }
-}
-
-// Determine if we are kicking this off because this is our own self compiled
-// CLI.
-if (runtime_available({request: AVAILABILITY_REQUEST.Deno})) {
-  const exe_name = globalThis.Deno.execPath().split(/[/\\]/).pop();
-  if (exe_name?.replace(".exe", "") === "codemelted") {
-    cli_main();
-  }
-}

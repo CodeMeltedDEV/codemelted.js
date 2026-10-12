@@ -1,243 +1,102 @@
 ---
-title: codemelted.js Project
+title: "codemelted.js Project"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "The codemelted.js Project aims to give software engineers the ability to deliver on this full stack engineering premise."
+tags: [codemelted.js, ES6 Module, JavaScript, TypeScript, HTML, CSS, Web Worker, full-stack, codemelted.rs, Rust, Native, TAURI, Android, iOS, BSD, Mac, Linux, Windows]
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
 ---
 <center>
-  <img style="width: px; "src="https://codemelted.com/assets/favicon/codemelted-js/android-chrome-192x192.png" />
-  <h1>codemelted.js Project</h1>
+  <br>
+  <img style="width: 100%;" src="https://codemelted.com/assets/images/logo-codemelted-js.png" />
+  <a aria-label="Follow @CodeMeltedDEV on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-show-count="true" data-size="small" href="https://github.com/CodeMeltedDEV" title="Follow @CodeMeltedDEV on GitHub">CodeMeltedDEV</a>
+  <a aria-label="Watch codemelteddev/codemelted.js on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-eye" data-show-count="true" data-size="small" href="https://github.com/codemelteddev/codemelted.js/subscription" title="Watch codemelteddev/codemelted.js on GitHub">Watch</a>
+  <a aria-label="Sponsor @CodeMeltedDEV on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-heart" data-size="small" href="https://github.com/sponsors/CodeMeltedDEV" title="Sponsor @CodeMeltedDEV and the codemelted.js Project on GitHub">Sponsor</a>
+  <br>
+	<a aria-label="Discuss codemelteddev/codemelted.js on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-comment-discussion" data-size="small" href="https://github.com/codemelteddev/codemelted.js/discussions" title="Discuss codemelteddev/codemelted.js on GitHub">Discuss</a>
+  <a aria-label="Download codemelteddev/codemelted.js on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="small" href="https://github.com/codemelteddev/codemelted.js/archive/HEAD.zip" tabindex="1" title="Download codemelteddev/codemelted.js on GitHu">Download</a>
+  <a aria-label="Fork codemelteddev/codemelted.js on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-repo-forked" data-size="small" href="https://github.com/codemelteddev/codemelted.js/fork" title="Fork codemelteddev/codemelted.js on GitHub">Fork</a>
+  <a aria-label="Issue codemelteddev/codemelted.js on GitHub" class="github-button" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-issue-opened" data-size="small" href="https://github.com/codemelteddev/codemelted.js/issues" title="Issue codemelteddev/codemelted.js on GitHub">Issue</a>
+  <br><br>
   <button style="cursor:pointer;" onclick="window.print();">Print</button>
+  <br>
+  <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
 </center>
 
-- [FEATURES](#features)
-  - [Module Core](#module-core)
-  - [Async Use Case](#async-use-case)
-  - [Console Use Case](#console-use-case)
-  - [DB Use Case](#db-use-case)
-  - [Disk Use Case](#disk-use-case)
-  - [HW Use Case](#hw-use-case)
-  - [JSON Use Case](#json-use-case)
-  - [Logger Use Case](#logger-use-case)
-  - [Monitor Use Case](#monitor-use-case)
-  - [Network Use Case](#network-use-case)
-  - [NPU Use Case](#npu-use-case)
-  - [Process Use Case](#process-use-case)
-  - [Runtime Use Case](#runtime-use-case)
-  - [Storage Use Case](#storage-use-case)
-  - [UI Use Case](#ui-use-case)
-    - [Public API](#public-api)
-    - [UI Components](#ui-components)
-  - [References](#references)
-    - [C++ Reference](#c-reference)
-    - [Mozilla Developer Network (MDN)](#mozilla-developer-network-mdn)
-    - [Rust STD](#rust-std)
-    - [web.dev](#webdev)
-- [GETTING STARTED](#getting-started)
-  - [Clone / Fork](#clone--fork)
-  - [Content Delivery Network (CDN)](#content-delivery-network-cdn)
-  - [V8 Runtime Utilization](#v8-runtime-utilization)
-- [USAGE](#usage)
-- [LICENSE](#license)
+"Write once, run anywhere (WORA)" was the famous slogan made by Sun Microsystems in 1995. At the time, this technology allowed for easy full stack engineering allowing you to target dedicated workstations and on premise servers. So long as a Java Runtime Environment existed, you could run your code. Java was unable to keep to their slogan as web browsers became more advanced, mobile devices became ubiquitous, and companies no longer required dedicated servers.
 
-# FEATURES
+The **codemelted.js Project** aims to give software engineers the ability to deliver on this full stack engineering premise.
 
-The `codemelted.js` module implements 14 domain specific use cases. These are implementation wrappers around Browser / Deno APIs to deliver a reusable tested way to build fullstack solutions. Domain use cases not available as wrappers are compiled via the `codemelted_lib` Rust static library and accessed via the `codemelted.js` module via the Deno Foreign Function Interface (FFI).
+**Table of Contents**
 
-The *codemelted.js Project* SDK documentation provides ways of detecting feature availability so your code can operate properly within a fullstack project. Any violation of the `codemelted.js` module API will throw a `CModuleError` with full stack trace of the violation.
+- [Consumable Modules](#consumable-modules)
+- [Native CLI](#native-cli)
+- [Building Apps](#building-apps)
+- [PWA Companion](#pwa-companion)
+- [Support](#support)
 
-The sections below break down the architecture of the module and how the domain use cases are implemented.
+# Consumable Modules
 
-## Module Core
+Fifteen domain use cases were identified covering the most common areas a software engineer needs a solution. Two modules are being developed to implement these use cases between the frontend and backend tech stacks. With these two modules, software engineers will be able to craft elegant software solutions to any problem they may face utilizing whatever tools that may be at their disposal.
 
-<img src="models/module_core.png" />
+<center>
+  <img src="documents/domain-use-cases/models/module/use-case-model.drawio.png" />
+  <br><br>
+</center>
 
-## Async Use Case
+| Module          | Description                                                                                                                                                                                                                                                                                           |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `codemelted.js` | An ES6 module that will deliver the frontend tech stack by allowing quick development of Single Page App (SPA) / Progressive Web App (PWA) web stack solutions. Can also be utilized with the TAURI framework in conjunction with the `codemelted.rs` module to create Desktop / Mobile applications. |
+| `codemelted.rs` | Provides the backend tech stack as a native memory safe compiled solution. It will provide a consumable crate to build these solutions, a native command line interface to script solutions, and serve as a dynamic library for inclusion in other higher level applications.                         |
 
-<img src="models/async_usecase.png" />
+# Native CLI
 
-## Console Use Case
+<center>
+  <img src="documents/domain-use-cases/models/module/cli-model.drawio.png" />
+  <br><br>
+</center>
 
-<mark>TO BE DEVELOPED</mark>
+| Provides              | What?                                                                                                                  |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------|
+| Native Command        | The `codemelted` command provides a native CLI available on any BSD / Mac / Linux / Windows operating system.          |
+| Scriptable Automation | Facilitates DevOps bash / PowerShell scripting by providing actions that work the same regardless of operating system. |
+| Developer Support     | Provides commands specific to developer actions when building application solutions with this project.                 |
 
-## DB Use Case
+# Building Apps
 
-<mark>TO BE DEVELOPED</mark>
+| Target                | Description                                                                                                                        |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| CLI / CLOUD / SERVICE | Use the `codemelted.rs` module crate to compile Rust services specific to your backend tech stack needs.                           |
+| PWA / WEB             | Use the `codemelted.js` ES6 module front end tech stack to build SPA / PWA independent of your chosen backend tech stack.          |
+| DESKTOP / MOBILE      | Use both modules in conjunction with the TAURI Rust framework to make performant memory safe Desktop / Mobile native applications. |
 
-## Disk Use Case
 
-<img src="models/disk_usecase.png" />
+# PWA Companion
 
-<mark>DENO DEVELOPMENT FORTHCOMING</mark>
+The `js.codemelted.com` domain is more than just a website. It serves a Software Engineer's companion for building full stack tech solutions. It is a [TypeDoc](https://typedoc.org/) built site with added useful information, services, and utilizes the very modules this project is building.
 
-## HW Use Case
+| Service                     | Description                                                                                                                                                                     |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Domain Use Cases            | The software engineering applied to building the `codemelted.js` and `codemelted.rs` modules.                                                                                   |
+| Software Engineering        | A knowledge base for applying the discipline to build full stack solution especially in the era of Artificial Intelligence (AI).                                                |
+| `codemelted` CLI              | The `codemelted` native CLI. Contains all the information for installing and utilizing this service.                                                                            |
+| `codemelted.js` Validation  | The mocha / chai test page for validating the module. Allows for quick testing across different browser runtimes.                                                               |
+| Module SDKs                 | Access to the core of the `codemelted.js` and `codemelted.rs` modules. Provides all the information necessary for install and utilizing these modules within your next project. |
+| GitHub Control Integration  | Provides controls to directly access the GitHub repo for this project, fork it, download it, you get it.                                                                        |
+| AI Agent (Future)           | A Gemini AI Notebook to utilize to build solutions for the project modules or access general information based on this sites' information.                                      |
+| Code Editor (Future)        | An online editor for quickly writing snippets of code and UML models based on the project modules and starter templates.                                                        |
+| Chat (Future)               | Bringing back online text chat rooms in the style of AOL / MSN with audio and video chat so like-minded software engineers can collaborate.                                     |
+| CodeMeltedDEV Blog (Future) | An app sheet access to the software engineer's blog about this project and other happenings.                                                                                    |
+| External Services (Future)  | Access to external services that make the PWA a one-stop solution for a software engineer regardless of how they access this PWA.                                               |
+| Page Controls (Future)      | The full ability to print, share (utilizing OpenGraph), and read the page aloud via Text To Speech (TTS)                                                                        |
 
-<mark>TO BE DEVELOPED</mark>
+# Support
 
-## JSON Use Case
+Support for this project is appreciated. We are just getting started so follow the links below to track / support this project.
 
-<img src="models/json_usecase.png" />
-
-## Logger Use Case
-
-<img src="models/logger_usecase.png" />
-
-## Monitor Use Case
-
-<mark>TO BE DEVELOPED</mark>
-
-## Network Use Case
-
-<mark>TO BE DEVELOPED</mark>
-
-## NPU Use Case
-
-<mark>TO BE DEVELOPED</mark>
-
-## Process Use Case
-
-<mark>TO BE DEVELOPED</mark>
-
-## Runtime Use Case
-
-<img src="models/runtime_usecase.png" />
-
-## Storage Use Case
-
-<img src="models/storage_usecase.png" />
-
-## UI Use Case
-
-### Public API
-
-<img src="models/ui_usecase.png" />
-
-### UI Components
-
-<img src="models/ui_components.png" />
-
-## References
-
-The following are the references to the external Browser / Deno APIs that were wrapped to create the `codemelted.js` module.
-
-### C++ Reference
-
-- [C++ Future](https://en.cppreference.com/cpp/thread/future)
-
-### Mozilla Developer Network (MDN)
-
-- [Beacon](https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API)
-- [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth)
-- [Broadcast Channel](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API)
-- [CookieStore](https://developer.mozilla.org/en-US/docs/Web/API/CookieStore)
-- [Console](https://developer.mozilla.org/en-US/docs/Web/API/console)
-- [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
-- [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)
-- [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-- [File System](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API)
-- [Geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
-- [Input File](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file)
-- [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
-- [Location](https://developer.mozilla.org/en-US/docs/Web/API/Location)
-- [HTMLAnchorElement Download](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/download)
-- [Navigator](https://developer.mozilla.org/en-US/docs/Web/API/Navigator)
-- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Screen](https://developer.mozilla.org/en-US/docs/Web/API/Screen)
-- [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
-- [USB](https://developer.mozilla.org/en-US/docs/Web/API/USB)
-- [Using Custom Elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements)
-- [Web Serial](https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API)
-- [Web MIDI](https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API)
-- [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
-- [WebRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)
-- [WebTransport](https://developer.mozilla.org/en-US/docs/Web/API/WebTransport)
-- [Window](https://developer.mozilla.org/en-US/docs/Web/API/Window)
-- [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker)
-
-### Rust STD
-
-- [Result](https://doc.rust-lang.org/std/result/)
-
-### web.dev
-
-- [web.dev: Save a File](https://web.dev/articles/files/save-a-file)
-
-# GETTING STARTED
-
-The following section breaks down how to clone / fork the project and build it, utilizing a CDN to consume the `codemelted.js` module directly, or utilizing the `codemelted` native CLI command to download the module directly into your project.
-
-## Clone / Fork
-
-When you clone / fork the *codemelted.js Project* repo, you will need to install tools to properly build the project. The following represents how to setup those tools.
-
-1. Install [PowerShell Core](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell?view=powershell-7.6) for your given operating system.
-2. Navigate to *codemelted.js Project* repo location.
-3. Open a terminal and execute `./build.ps1 --setup`. Follow the instructions to install all the necessary repo tooling.
-4. Once completed, execute `./build.ps1 --help` to gain an understanding of how to build the project in the future.
-
-## Content Delivery Network (CDN)
-
-The `codemelted.js` module is hosted on GitHub and delivered via the
-`jsdelivr` CDN. The following represents the URLs for accessing the module. These can be utilized with `import` statements within JavaScript /TypeScript or as part of the `<script type="module"></script>` tags of a website.
-- **Latest Version (Risky):**
-  ```txt
-  https://cdn.jsdelivr.net/gh/codemelteddev/codemelted.js/codemelted.js
-  ```
-- **Version Controlled (Safest):**
-  ```txt
-  https://cdn.jsdelivr.net/gh/codemelteddev/codemelted.js@XX.Y.Z/codemelted.js
-  ```
-
-**NOTES:**
-1. The `@XX.Y.Z` corresponds to the releases of the *codemelted.js Project* as identified on GitHub.
-2. `XX` corresponds to the year of the release. A change in this value resets `Y` and `Z` to `0` respectively.
-3. `Y` corresponds to an API breaking change. A change in this number resets `Z`.
-4. `Z` corresponds to a newly delivered feature / bug fix that should not break other API functions.
-
-## V8 Runtime Utilization
-
-Deno and Node are popular V8 runtimes typically for cloud / backend server-side services development. For the cloud portion, all the source files are packaged and delivered to support the given cloud service. Additionally, each of these runtimes has an ability to "compile" all source files into a given operating system executable. To support these options, the `codemelted.js` module can be downloaded into your project structure via the following command.
-
-<mark>Command below is not available yet.</mark>
-
-```sh
-codemelted --dev-fetch-codemelted-js [version] [path]
-```
-This then allows for you to develop your project independent of changes to the overall *codemelted.js Project*. You also have the ability to utilize TypeScript since the `codemelted.js` module has full JSDoc documentation and `// @ts-check` turned on by default.
-
-**NOTE:** You can utilize this method for building complex web apps as well. It is not just for V8 JavaScript runtimes.
-
-# USAGE
-
-**ES6 Module Import Example**
-
-```js
-// Import whole module statically via URL or local path
-import * as codemelted from "path/to/codemelted.js";
-
-// Import elements to use statically via URL or local path
-import { exported_element } from "path/to/codemelted.js";
-
-// Dynamically import all module elements to named variable
-let codemelted = await import("path/to/codemelted_xxx.js");
-```
-**Via Script Tag in HTML File**
-
-```html
-<script type="module">
-  // Use the import examples above to utilize the script functions.
-</script>
-```
-**NOTES:**
-
-1. The `codemelted.js` module is TypeScript compliant so it can be utilized within TypeScript projects to get full code completion.
-2. The examples above should work whether downloaded for direct inclusion into your project or accessed via jsdelivr for a website.
-
-# LICENSE
-
-MIT License
-
-© 2025-2026 Mark Shaffer
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+| Where                                                                                                                                                             | Description                                                                                                                                                                                                   |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <a href="https://www.buymeacoffee.com/codemelteddev"><img src="https://codemelted.com/assets/images/icon-buy-me-a-coffee.png" height="35px" />Buy Me A Coffee</a> | Direct support for the CodeMeltedDEV content and services offered via the **codemelted.js Project**.                                                                                                          |
+| <a href="https://github.com/sponsors/CodeMeltedDEV"><img src="https://codemelted.com/assets/images/icon-github.png" height="35px" /> GitHub Sponsorship</a>       | Direct support for the **codemelted.js Project** either through a one time donation or a monthly subscription.                                                                                                |
+| <a href="https://dev.codemelted.com"><img src="https://codemelted.com/assets/favicon/apple-touch-icon.png" height="35px" /> CodeMeltedDEV Blog</a>                | My website where I will blog about this project along with other interest and utilize this project to build out web features. It is where you can find my socials to follow for updates all things happening. |
