@@ -47,4 +47,6 @@
     "documents/module-test.md",
     "documents/codemelted-rs.md"
   ],
+  "customFooterHtml": "<script type='module' src='/assets/js/app.js'></script><cm-project-toolbar></cm-project-toolbar>",
+  "customFooterHtmlDisableWrapper": true
 }

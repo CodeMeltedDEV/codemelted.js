@@ -30,3 +30,4 @@ node_modules/
 # Ignore files I do to build widgets
 codemelted_playground.html
 blogger_widgets.js
+assets/js/codemelted.js

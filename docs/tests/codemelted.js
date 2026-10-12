@@ -2303,7 +2303,6 @@ export function json_check_type({
   try {
     const is_expected_type = typeof type !== "string"
       ? (data instanceof type)
-      // deno-lint-ignore valid-typeof
       : typeof data === type;
     const valid = typeof count === "number"
       ? is_expected_type && data.length === count
@@ -2645,7 +2644,6 @@ export function logger_level(level) {
  */
 export function logger_log({level, data}) {
   try {
-    json_check_type({type: "object", data: level, should_throw: true});
     json_has_key({obj: level, key: "level", should_throw: true});
     json_has_key({obj: level, key: "label", should_throw: true});
     if (!data) {
@@ -4916,7 +4914,6 @@ export function ui_document({request, name}) {
  * @example
  * // TBD
  */
-// deno-lint-ignore require-await
 export async function ui_notify({request, message}) {
   try {
     let value;
@@ -5190,14 +5187,14 @@ export class CHtmlComponent extends HTMLElement {
   #connected_move_cb;
   /** @type {CHtmlComponentCB | undefined} */
   #disconnected_cb;
-  /** @type {ShadowRoot | undefined} */
+  /** @type {ShadowRoot} */
   #shadow_root;
 
   /**
    * Provides access to the shadow DOM for constructing the custom component.
    * @protected
    * @readonly
-   * @type {ShadowRoot | undefined}
+   * @type {ShadowRoot}
    */
   get shadow_root() { return this.#shadow_root; }
 
@@ -5230,27 +5227,6 @@ export class CHtmlComponent extends HTMLElement {
    */
   get_attribute(name) {
     return this.getAttribute(name);
-  }
-
-  /**
-   * Provides the ability to query the DOM for a given css_value by
-   * variable name. The design of this function is if a variable name is not
-   * what is specified, it is assumed to be the actual property so it is
-   * returned instead.
-   * @param {string} attr The variable name to search
-   * @returns {string} The value of the CssVariable or the attr returned
-   * as it is assumed to be the actual style.
-   */
-  get_css_value(attr) {
-    const css_value = ui_document({
-      request: DOCUMENT_REQUEST.CssVariable,
-      name: attr
-    });
-    // @ts-ignore
-    return css_value.length > 0
-      // @ts-ignore
-      ? css_value
-      : attr;
   }
 
   /**
@@ -5366,9 +5342,6 @@ export class CHtmlComponent extends HTMLElement {
    * handles the {@link connectedMoveCallback} method.
    * @param {CHtmlComponentCB} [params.disconnected_cb] The callback that
    * handles the {@link disconnectedCallback} method.
-   * @param {"none" | "open" | "closed"} [params.shadow_mode="none"] Whether
-   * to attach a shadow root or not and what mode it will be. Utilize the
-   * shadow_root property if not set to "none".
    */
   constructor({
     adopted_cb,
@@ -5376,7 +5349,6 @@ export class CHtmlComponent extends HTMLElement {
     connected_cb,
     connected_move_cb,
     disconnected_cb,
-    shadow_mode="none",
   }) {
     super();
     try {
@@ -5425,15 +5397,170 @@ export class CHtmlComponent extends HTMLElement {
       this.#connected_cb = connected_cb;
       this.#connected_move_cb = connected_move_cb;
       this.#disconnected_cb = disconnected_cb;
-      if (shadow_mode !== "none") {
-        this.#shadow_root = this.attachShadow({mode: "closed"});
-      }
+      this.#shadow_root = this.attachShadow({mode: "open"});
     } catch (err) {
       CModuleError.handle_error(err);
       throw new CModuleError(CModuleError.MISUSE);
     }
   }
 }
+
+/**
+ * <cm-app-toolbar> Web Component
+ *
+ * A unified, dual-mode application toolbar supporting:
+ *
+ * - position="top"    -> Fixed header pinned to top: 0 with
+ *   <header role="banner"> and bottom border
+ * - position="bottom" -> Fixed footer pinned to bottom: 0 with
+ *   <footer role="contentinfo"> and top border
+ *
+ * Coordinates (top/bottom/left/right) are strictly managed by the component.
+ *
+ * Exposed CSS Variables:
+ *   --toolbar-height      (default: 60px)
+ *   --toolbar-bg          (default: rgba(15, 23, 42, 0.9))
+ *   --toolbar-color       (default: #f8fafc)
+ *   --toolbar-border      (default: 1px solid rgba(51, 65, 85, 0.7))
+ *   --toolbar-z-index     (default: 1000)
+ *   --toolbar-padding     (default: 0 1.25rem)
+ *   --toolbar-gap         (default: 0.75rem)
+ *
+ * @extends {CHtmlComponent}
+ */
+export class CAppToolbar extends CHtmlComponent {
+  static get observedAttributes() {
+    return ["position"];
+  }
+
+  /**
+   * Retrieves the current toolbar position as "top" or "bottom".
+   * @type {string}
+   */
+  get position() {
+    const val = this.get_attribute("position");
+    return val === "bottom" ? "bottom" : "top";
+  }
+
+  /**
+   * Sets the toolbar position.
+   * @param {"top" | "bottom"} val The position to set.
+   */
+  set position(val) {
+    if (val === "bottom") {
+      this.set_attribute("position", "bottom");
+    } else {
+      this.set_attribute("position", "top");
+    }
+  }
+
+  /**
+   * Renders the toolbar at its desginated position.
+   */
+  render() {
+    const is_bottom = this.position === "bottom";
+    const tag_name = is_bottom ? "footer" : "header";
+    const role = is_bottom ? "contentinfo" : "banner";
+
+    this.shadow_root.innerHTML = `
+      <style>
+        :host {
+          /* Configurable visual tokens */
+          --_height: var(--toolbar-height, 60px);
+          --_bg: var(--toolbar-bg, rgba(15, 23, 42, 0.9));
+          --_color: var(--toolbar-color, #f8fafc);
+          --_border: var(--toolbar-border, 1px solid rgba(51, 65, 85, 0.7));
+          --_z-index: var(--toolbar-z-index, 1000);
+          --_padding: var(--toolbar-padding, 0 1.25rem);
+          --_gap: var(--toolbar-gap, 0.75rem);
+
+          /* Automated Fixed Coordinates */
+          position: fixed;
+          left: 0;
+          right: 0;
+          ${is_bottom ? "bottom: 0; top: auto;" : "top: 0; bottom: auto;"}
+          z-index: var(--_z-index);
+          width: 100%;
+          box-sizing: border-box;
+          display: block;
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+        }
+
+        *, *::before, *::after {
+          box-sizing: border-box;
+        }
+
+        /* Semantic container rendered as Grid Row */
+        .toolbar-inner {
+          display: grid;
+          grid-auto-flow: column;
+          grid-auto-columns: max-content;
+          align-items: center;
+          column-gap: var(--_gap);
+          height: var(--_height);
+          max-height: var(--_height);
+          padding: var(--_padding);
+          background: var(--_bg);
+          color: var(--_color);
+          ${is_bottom
+            ? "border-top: var(--_border);"
+            : "border-bottom: var(--_border);"}
+          width: 100%;
+          overflow: hidden;
+          box-shadow: ${is_bottom
+            ? "0 -8px 24px -4px rgba(0,0,0,0.3)"
+            : "0 8px 24px -4px rgba(0,0,0,0.3)"};
+          transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+        /* Height constraint enforcement for all slotted children */
+        ::slotted(*) {
+          max-height: 100% !important;
+          box-sizing: border-box;
+          margin: 0;
+        }
+
+        /* Helper utility for stretchable slotted elements */
+        ::slotted([data-flex]),
+        ::slotted([data-spacer]) {
+          width: 100%;
+        }
+      </style>
+
+      <${tag_name} class="toolbar-inner" role="${role}" part="container">
+        <slot></slot>
+      </${tag_name}>
+    `;
+  }
+
+  /**
+   * Constructor our component.
+   */
+  constructor() {
+    super({
+      attribute_changed_cb: (name, old_value, new_value) => {
+        if (name === "position" && old_value !== new_value) {
+          this.render();
+          this.dispatchEvent(new CustomEvent('position-changed', {
+            detail: { position: this.position },
+            bubbles: true,
+            composed: true
+          }));
+        }
+      },
+      connected_cb: () => {
+        if (!this.hasAttribute("position")) {
+          this.set_attribute("position", "top");
+        }
+        this.render();
+      }
+    });
+  }
+}
+CHtmlComponent.register_component("cm-app-toolbar", CAppToolbar);
+
+
 
 // TODO: ATTEMPTING TO BUILD A COMPONENT
 // /**
