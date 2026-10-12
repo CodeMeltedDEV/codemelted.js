@@ -1,9 +1,7 @@
 // @ts-check
 // ============================================================================
 /**
- * <img style="width: 100%;"
- *      src="https://js.codemelted.com/assets/images/logo-codemelted-js.png"
- * />
+ * <cm-page-header></cm-page-header>
  *
  * | Key       | Value                                                        |
  * | --------- | ------------------------------------------------------------ |
@@ -31,7 +29,7 @@
  * install tools to properly build the project. The following represents how to
  * set up those tools.
  *
- * 1. Install [PowerShell Core](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell?view=powershell-7.6)
+ * 1. Install [PowerShell Core](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell)
  * for your given operating system.
  * 2. Navigate to *codemelted.js Project* repo location.
  * 3. Open a terminal and execute `./build.ps1 --setup`. Follow the
@@ -120,9 +118,6 @@
  * - ui_xxx() use case. Start building UI components and come up with a standard
  * for using them within HTML to build user interfaces.
  * - ui_xxx() use case. Define tests to fully flesh and test this out.
- * - Perform OOAD analysis, fill out, and add TODOs for remainder of this project
- * based on necessary Deno wrappers and what will go into the Rust static lib
- * project.
  *
  * # LICENSE
  *
@@ -155,39 +150,6 @@
  *
  * @module codemelted.js SDK
  */
-// =============================================================================
-// [MODULE CORE] ===============================================================
-// =============================================================================
-
-/**
- * Captures information about the `codemelted.js` module.
- * @typedef {object}
- * @property {string} author Who made this sticking project anyways.
- * @property {string} copyright Who has the rights to it.
- * @property {string} license It's MIT. Do with it as you please.
- * @property {string} version The current version of the module as identified
- * on GitHub
- * @property {string} history A brief history for the year of the version.
- * Will only be for the given year and reset with each new yearly release.
- * @property {string} todos Identifies upcoming features / bugs needing
- * implementation within the module.
- */
-export const ABOUT_MODULE = Object.freeze({
-author: "mark.shaffer@codemelted.com / dev.codemelted.com",
-copyright: "© 2025 - 2026 Mark Shaffer. All Rights Reserved.",
-license: `
-`,
-version: "v26.0.0 [Last Updated 2026-SEP-19]",
-history:`
-- v26.0.0 [2026-SEP-19]: Initial release of the module. It exposes the current
-  public APIs and objects available on the Browser / Deno / Node / Worker
-  JavaScript runtimes that have been fully tested and documented.
-`,
-todos:`
-
-`,
-});
-
 // ============================================================================
 // [MODULE CORE] ==============================================================
 // ============================================================================
@@ -3783,9 +3745,7 @@ export function npu_compute({formula, args}) {
  * @property {string} BroadcastChannel Determines if a BroadcastChannel
  * protocol is available.
  * @property {string} Browser Determine if the runtime is a Web Browser.
- * @property {string} Bun Determines if the runtime is Bun.
  * @property {string} Bluetooth Determines if bluetooth is available.
- * @property {string} Deno Determines if the runtime is Deno.
  * @property {string} CookieStore Determines if cookie store is
  * available to the runtime.
  * @property {string} EventSource Determines if an EventSource protocol
@@ -3795,7 +3755,6 @@ export function npu_compute({formula, args}) {
  * @property {string} LocalStorage Determines if local storage is
  * available to the runtime.
  * @property {string} Midi Determines if MIDI devices are available.
- * @property {string} Node Determines if the runtime is Node.
  * @property {string} Open Determines if ui_open is available to the
  * runtime.
  * @property {string} Orientation Determines if Orientation is available
@@ -3836,15 +3795,12 @@ export const AVAILABILITY_REQUEST = Object.freeze({
   Beacon: "beacon",
   BroadcastChannel: "broadcast_channel",
   Browser: "browser",
-  Bun: "bun",
   Bluetooth: "bluetooth",
   CookieStore: "cookie_store",
-  Deno: "deno",
   EventSource: "event_source",
   IFrame: "iframe",
   LocalStorage: "local_storage",
   Midi: "midi",
-  Node: "node",
   Open: "open",
   Orientation: "orientation",
   Print: "print",
@@ -3907,9 +3863,9 @@ export const EVENT_REQUEST = Object.freeze({
  * request.
  * @returns {boolean}
  * @example
- * // Determine if this is the Deno runtime
- * if (runtime_available({request AVAILABILITY_REQUEST.Deno})) {
- *   // Do Deno related things.
+ * // Determine if this is the Worker runtime
+ * if (runtime_available({request AVAILABILITY_REQUEST.WorkerRuntime})) {
+ *   // Do Worker related things.
  * }
  *
  * // Ask runtime about a particular thing globally
@@ -3958,14 +3914,8 @@ export function runtime_available({request, name="", obj = globalThis}) {
         return is_available({property: "BroadcastChannel"});
       case AVAILABILITY_REQUEST.Browser:
         return is_available({property: "HTMLElement"}) &&
-          !is_available({property: "Bun"}) &&
-          !is_available({property: "Deno"}) &&
           !is_available({property: "process"}) &&
           !is_available({property: "WorkerGlobalScope"});
-      case AVAILABILITY_REQUEST.Bun:
-        return is_available({property: "Bun"});
-      case AVAILABILITY_REQUEST.Deno:
-        return is_available({property: "Deno"});
       case AVAILABILITY_REQUEST.CookieStore:
         return is_available({property: "cookieStore"});
       case AVAILABILITY_REQUEST.EventSource:
@@ -3974,9 +3924,7 @@ export function runtime_available({request, name="", obj = globalThis}) {
         return is_available({property: "localStorage"});
       case AVAILABILITY_REQUEST.IFrame:
         try {
-          if (is_available({property: "Bun"}) ||
-              is_available({property: "Deno"}) ||
-              is_available({property: "process"}) ||
+          if (is_available({property: "process"}) ||
               is_available({property: "WorkerGlobalScope"}))
           {
             return false;
@@ -3990,10 +3938,6 @@ export function runtime_available({request, name="", obj = globalThis}) {
           property: "requestMIDIAccess",
           obj: globalThis["navigator"]
         });
-      case AVAILABILITY_REQUEST.Node:
-        return is_available({property: "process"}) &&
-          !is_available({property: "Deno"}) &&
-          !is_available({property: "Bun"});
       case AVAILABILITY_REQUEST.Open:
         return is_available({property: "open"});
       case AVAILABILITY_REQUEST.Orientation:
@@ -4106,7 +4050,6 @@ export function runtime_event({
       throw new CModuleError(CModuleError.UNSUPPORTED_RUNTIME);
     }
     json_check_type({type: "string", data: type, should_throw: true});
-    console.log("handler = ", handler);
     json_check_type({
       type: "function",
       data: handler,
@@ -4126,7 +4069,7 @@ export function runtime_event({
   }
 }
 
-// TODO: add other queryable elements from Deno along with
+// TODO: add other queryable elements from
 //       along with things from other items.
 // export function runtime_query({request, name}) {
 //   try {
@@ -5843,6 +5786,10 @@ export class CPrintButton extends CButton {
     });
     if (!runtime_available({request: AVAILABILITY_REQUEST.Print})) {
       this.style.display = "none";
+      logger_log({
+        level: LOGGER.Warning,
+        data: "<cm-print-button> print not detected, button hidden."
+      });
     }
   }
 }

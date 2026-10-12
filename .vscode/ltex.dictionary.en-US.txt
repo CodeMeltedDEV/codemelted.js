@@ -19,3 +19,4 @@ CookieStore
 Queryable
 TAURI
 TypeDoc
+cmocha

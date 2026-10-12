@@ -497,14 +497,11 @@ describe("RUNTIME USE CASE VALIDATION", () => {
     assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.Bluetooth})).length > 0, true);
     assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.BroadcastChannel})).length > 0, true);
     assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.Browser})).length > 0, true);
-    assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.Bun})).length > 0, true);
-    assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.Deno})).length > 0, true);
     assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.CookieStore})).length > 0, true);
     assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.EventSource})).length > 0, true);
     assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.LocalStorage})).length > 0, true);
     assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.IFrame})).length > 0, true);
     assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.Midi})).length > 0, true);
-    assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.Node})).length > 0, true);
     assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.Open})).length > 0, true);
     assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.Orientation})).length > 0, true);
     assert.equal(json_stringify(runtime_available({request: AVAILABILITY_REQUEST.Pwa})).length > 0, true);

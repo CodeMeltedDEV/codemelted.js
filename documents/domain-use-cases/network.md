@@ -1,5 +1,5 @@
 ---
-title: "Network Core Use Case"
+title: "Network Use Case"
 date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "A system of interconnected computing devices that communicate and share resources, data, and applications over wired or wireless connections."

@@ -1,5 +1,5 @@
 ---
-title: "User Interface Core Use Case"
+title: "User Interface Use Case"
 date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "A visual way for humans to interact with electronic devices, such as computers, smartphones, and ATMs, using graphics instead of text commands."

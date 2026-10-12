@@ -1,5 +1,5 @@
 ---
-title: "Runtime Core Use Case"
+title: "Runtime Use Case"
 date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "The supporting software, libraries, and virtual layer that sit between the app and the operating system to make the program run."

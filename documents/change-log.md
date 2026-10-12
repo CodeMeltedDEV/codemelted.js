@@ -11,6 +11,29 @@ twitter_site: "@CodeMeltedDEV"
 
 The *codemelted.js Project Change Log* reflects updates to the `codemelted.js` / `codemelted.rs` along with update to the `js.codemelted.com` PWA.
 
-| Version     | Date        | Changes                        |
-|-------------|-------------|--------------------------------|
-| [v26.X.Y]() | YYYY-OCT-DD | Something something star wars. |
+# v26.0.0-alpha (2026-OCT-02)
+
+[Download]()
+
+The project is just getting started. We are snapping a chalk line as we begin the engineering journey for this project. So for now, consider the `codemelted.js` module in an alpha state. If you look within the guts of it, you will see a lot of prototyping and thinking through problems. Time to apply real software engineering to it.
+
+## codemelted Rust Module
+
+- Tool chain for building a dynamic library in place.
+- Basic layout for a Foreign Function Interface (FFI) defined.
+- Will need to begin massive refactor to bring in old work for the use cases.
+
+## codemelted JavaScript Module
+
+- Developed series of custom HTML elements to begin utilizing on the PWA.
+- Ensured testing passes.
+- Removed all traces of Bun / Deno / Node. This will be a browser / worker only module.
+- Ensure the SDK produces mostly usable documentation. It may have issues.
+
+## Website (PWA)
+
+- Got site documents fully organized.
+- Identified the mission of the project.
+- Applied a Material3 theme to the TypeDoc.
+- Setup overall app structure to consume the newly built custom components.
+- This included a page header, a bottom app toolbar, and a print button.

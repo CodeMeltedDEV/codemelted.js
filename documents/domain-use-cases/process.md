@@ -1,5 +1,5 @@
 ---
-title: "Process Core Use Case"
+title: "Process Use Case"
 date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "An instance of a computer program that is actively being executed by the operating system and the CPU. Bidirectional communication occurs via STDIN / STDOUT / STDERR."
