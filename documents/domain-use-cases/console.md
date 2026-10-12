@@ -1,10 +1,11 @@
 ---
-title: "Console"
-date: YYY-MMM-DD
-author: "Jane Doe"
-description: ""
-tags: []
-categories:
+title: "Console Use Case"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "Command Line Interface (CLI) apps sometimes require basic input / output interaction with a user. Basic prompts working over STDIN / STDOUT / STDERR provides this capability."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [STDIN, STDOUT, STDERR, CLI, Command Line Interface]
 ---
 <center>
   <br>

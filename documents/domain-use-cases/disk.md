@@ -1,10 +1,11 @@
 ---
-title: "Disk"
-date: YYY-MMM-DD
-author: "Jane Doe"
-description: ""
-tags: []
-categories:
+title: "Disk Use Case"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "Applications have to interact with files on disk. That means reading and writing to them along with managing them."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [File I/O, Read, Write, Disk Management, File Management]
 ---
 <center>
   <br>

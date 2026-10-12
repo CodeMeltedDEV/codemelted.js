@@ -1,10 +1,11 @@
 ---
-title: "Logger"
-date: YYY-MMM-DD
-author: "Jane Doe"
-description: ""
-tags: []
-categories:
+title: "Logger Use Case"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "A utility that automatically records, tracks, and stores sequential data, system events, or user actions over time."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [Console, Logging, Debugging]
 ---
 <center>
   <br>

@@ -1,10 +1,11 @@
 ---
-title: "Runtime"
-date: YYY-MMM-DD
-author: "Jane Doe"
-description: ""
-tags: []
-categories:
+title: "Runtime Core Use Case"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "The supporting software, libraries, and virtual layer that sit between the app and the operating system to make the program run."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [Runtime, Operating System, Virtualization]
 ---
 <center>
   <br>

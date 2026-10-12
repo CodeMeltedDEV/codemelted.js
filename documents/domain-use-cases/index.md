@@ -1,9 +1,11 @@
 ---
-title: "Domain Use Cases"
-date: 2026-Oct-06
+title: "Domain Use Case"
+date: 2026-OCT-11
 author: "Mark Shaffer"
-description: "TBD"
-tags: []
+description: "Fifteen domain use cases were identified covering the most common areas a software engineer needs a solution."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [Software Engineering, Rust, JavaScript, Front End, Back End, Full Stack, Use Cases]
 children:
   - async.md
   - console.md

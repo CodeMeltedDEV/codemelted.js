@@ -1,10 +1,11 @@
 ---
-title: "Async"
-date: YYY-MMM-DD
-author: "Jane Doe"
-description: ""
-tags: []
-categories:
+title: "Async Use Case"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "Complex applications require the ability to asynchronously time slice up work as to not block the main synchronous processing thread."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [Async Processing, Async IO, Threading]
 ---
 <center>
   <br>

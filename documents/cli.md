@@ -1,9 +1,11 @@
 ---
-title: "Command Line Interface"
-date: 2026-OCT-06
+title: "codemelted CLI"
+date: 2026-OCT-11
 author: "Mark Shaffer"
-description: "TBD"
-tags: []
+description: "The native codemelted Command Line Interface (CLI) providing a common scriptable solution regardless operating sytem."
+tags: [Software Engineering, Developer, Programmer, ACM, IEEE]
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
 ---
 <center>
   <br>
@@ -11,5 +13,7 @@ tags: []
   <h1>codemelted CLI</h1>
   <br>
 </center>
+
+The native codemelted Command Line Interface (CLI) providing a common scriptable solution regardless operating sytem.
 
 <mark>TO BE DEVELOPED</mark>

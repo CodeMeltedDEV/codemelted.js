@@ -1,10 +1,11 @@
 ---
-title: "User Interface"
-date: YYY-MMM-DD
-author: "Jane Doe"
-description: ""
-tags: []
-categories:
+title: "User Interface Core Use Case"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "A visual way for humans to interact with electronic devices, such as computers, smartphones, and ATMs, using graphics instead of text commands."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [HTML, HTML5, CSS, CSS3, JavaScript, Custom HTML Components]
 ---
 <center>
   <br>

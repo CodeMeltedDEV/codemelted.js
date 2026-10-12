@@ -61,7 +61,7 @@ function main {
     # Build the documentation
     Remove-Item -Path $PSScriptRoot/docs -Force -Recurse `
       -ErrorAction SilentlyContinue
-    typedoc --skipErrorChecking
+    npx typedoc --skipErrorChecking
     if ($LASTEXITCODE -ne 0) {
       throw "make_js - 'typedoc --skipErrorChecking' failed."
     }

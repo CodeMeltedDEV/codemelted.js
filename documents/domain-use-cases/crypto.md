@@ -1,10 +1,11 @@
 ---
-title: "Crypto"
-date: YYY-MMM-DD
-author: "Jane Doe"
-description: ""
-tags: []
-categories:
+title: "Crypto Use Case"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "Apps needs to secure information from unauthorized usage. Cryptographic algorithms allow for hiding or coding information so that only authorized parties can read and process it."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [cybersecurity, cyber, cryptography]
 ---
 <center>
   <br>

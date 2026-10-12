@@ -1,10 +1,11 @@
 ---
-title: "Hardware"
-date: YYY-MMM-DD
-author: "Jane Doe"
-description: ""
-tags: []
-categories:
+title: "Hardware Use Case"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "Hardware peripherals are auxiliary devices connected to a computer to expand its capabilities. Applications connect to these peripherals via protocols specific to that hardware."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [Hardware, Peripheral, Bluetooth, BLE, Serial, RS-232, USB, MIDI]
 ---
 <center>
   <br>

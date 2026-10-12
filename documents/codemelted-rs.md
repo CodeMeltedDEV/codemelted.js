@@ -1,9 +1,11 @@
 ---
 title: "codemelted.rs SDK"
-date: 2026-OCT-06
+date: 2026-OCT-11
 author: "Mark Shaffer"
-description: "TBD"
-tags: []
+description: "The Software Development Kit (SDK) for using the codemelted.rs module."
+tags: [Rust, Crate, Module, Dynamic Library, Memory Safety, Speed, SDK]
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
 ---
 <h1>Module codemelted.rs SDK</h1>
 <center>

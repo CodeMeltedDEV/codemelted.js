@@ -1,9 +1,11 @@
 ---
-title: "About Project"
-date: 2026-Oct-06
+title: "codemelted.js Project"
+date: 2026-OCT-11
 author: "Mark Shaffer"
 description: "The codemelted.js Project aims to give software engineers the ability to deliver on this full stack engineering premise."
 tags: [codemelted.js, ES6 Module, JavaScript, TypeScript, HTML, CSS, Web Worker, full-stack, codemelted.rs, Rust, Native, TAURI, Android, iOS, BSD, Mac, Linux, Windows]
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
 ---
 <center>
   <br>

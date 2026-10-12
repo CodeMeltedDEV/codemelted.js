@@ -34,7 +34,12 @@
     "documents/software-engineering/index.md",
     "documents/cli.md",
     "documents/module-test.md",
-    "documents/codemelted-rs.md",
+    "documents/codemelted-rs.md"
   ],
-  "favicon": "https://codemelted.com/favicon.png"
+  "favicon": "https://codemelted.com/favicon.png",
+  "plugin": ["./assets/js/typedoc-plugin-og.js"],
+  "$schema": "https://typedoc.org",
+  "customDescription": "The codemelted.js Project aims to give software engineers the ability to deliver on this full stack engineering premise.",
+  "customImage": "https://codemelted.com/assets/images/logo-codemelted-js.png",
+  "customTwitter": "@CodeMeltedDEV"
 }

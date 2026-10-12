@@ -1,10 +1,11 @@
 ---
-title: "Network"
-date: YYY-MMM-DD
-author: "Jane Doe"
-description: ""
-tags: []
-categories:
+title: "Network Core Use Case"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "A system of interconnected computing devices that communicate and share resources, data, and applications over wired or wireless connections."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [fetch, REST API, TCP, UDP, Web Socket, WebRTC, Web Transport, Beacon]
 ---
 <center>
   <br>

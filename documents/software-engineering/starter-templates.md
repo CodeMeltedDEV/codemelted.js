@@ -1,9 +1,11 @@
 ---
 title: "Starter Templates"
-date: 2026-OCT-06
+date: 2026-OCT-11
 author: "Mark Shaffer"
-description: "This is a collection of templates for performing software engineering tasks and beginning a coding effort."
-tags: [software engineering, code templates, markdown templates]
+description: "A collection of templates for performing software engineering tasks and beginning a coding effort."
+tags: [Software Engineering, Developer, Programmer, ACM, IEEE]
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
 ---
 <center>
   <br>

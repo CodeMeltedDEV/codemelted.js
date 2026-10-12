@@ -1,9 +1,11 @@
 ---
 title: "codemelted.js Validation"
-date: 2026-OCT-06
+date: 2026-OCT-11
 author: "Mark Shaffer"
-description: "Represents the developed tests to validate the codemelted.js module in the different JavaScript runtimes."
-tags: [Browser Mocha/Chai Test, HTML, HTML5, CSS, CSS3, JavaScript, ES6 Module, Web Worker]
+description: "Represents the cmocha / chai tests validate the codemelted.js module from within the Browser runtime."
+tags: [JavaScript, web, mocha, chai, test runner]
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
 ---
 <center>
   <br>

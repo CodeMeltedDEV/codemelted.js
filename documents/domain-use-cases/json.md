@@ -1,10 +1,11 @@
 ---
-title: "JSON"
-date: YYY-MMM-DD
-author: "Jane Doe"
-description: ""
-tags: []
-categories:
+title: "JSON Use Case"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "JSON (JavaScript Object Notation) is a lightweight, plain-text format used to store and transfer structured data between a server and an application."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [JSON, Stringify, Parse]
 ---
 <center>
   <br>

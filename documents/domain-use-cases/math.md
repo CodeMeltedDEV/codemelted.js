@@ -1,10 +1,11 @@
 ---
-title: "Math"
-date: YYY-MMM-DD
-author: "Jane Doe"
-description: ""
-tags: []
-categories:
+title: "Math Use Case"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "A collection of mathematical formulas for computational purposes."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [Mathematics, Formulas, Physics, Science, Statistics]
 ---
 <center>
   <br>

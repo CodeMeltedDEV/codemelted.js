@@ -1,9 +1,11 @@
 ---
 title: "Software Engineering"
-date: 2026-OCT-06
+date: 2026-OCT-11
 author: "Mark Shaffer"
-description: "TBD"
-tags: []
+description: "A Software Engineering Knowledge Repository."
+tags: [Software Engineering, Developer, Programmer, ACM, IEEE]
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
 children:
   - starter-templates.md
 ---

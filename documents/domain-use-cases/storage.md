@@ -1,10 +1,11 @@
 ---
-title: "Storage"
-date: YYY-MMM-DD
-author: "Jane Doe"
-description: ""
-tags: []
-categories:
+title: "Storage Core Use Case"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "A string based key / value pair combination for simple information storage and retrieval."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [Key Value Pairs, Local Storage, Session Storage, Cookie Store, Local File]
 ---
 <center>
   <br>

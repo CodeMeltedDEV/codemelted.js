@@ -1,10 +1,11 @@
 ---
-title: "Database"
-date: YYY-MMM-DD
-author: "Jane Doe"
-description: ""
-tags: []
-categories:
+title: "Databse Use Case"
+date: 2026-OCT-11
+author: "Mark Shaffer"
+description: "Complicated data requires a way to be stored, recalled, and utilized. Embedded database technologies (IndexedDB codemelted.js / SQLite3 codemelted.rs) allow for this complex data storage."
+image: "https://codemelted.com/assets/images/logo-codemelted-js.png"
+twitter_site: "@CodeMeltedDEV"
+tags: [IndexedDB, SQLite3, SQLite]
 ---
 <center>
   <br>
