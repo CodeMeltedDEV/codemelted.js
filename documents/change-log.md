@@ -13,7 +13,7 @@ The *codemelted.js Project Change Log* reflects updates to the `codemelted.js` /
 
 # v26.0.0-alpha (2026-OCT-02)
 
-[Download]()
+[Download](https://github.com/CodeMeltedDEV/codemelted.js/releases#release-v26.0.0-alpha)
 
 The project is just getting started. We are snapping a chalk line as we begin the engineering journey for this project. So for now, consider the `codemelted.js` module in an alpha state. If you look within the guts of it, you will see a lot of prototyping and thinking through problems. Time to apply real software engineering to it.
 
